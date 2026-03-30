@@ -1,0 +1,42 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Domain.Logins
+{
+    public class Login
+    {
+        public string LoginId { get; set; } = Guid.NewGuid().ToString();
+        public string UserName { get; private set; }
+        public string Password { get; private set; }
+        public ERole Role { get; private set; }
+
+#pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
+        public Login()
+#pragma warning restore CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
+        {
+        }
+
+        public Login(string userName, string password, ERole role)
+        {
+            UserName=userName;
+            Password=password;
+            Role=role;
+        }
+
+        public void UpdateUserName(string userName)
+        {
+            UserName = userName;
+        }
+        public void UpdatePassword(string password)
+        {
+            Password = password;
+        }
+        public void UpdateRole(ERole role)
+        {
+            Role = role;
+        }
+    }
+}
