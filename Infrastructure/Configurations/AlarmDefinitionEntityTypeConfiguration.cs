@@ -13,7 +13,8 @@ namespace Infrastructure.Configurations
     {
         public void Configure(EntityTypeBuilder<AlarmDefinition> builder)
         {
-            throw new NotImplementedException();
+            builder.HasKey(x => x.AlarmDefinitionId);
+            builder.Property(x => x.AlarmDefinitionId).HasDefaultValueSql("NEWID()");
         }
     }
 }

@@ -13,7 +13,8 @@ namespace Infrastructure.Configurations
     {
         public void Configure(EntityTypeBuilder<Material> builder)
         {
-            throw new NotImplementedException();
+            builder.HasKey(x => x.MaterialId);
+            builder.Property(x => x.MaterialId).HasDefaultValueSql("NEWID()");
         }
     }
 }

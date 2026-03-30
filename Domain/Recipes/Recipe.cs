@@ -13,6 +13,7 @@ namespace Domain.Recipes
         public string RecipeName { get; private set; }
         public DateTime CreatedDate { get; private set; } = DateTime.Now;
         public bool IsActive { get; private set; } = true;
+        public string ProductId { get; private set; }
         public Product Product { get; private set; }
         public List<RecipeMaterial> RecipeMaterials { get; private set; } = new List<RecipeMaterial>();
 

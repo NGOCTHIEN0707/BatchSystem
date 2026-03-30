@@ -1,4 +1,5 @@
-﻿using Domain.Stations;
+﻿using Domain.Lines;
+using Domain.Stations;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System;
@@ -13,7 +14,12 @@ namespace Infrastructure.Configurations
     {
         public void Configure(EntityTypeBuilder<StationCurrentStatus> builder)
         {
-            throw new NotImplementedException();
+            builder.HasKey(x => x.StationCurrentStatusId);
+            builder.Property(x => x.StationCurrentStatusId).HasDefaultValueSql("NEWID()");
+            builder.HasOne(x => x.Station)
+                .WithOne(x => x.CurrentStatus).
+                HasForeignKey<StationCurrentStatus>(x => x.StationId)
+                .OnDelete(DeleteBehavior.Cascade);
         }
     }
 }

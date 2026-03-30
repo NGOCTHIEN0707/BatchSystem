@@ -13,7 +13,9 @@ namespace Infrastructure.Configurations
     {
         public void Configure(EntityTypeBuilder<Login> builder)
         {
-            throw new NotImplementedException();
+            builder.HasKey(x => x.LoginId);
+            builder.Property(x => x.LoginId).HasDefaultValueSql("NEWID()");
+
         }
     }
 }

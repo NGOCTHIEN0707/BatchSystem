@@ -13,7 +13,8 @@ namespace Infrastructure.Configurations
     {
         public void Configure(EntityTypeBuilder<OrderBatchStep> builder)
         {
-            throw new NotImplementedException();
+            builder.HasKey(x => x.OrderBatchStepId);
+            builder.Property(x => x.OrderBatchStepId).HasDefaultValueSql("NEWID()");
         }
     }
 }

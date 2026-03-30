@@ -13,7 +13,8 @@ namespace Infrastructure.Configurations
     {
         public void Configure(EntityTypeBuilder<BatchWeighingResult> builder)
         {
-            throw new NotImplementedException();
+            builder.HasKey(x => x.BatchWeighingResultId);
+            builder.Property(x => x.BatchWeighingResultId).HasDefaultValueSql("NEWID()");
         }
     }
 }
