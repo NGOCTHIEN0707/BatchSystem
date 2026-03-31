@@ -14,7 +14,13 @@ namespace Infrastructure.Configurations
         public void Configure(EntityTypeBuilder<BatchWeighingResult> builder)
         {
             builder.HasKey(x => x.BatchWeighingResultId);
-            builder.Property(x => x.BatchWeighingResultId).HasDefaultValueSql("NEWID()");
+            builder.Property(x => x.BatchWeighingResultId).HasDefaultValueSql("NEWSEQUENTIALID()");
+            builder.HasOne(x=>x.Material)
+                .WithMany()
+                .HasForeignKey(x=>x.MaterialId)
+                .OnDelete(DeleteBehavior.Restrict);
+            builder.HasIndex(x => x.MaterialId);
+            builder.HasIndex(x => new { x.OrderBatchId, x.CapturedAt });
         }
     }
 }

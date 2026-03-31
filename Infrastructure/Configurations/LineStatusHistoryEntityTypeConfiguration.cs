@@ -14,11 +14,12 @@ namespace Infrastructure.Configurations
         public void Configure(EntityTypeBuilder<LineStatusHistory> builder)
         {
             builder.HasKey(x => x.LineStatusHistoryId);
-            builder.Property(x => x.LineStatusHistoryId).HasDefaultValueSql("NEWID()");
+            builder.Property(x => x.LineStatusHistoryId).HasDefaultValueSql("NEWSEQUENTIALID()");
             builder.HasOne(x => x.Line)
                 .WithMany()
                 .HasForeignKey(x => x.LineId)
                 .OnDelete(DeleteBehavior.Restrict);
+            builder.HasIndex(x => x.LineId);
         }
     }
 }

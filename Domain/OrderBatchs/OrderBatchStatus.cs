@@ -13,6 +13,7 @@ namespace Domain.OrderBatchs
         Running = 2,     // Đang nằm trên line
         Paused = 3,      // Tạm dừng
         Completed = 4,   // Xong
-        Cancelled = 5    // Hủy
+        Cancelled = 5,    // Hủy
+        Aborted = 6
     }
 }

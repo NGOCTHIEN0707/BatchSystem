@@ -15,6 +15,7 @@ namespace Infrastructure.Configurations
         {
             builder.HasKey(x => x.AlarmDefinitionId);
             builder.Property(x => x.AlarmDefinitionId).HasDefaultValueSql("NEWID()");
+           
         }
     }
 }

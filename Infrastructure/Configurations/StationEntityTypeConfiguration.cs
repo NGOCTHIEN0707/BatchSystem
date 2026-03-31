@@ -15,6 +15,10 @@ namespace Infrastructure.Configurations
         {
             builder.HasKey(x => x.StationId);
             builder.Property(x => x.StationId).HasDefaultValueSql("NEWID()");
+            builder.HasMany(x => x.AlarmDefinitions)
+                .WithOne(x => x.Station)
+                .HasForeignKey(x => x.StationId)
+                .OnDelete(DeleteBehavior.Cascade);
         }
     }
 }

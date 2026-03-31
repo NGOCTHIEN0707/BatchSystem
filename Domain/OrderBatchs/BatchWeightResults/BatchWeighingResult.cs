@@ -21,7 +21,16 @@ namespace Domain.OrderBatchs.BatchWeightResults
         public DateTime CapturedAt { get; private set; } = DateTime.Now;
         public OrderBatch OrderBatch { get; private set; }
         public Material Material { get; private set; }
+
+#pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
+        public BatchWeighingResult()
+#pragma warning restore CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
+        {
+        }
+
+#pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
         public BatchWeighingResult(
+#pragma warning restore CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
             string orderBatchId,
             string materialId,
             decimal targetKg,

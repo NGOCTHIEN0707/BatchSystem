@@ -15,6 +15,7 @@ namespace Infrastructure.Configurations
         {
             builder.HasKey(x => x.MaterialId);
             builder.Property(x => x.MaterialId).HasDefaultValueSql("NEWID()");
+            
         }
     }
 }

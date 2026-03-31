@@ -14,7 +14,11 @@ namespace Infrastructure.Configurations
         public void Configure(EntityTypeBuilder<ProductionOrderDetail> builder)
         {
             builder.HasKey(x => x.ProductionOrderDetailId);
-            builder.Property(x => x.ProductionOrderDetailId).HasDefaultValueSql("NEWID()");
+            builder.Property(x => x.ProductionOrderDetailId).HasDefaultValueSql("NEWSEQUENTIALID()");
+            builder.HasMany(x=>x.OrderBatches)
+                .WithOne(x=>x.ProductionOrderDetail)
+                .HasForeignKey(x=>x.ProductionOrderDetailId)
+                .OnDelete(DeleteBehavior.Restrict); // coi lai restrict hay cascade
         }
     }
 }
