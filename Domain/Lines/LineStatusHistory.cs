@@ -8,7 +8,7 @@ namespace Domain.Lines
 {
     public class LineStatusHistory
     {
-        public string LineStatusHistoryId { get; private set; }
+        public Guid LineStatusHistoryId { get; private set; }
         public string LineId { get; private set; }
         public LineStatus Status { get; private set; }
         public LineMode Mode { get; private set; }

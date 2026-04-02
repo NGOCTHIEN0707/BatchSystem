@@ -20,10 +20,7 @@ namespace Infrastructure
 {
     public class ApplicationDbContext : DbContext
     {
-        public ApplicationDbContext(DbContextOptions options) : base(options)
-        {
-
-        }
+        public ApplicationDbContext(DbContextOptions options) : base(options) { }
         public DbSet<Line> Lines { get; set; }
         public DbSet<Station> Stations { get; set; }
         public DbSet<Material> Materials { get; set; }

@@ -13,8 +13,8 @@ namespace Domain.ProductionOrders
 {
     public class ProductionOrderDetail
     {
-        public string ProductionOrderDetailId { get; private set; }
-        public string ProductionOrderId { get; private set; }
+        public Guid ProductionOrderDetailId { get; private set; }
+        public Guid ProductionOrderId { get; private set; }
         public string ProductId { get; private set; }
         public string RecipeId { get; private set; }
         public int BatchQuantity { get; private set; }
@@ -33,7 +33,7 @@ namespace Domain.ProductionOrders
 
 
 #pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
-        public ProductionOrderDetail(string productionOrderId, string productId, string recipeId, int batchQuantity, int sequenceNo)
+        public ProductionOrderDetail(Guid productionOrderId, string productId, string recipeId, int batchQuantity, int sequenceNo)
 #pragma warning restore CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
         {
             ProductionOrderId=productionOrderId;

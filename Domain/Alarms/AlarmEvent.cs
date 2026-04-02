@@ -11,10 +11,10 @@ namespace Domain.Alarms
 {
     public class AlarmEvent
     {
-        public string AlarmEventId { get; private set; }
+        public Guid AlarmEventId { get; private set; }
         public string AlarmDefinitionId { get; private set; }
-        public string? ProductionOrderId { get; private set; }
-        public string? OrderBatchId { get; private set; }
+        public Guid? ProductionOrderId { get; private set; }
+        public Guid? OrderBatchId { get; private set; }
         public string StationId { get; private set; }
         public DateTime OccurredAt { get; private set; }
         public DateTime? EndedAt { get; private set; }
@@ -34,7 +34,7 @@ namespace Domain.Alarms
         }
 
 #pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
-        public AlarmEvent(string alarmDefinitionId, string? productionOrderId, string? orderBatchId, string stationId)
+        public AlarmEvent(string alarmDefinitionId, Guid? productionOrderId, Guid? orderBatchId, string stationId)
 #pragma warning restore CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
         {
             AlarmDefinitionId = alarmDefinitionId;

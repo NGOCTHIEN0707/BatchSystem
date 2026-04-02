@@ -15,6 +15,9 @@ namespace Infrastructure.Configurations
         {
             builder.HasKey(x => x.RecipeMaterialId);
             builder.Property(x => x.RecipeMaterialId).HasDefaultValueSql("NEWID()");
+            builder.Property(x => x.TargetKg).HasPrecision(18, 3);
+            builder.Property(x => x.ToleranceMinKg).HasPrecision(18, 3);
+            builder.Property(x => x.ToleranceMaxKg).HasPrecision(18, 3);
         }
     }
 }

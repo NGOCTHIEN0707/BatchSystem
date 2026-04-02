@@ -12,9 +12,9 @@ namespace Domain.Recipes
         public string RecipeMaterialId { get; private set; }
         public string RecipeId { get; private set; }
         public string MaterialId { get; private set; }
-        public double TargetKg { get; private set; }
-        public double ToleranceMinKg { get; private set; }
-        public double ToleranceMaxKg { get; private set; }
+        public decimal TargetKg { get; private set; }
+        public decimal ToleranceMinKg { get; private set; }
+        public decimal ToleranceMaxKg { get; private set; }
         public Recipe Recipe { get; private set; }
         public Material Material { get; private set; }
 #pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
@@ -25,7 +25,7 @@ namespace Domain.Recipes
 
 
 #pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
-        public RecipeMaterial(string recipeId, string materialId, double targetKg, double toleranceMinKg, double toleranceMaxKg)
+        public RecipeMaterial(string recipeId, string materialId, decimal targetKg, decimal toleranceMinKg, decimal toleranceMaxKg)
 #pragma warning restore CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
         {
             RecipeId = recipeId;

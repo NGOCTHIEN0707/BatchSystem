@@ -19,14 +19,19 @@ namespace Infrastructure.Configurations
                 .WithMany()
                 .HasForeignKey(x => x.AlarmDefinitionId)
                 .OnDelete(DeleteBehavior.Restrict);
+
             builder.HasOne(x=>x.ProductionOrder)
                 .WithMany()
                 .HasForeignKey(x=>x.ProductionOrderId)
-                .OnDelete(DeleteBehavior.SetNull);
+                .IsRequired(false)
+                .OnDelete(DeleteBehavior.NoAction);
+
             builder.HasOne(x=>x.OrderBatch)
                 .WithMany()
                 .HasForeignKey(x=>x.OrderBatchId)
-                .OnDelete(DeleteBehavior.SetNull);
+                .IsRequired(false)
+                .OnDelete(DeleteBehavior.NoAction);
+
             builder.HasIndex(x => new { x.OrderBatchId, x.OccurredAt });
             builder.HasIndex(x => x.ProductionOrderId);
         }

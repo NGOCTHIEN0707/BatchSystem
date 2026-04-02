@@ -9,8 +9,8 @@ namespace Domain.OrderBatchs
 {
     public class OrderBatchStep
     {
-        public string OrderBatchStepId { get; private set; }
-        public string OrderBatchId { get; private set; }
+        public Guid OrderBatchStepId { get; private set; }
+        public Guid OrderBatchId { get; private set; }
         public string StationId { get; private set; }
         public int StepNo { get; private set; }
         public OrderBatchStepStatus Status { get; private set; } = OrderBatchStepStatus.Pending;
@@ -29,7 +29,7 @@ namespace Domain.OrderBatchs
 
 
 #pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
-        public OrderBatchStep(string orderBatchId, string stationId, int stepNo)
+        public OrderBatchStep(Guid orderBatchId, string stationId, int stepNo)
 #pragma warning restore CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
         {
             OrderBatchId = orderBatchId;

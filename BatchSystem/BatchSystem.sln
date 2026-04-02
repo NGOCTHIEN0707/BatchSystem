@@ -5,9 +5,9 @@ VisualStudioVersion = 17.10.35027.167
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BatchSystem", "BatchSystem.csproj", "{F1C1FDB2-EF09-4265-9820-DA1C7AFF97FC}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "..\Domain\Domain.csproj", "{F36C6B6E-1BF1-4807-92B5-BC4AA79298B6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BatchSystem.Domain", "..\Domain\BatchSystem.Domain.csproj", "{F36C6B6E-1BF1-4807-92B5-BC4AA79298B6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "..\Infrastructure\Infrastructure.csproj", "{46FE65AE-1823-41FE-AF32-60AC021C201B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BatchSystem.Infrastructure", "..\Infrastructure\BatchSystem.Infrastructure.csproj", "{46FE65AE-1823-41FE-AF32-60AC021C201B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

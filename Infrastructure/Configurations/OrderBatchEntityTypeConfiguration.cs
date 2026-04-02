@@ -19,6 +19,7 @@ namespace Infrastructure.Configurations
                 .WithOne(x=>x.OrderBatch)
                 .HasForeignKey(x=>x.OrderBatchId)
                 .OnDelete(DeleteBehavior.Cascade);
+
             builder.HasMany(x=>x.BatchWeighingResults)
                 .WithOne(x=>x.OrderBatch)
                 .HasForeignKey(x=>x.OrderBatchId)

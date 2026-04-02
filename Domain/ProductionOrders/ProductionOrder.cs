@@ -10,7 +10,7 @@ namespace Domain.ProductionOrders
 {
     public class ProductionOrder
     {
-        public string ProductionOrderId { get; private set; }
+        public Guid ProductionOrderId { get; private set; }
         public int Priority { get; private set; }
         public ProductionOrderStatus Status { get; private set; } = ProductionOrderStatus.Pending;
         public DateTime? PlannedStartTime { get; private set; }

@@ -9,8 +9,8 @@ namespace Domain.OrderBatchs.BatchWeightResults
 {
     public class BatchWeighingResult
     {
-        public string BatchWeighingResultId { get; private set; }
-        public string OrderBatchId { get; private set; }
+        public Guid BatchWeighingResultId { get; private set; }
+        public Guid OrderBatchId { get; private set; }
         public string MaterialId { get; private set; }
         public decimal TargetKg { get; private set; }
         public decimal ActualKg { get; private set; }
@@ -31,7 +31,7 @@ namespace Domain.OrderBatchs.BatchWeightResults
 #pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
         public BatchWeighingResult(
 #pragma warning restore CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
-            string orderBatchId,
+            Guid orderBatchId,
             string materialId,
             decimal targetKg,
             decimal actualKg,

@@ -13,9 +13,9 @@ namespace Domain.OrderBatchs
 {
     public class OrderBatch
     {
-        public string OrderBatchId { get; private set; }
-        public string ProductionOrderId { get; private set; }
-        public string ProductionOrderDetailId { get; private set; }
+        public Guid OrderBatchId { get; private set; }
+        public Guid ProductionOrderId { get; private set; }
+        public Guid ProductionOrderDetailId { get; private set; }
         public string LineId { get; private set; }
         public int BatchNo { get; private set; }
         public OrderBatchStatus Status { get; private set; } = OrderBatchStatus.Pending;
@@ -35,7 +35,7 @@ namespace Domain.OrderBatchs
         }
 
 #pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
-        public OrderBatch(string productionOrderId, string productionOrderDetailId, string lineId, int batchNo)
+        public OrderBatch(Guid productionOrderId, Guid productionOrderDetailId, string lineId, int batchNo)
 #pragma warning restore CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
         {
             ProductionOrderId = productionOrderId;
