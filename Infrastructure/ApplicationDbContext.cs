@@ -1,4 +1,5 @@
-﻿using Domain.Alarms;
+﻿using BatchSystem.Infrastructure;
+using Domain.Alarms;
 using Domain.Lines;
 using Domain.Logins;
 using Domain.Materials;
@@ -9,6 +10,7 @@ using Domain.Products;
 using Domain.Recipes;
 using Domain.Stations;
 using Infrastructure.Configurations;
+using MediatR;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -18,9 +20,16 @@ using System.Threading.Tasks;
 
 namespace Infrastructure
 {
-    public class ApplicationDbContext : DbContext
+    public class ApplicationDbContext : DbContext, IUnitOfWork
     {
+        private readonly IMediator _mediator;
+#pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
         public ApplicationDbContext(DbContextOptions options) : base(options) { }
+#pragma warning restore CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
+        public ApplicationDbContext(DbContextOptions options, IMediator mediator) : base(options)
+        {
+            _mediator = mediator;
+        }
         public DbSet<Line> Lines { get; set; }
         public DbSet<Station> Stations { get; set; }
         public DbSet<Material> Materials { get; set; }
@@ -39,6 +48,13 @@ namespace Infrastructure
         public DbSet<AlarmDefinition> AlarmDefinitions { get; set; }
         public DbSet<AlarmEvent> AlarmEvents { get; set; }
         public DbSet<Login> Logins { get; set; }
+
+        public async Task<bool> SaveEntitiesAsync(CancellationToken cancellationToken = default)
+        {
+            await _mediator.DispatchDomainEventsAsync(this);
+            await base.SaveChangesAsync(cancellationToken);
+            return true;
+        }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

@@ -146,3 +146,5 @@ C:\Users\herob\Downloads\BatchSystem\BatchSystem\obj\Debug\net8.0\refint\BatchSy
 C:\Users\herob\Downloads\BatchSystem\BatchSystem\obj\Debug\net8.0\BatchSystem.pdb
 C:\Users\herob\Downloads\BatchSystem\BatchSystem\obj\Debug\net8.0\BatchSystem.genruntimeconfig.cache
 C:\Users\herob\Downloads\BatchSystem\BatchSystem\obj\Debug\net8.0\ref\BatchSystem.dll
+C:\Users\herob\Downloads\BatchSystem\BatchSystem\bin\Debug\net8.0\MediatR.dll
+C:\Users\herob\Downloads\BatchSystem\BatchSystem\bin\Debug\net8.0\MediatR.Contracts.dll
