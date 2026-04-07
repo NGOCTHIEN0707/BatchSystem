@@ -1,6 +1,8 @@
 ﻿using BatchSystem.Domain.Alarms;
+using BatchSystem.Infrastructure.Repositories.Common;
 using Domain.Alarms;
 using Infrastructure;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,24 +17,25 @@ namespace BatchSystem.Infrastructure.Repositories
         {
         }
 
-        public Task AddAsync(AlarmEvent alarmEvent)
+        public async Task AddAsync(AlarmEvent alarmEvent)
         {
-            throw new NotImplementedException();
+            await _context.AlarmEvents.AddAsync(alarmEvent);
         }
 
-        public Task Delete(AlarmEvent alarmEvent)
+        public void Delete(AlarmEvent alarmEvent)
         {
-            throw new NotImplementedException();
+            _context.AlarmEvents.Remove(alarmEvent);
         }
 
-        public Task<AlarmEvent?> GetById(Guid alarmEventId)
+        public async Task<AlarmEvent?> GetById(Guid alarmEventId)
         {
-            throw new NotImplementedException();
+            var alarmEvent = await _context.AlarmEvents.AsNoTracking().FirstOrDefaultAsync(x=>x.AlarmEventId == alarmEventId);
+            return alarmEvent;
         }
 
-        public Task UpdateAsync(AlarmEvent alarmEvent)
+        public void UpdateAsync(AlarmEvent alarmEvent)
         {
-            throw new NotImplementedException();
+            _context.AlarmEvents.Update(alarmEvent);
         }
     }
 }

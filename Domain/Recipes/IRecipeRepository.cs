@@ -11,9 +11,9 @@ namespace BatchSystem.Domain.Recipes
     public interface IRecipeRepository
     {
         Task AddAsync(Recipe recipe);
-        Task Delete(Recipe recipe);
+        void Delete(Recipe recipe);
         Task<Recipe?> GetById(string recipeId);
         // Ở đây vẫn cần GetById để phục vụ cho các lệnh khác chứ không dùng Get ngay đây để truy vấn dữ liệu
-        Task UpdateAsync(Recipe recipe);
+        void UpdateAsync(Recipe recipe);
     }
 }

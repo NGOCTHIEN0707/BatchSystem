@@ -1,4 +1,5 @@
 ﻿using BatchSystem.Domain.ProductionOrders;
+using BatchSystem.Infrastructure.Repositories.Common;
 using Domain.ProductionOrders;
 using Infrastructure;
 using Microsoft.EntityFrameworkCore;
@@ -16,24 +17,26 @@ namespace BatchSystem.Infrastructure.Repositories
         {
         }
 
-        public Task AddAsync(ProductionOrder productionOrder)
+        public async Task AddAsync(ProductionOrder productionOrder)
         {
-            throw new NotImplementedException();
+            await _context.ProductionOrders.AddAsync(productionOrder);
         }
 
-        public Task Delete(ProductionOrder productionOrder)
+        public void Delete(ProductionOrder productionOrder)
         {
-            throw new NotImplementedException();
+            _context.ProductionOrders.Remove(productionOrder);
         }
 
-        public Task<ProductionOrder?> GetById(Guid productionOrderId)
+        public async Task<ProductionOrder?> GetById(Guid productionOrderId)
         {
-            throw new NotImplementedException();
+            var productionOrder = await _context.ProductionOrders.AsNoTracking().FirstOrDefaultAsync(x=>x.ProductionOrderId == productionOrderId);
+            return productionOrder;
         }
 
-        public Task UpdateAsync(ProductionOrder productionOrder)
+        public void UpdateAsync(ProductionOrder productionOrder)
         {
-            throw new NotImplementedException();
+            _context.ProductionOrders.Update(productionOrder);
         }
+       
     }
 }

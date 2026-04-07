@@ -1,6 +1,8 @@
 ﻿using BatchSystem.Domain.OrderBatchs;
+using BatchSystem.Infrastructure.Repositories.Common;
 using Domain.OrderBatchs;
 using Infrastructure;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,24 +17,25 @@ namespace BatchSystem.Infrastructure.Repositories
         {
         }
 
-        public Task AddAsync(OrderBatch orderBatch)
+        public async Task AddAsync(OrderBatch orderBatch)
         {
-            throw new NotImplementedException();
+            await _context.OrderBatchs.AddAsync(orderBatch);
         }
 
-        public Task Delete(OrderBatch orderBatch)
+        public void Delete(OrderBatch orderBatch)
         {
-            throw new NotImplementedException();
+            _context.OrderBatchs.Remove(orderBatch);
         }
 
-        public Task<OrderBatch?> GetById(Guid orderBatchId)
+        public async Task<OrderBatch?> GetById(Guid orderBatchId)
         {
-            throw new NotImplementedException();
+            var orderBatch = await _context.OrderBatchs.AsNoTracking().FirstOrDefaultAsync(x=>x.OrderBatchId == orderBatchId);
+            return orderBatch;
         }
 
-        public Task UpdateAsync(OrderBatch orderBatch)
+        public void UpdateAsync(OrderBatch orderBatch)
         {
-            throw new NotImplementedException();
+            _context.OrderBatchs.Update(orderBatch);
         }
     }
 }

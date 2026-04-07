@@ -11,9 +11,9 @@ namespace BatchSystem.Domain.OrderBatchs
     public interface IOrderBatchRepository
     {
         Task AddAsync(OrderBatch orderBatch);
-        Task Delete(OrderBatch orderBatch);
+        void Delete(OrderBatch orderBatch);
         Task<OrderBatch?> GetById(Guid orderBatchId);
         // Ở đây vẫn cần GetById để phục vụ cho các lệnh khác chứ không dùng Get ngay đây để truy vấn dữ liệu
-        Task UpdateAsync(OrderBatch orderBatch);
+        void UpdateAsync(OrderBatch orderBatch);
     }
 }

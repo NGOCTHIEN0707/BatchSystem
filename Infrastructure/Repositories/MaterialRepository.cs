@@ -1,6 +1,8 @@
 ﻿using BatchSystem.Domain.Materials;
+using BatchSystem.Infrastructure.Repositories.Common;
 using Domain.Materials;
 using Infrastructure;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,24 +17,25 @@ namespace BatchSystem.Infrastructure.Repositories
         {
         }
 
-        public Task AddAsync(Material material)
+        public async Task AddAsync(Material material)
         {
-            throw new NotImplementedException();
+            await _context.Materials.AddAsync(material);
         }
 
-        public Task Delete(Material material)
+        public void Delete(Material material)
         {
-            throw new NotImplementedException();
+            _context.Materials.Remove(material);
         }
 
-        public Task<Material?> GetById(string materialId)
+        public async Task<Material?> GetById(string materialId)
         {
-            throw new NotImplementedException();
+            var material = await _context.Materials.AsNoTracking().FirstOrDefaultAsync(x=>x.MaterialId == materialId);
+            return material;
         }
 
-        public Task UpdateAsync(Material material)
+        public void UpdateAsync(Material material)
         {
-            throw new NotImplementedException();
+            _context.Materials.Update(material);
         }
     }
 }

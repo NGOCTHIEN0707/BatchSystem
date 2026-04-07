@@ -1,4 +1,5 @@
-﻿using BatchSystem.Infrastructure;
+﻿using BatchSystem.Domain.SeedWork;
+using BatchSystem.Infrastructure;
 using Domain.Alarms;
 using Domain.Lines;
 using Domain.Logins;

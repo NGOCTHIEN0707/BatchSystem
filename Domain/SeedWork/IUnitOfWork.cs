@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BatchSystem.Infrastructure
+namespace BatchSystem.Domain.SeedWork
 {
     public interface IUnitOfWork
     {

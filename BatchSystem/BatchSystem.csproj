@@ -18,9 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Application\Commands\" />
     <Folder Include="Application\Queries\" />
-    <Folder Include="Controllers\" />
   </ItemGroup>
 
   <ItemGroup>

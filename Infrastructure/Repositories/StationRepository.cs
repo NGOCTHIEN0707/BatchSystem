@@ -1,6 +1,8 @@
 ﻿using BatchSystem.Domain.Stations;
+using BatchSystem.Infrastructure.Repositories.Common;
 using Domain.Stations;
 using Infrastructure;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,24 +17,25 @@ namespace BatchSystem.Infrastructure.Repositories
         {
         }
 
-        public Task AddAsync(Station station)
+        public async Task AddAsync(Station station)
         {
-            throw new NotImplementedException();
+            await _context.Stations.AddAsync(station);
         }
 
-        public Task Delete(Station station)
+        public void Delete(Station station)
         {
-            throw new NotImplementedException();
+            _context.Stations.Remove(station);
         }
 
-        public Task<Station?> GetById(string stationId)
+        public async Task<Station?> GetById(string stationId)
         {
-            throw new NotImplementedException();
+            var station = await _context.Stations.AsNoTracking().FirstOrDefaultAsync(x=>x.StationId == stationId);
+            return station;
         }
 
-        public Task UpdateAsync(Station station)
+        public void UpdateAsync(Station station)
         {
-            throw new NotImplementedException();
+            _context.Update(station);
         }
     }
 }

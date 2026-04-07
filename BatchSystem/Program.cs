@@ -1,4 +1,5 @@
 
+using BatchSystem.Application.Commands.ProductionOrders;
 using BatchSystem.Domain.Alarms;
 using BatchSystem.Domain.Lines;
 using BatchSystem.Domain.Logins;
@@ -45,6 +46,7 @@ namespace BatchSystem
             builder.Services.AddMediatR(cfg =>
             {
                 //cfg.RegisterServicesFromAssemblyContaining<ModelToViewModelProfile>();
+                cfg.RegisterServicesFromAssemblyContaining<CreateProductionOrderCommandHandler>();
                 cfg.RegisterServicesFromAssemblyContaining<ApplicationDbContext>();
                 cfg.RegisterServicesFromAssemblyContaining<Entity>();
                 //cfg.RegisterServicesFromAssemblyContaining<Buffer>();

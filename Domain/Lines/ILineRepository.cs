@@ -11,9 +11,9 @@ namespace BatchSystem.Domain.Lines
     public interface ILineRepository
     {
         Task AddAsync(Line line);
-        Task Delete(Line line);
+        void Delete(Line line);
         Task<Line?> GetById(string lineId);
         // Ở đây vẫn cần GetById để phục vụ cho các lệnh khác chứ không dùng Get ngay đây để truy vấn dữ liệu
-        Task UpdateAsync(Line line);
+        void UpdateAsync(Line line);
     }
 }

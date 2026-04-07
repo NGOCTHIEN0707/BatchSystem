@@ -1,6 +1,8 @@
 ﻿using BatchSystem.Domain.Recipes;
+using BatchSystem.Infrastructure.Repositories.Common;
 using Domain.Recipes;
 using Infrastructure;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,24 +17,29 @@ namespace BatchSystem.Infrastructure.Repositories
         {
         }
 
-        public Task AddAsync(Recipe recipe)
+        public async Task AddAsync(Recipe recipe)
         {
-            throw new NotImplementedException();
+            await _context.Recipes.AddAsync(recipe);
         }
 
-        public Task Delete(Recipe recipe)
+        public void Delete(Recipe recipe)
         {
-            throw new NotImplementedException();
+            _context.Recipes.Remove(recipe);
         }
 
-        public Task<Recipe?> GetById(string recipeId)
+        public async Task<Recipe?> GetById(string recipeId)
         {
-            throw new NotImplementedException();
+            var recipe = await _context.Recipes.AsNoTracking()
+                .Include(x => x.RecipeMaterials)
+                .ThenInclude(x => x.Material)
+                .FirstOrDefaultAsync(x => x.RecipeId == recipeId);
+
+            return recipe;
         }
 
-        public Task UpdateAsync(Recipe recipe)
+        public void UpdateAsync(Recipe recipe)
         {
-            throw new NotImplementedException();
+            _context.Recipes.Update(recipe);
         }
     }
 }

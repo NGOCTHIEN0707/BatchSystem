@@ -1,7 +1,9 @@
 ﻿using BatchSystem.Domain.Alarms;
+using BatchSystem.Infrastructure.Repositories.Common;
 using Domain.Alarms;
 using Domain.Lines;
 using Infrastructure;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,24 +18,25 @@ namespace BatchSystem.Infrastructure.Repositories
         {
         }
 
-        public Task AddAsync(AlarmDefinition alarmDefinition)
+        public async Task AddAsync(AlarmDefinition alarmDefinition)
         {
-            throw new NotImplementedException();
+            await _context.AlarmDefinitions.AddAsync(alarmDefinition);
         }
 
-        public Task Delete(AlarmDefinition alarmDefinition)
+        public void Delete(AlarmDefinition alarmDefinition)
         {
-            throw new NotImplementedException();
+            _context.AlarmDefinitions.Remove(alarmDefinition);
         }
 
-        public Task<AlarmDefinition?> GetById(string alarmDefinitionId)
+        public async Task<AlarmDefinition?> GetById(string alarmDefinitionId)
         {
-            throw new NotImplementedException();
+            var alarmDefi = await _context.AlarmDefinitions.AsNoTracking().FirstOrDefaultAsync(x=>x.AlarmDefinitionId == alarmDefinitionId);
+            return alarmDefi;
         }
 
-        public Task UpdateAsync(AlarmDefinition alarmDefinition)
+        public void UpdateAsync(AlarmDefinition alarmDefinition)
         {
-            throw new NotImplementedException();
+            _context.AlarmDefinitions.Update(alarmDefinition);
         }
     }
 }

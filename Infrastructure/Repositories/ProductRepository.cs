@@ -1,6 +1,8 @@
 ﻿using BatchSystem.Domain.Products;
+using BatchSystem.Infrastructure.Repositories.Common;
 using Domain.Products;
 using Infrastructure;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,24 +17,25 @@ namespace BatchSystem.Infrastructure.Repositories
         {
         }
 
-        public Task AddAsync(Product product)
+        public async Task AddAsync(Product product)
         {
-            throw new NotImplementedException();
+            await _context.Products.AddAsync(product);
         }
 
-        public Task Delete(Product product)
+        public void Delete(Product product)
         {
-            throw new NotImplementedException();
+            _context.Products.Remove(product);
         }
 
-        public Task<Product?> GetById(string productId)
+        public async Task<Product?> GetById(string productId)
         {
-            throw new NotImplementedException();
+            var product = await _context.Products.AsNoTracking().FirstOrDefaultAsync(x=> x.ProductId == productId);
+            return product;
         }
 
-        public Task UpdateAsync(Product product)
+        public void UpdateAsync(Product product)
         {
-            throw new NotImplementedException();
+            _context.Products.Update(product);
         }
     }
 }

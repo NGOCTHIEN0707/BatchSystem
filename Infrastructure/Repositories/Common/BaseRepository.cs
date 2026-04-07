@@ -1,11 +1,12 @@
-﻿using Infrastructure;
+﻿using BatchSystem.Domain.SeedWork;
+using Infrastructure;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BatchSystem.Infrastructure.Repositories
+namespace BatchSystem.Infrastructure.Repositories.Common
 {
     public class BaseRepository
     {
@@ -21,7 +22,7 @@ namespace BatchSystem.Infrastructure.Repositories
 
         public BaseRepository(ApplicationDbContext context)
         {
-            _context=context ?? throw new ArgumentException(nameof(context));
+            _context = context ?? throw new ArgumentException(nameof(context));
         }
     }
 }

@@ -18,7 +18,7 @@ namespace Domain.ProductionOrders
         public string ProductId { get; private set; }
         public string RecipeId { get; private set; }
         public int BatchQuantity { get; private set; }
-        public int SequenceNo { get; private set; }
+        public int SequenceNo { get; private set; }// Thứ tự chạy
         public ProductionOrder ProductionOrder { get; private set; }
         public Product Product { get; private set; }
         public Recipe Recipe { get; private set; }

@@ -1,6 +1,8 @@
 ﻿using BatchSystem.Domain.Logins;
+using BatchSystem.Infrastructure.Repositories.Common;
 using Domain.Logins;
 using Infrastructure;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,24 +17,25 @@ namespace BatchSystem.Infrastructure.Repositories
         {
         }
 
-        public Task AddAsync(Login login)
+        public async Task AddAsync(Login login)
         {
-            throw new NotImplementedException();
+            await _context.Logins.AddAsync(login);
         }
 
-        public Task Delete(Login login)
+        public void Delete(Login login)
         {
-            throw new NotImplementedException();
+            _context.Logins.Remove(login);
         }
 
-        public Task<Login?> GetById(string loginId)
+        public async Task<Login?> GetById(string loginId)
         {
-            throw new NotImplementedException();
+            var user = await _context.Logins.AsNoTracking().FirstOrDefaultAsync(x=>x.LoginId == loginId);
+            return user;
         }
 
-        public Task UpdateAsync(Login login)
+        public void UpdateAsync(Login login)
         {
-            throw new NotImplementedException();
+            _context.Logins.Update(login);
         }
     }
 }

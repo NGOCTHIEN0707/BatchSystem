@@ -450,7 +450,13 @@ namespace BatchSystem.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("RecipeId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
                     b.HasKey("ProductId");
+
+                    b.HasIndex("RecipeId");
 
                     b.ToTable("Products");
                 });
@@ -468,17 +474,11 @@ namespace BatchSystem.Migrations
                     b.Property<bool>("IsActive")
                         .HasColumnType("bit");
 
-                    b.Property<string>("ProductId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
-
                     b.Property<string>("RecipeName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("RecipeId");
-
-                    b.HasIndex("ProductId");
 
                     b.ToTable("Recipes");
                 });
@@ -711,7 +711,7 @@ namespace BatchSystem.Migrations
                         .IsRequired();
 
                     b.HasOne("Domain.ProductionOrders.ProductionOrder", "ProductionOrder")
-                        .WithMany("OrderBatches")
+                        .WithMany()
                         .HasForeignKey("ProductionOrderId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -771,15 +771,15 @@ namespace BatchSystem.Migrations
                     b.Navigation("Recipe");
                 });
 
-            modelBuilder.Entity("Domain.Recipes.Recipe", b =>
+            modelBuilder.Entity("Domain.Products.Product", b =>
                 {
-                    b.HasOne("Domain.Products.Product", "Product")
-                        .WithMany("Recipes")
-                        .HasForeignKey("ProductId")
+                    b.HasOne("Domain.Recipes.Recipe", "Recipe")
+                        .WithMany()
+                        .HasForeignKey("RecipeId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
-                    b.Navigation("Product");
+                    b.Navigation("Recipe");
                 });
 
             modelBuilder.Entity("Domain.Recipes.RecipeMaterial", b =>
@@ -864,19 +864,12 @@ namespace BatchSystem.Migrations
 
             modelBuilder.Entity("Domain.ProductionOrders.ProductionOrder", b =>
                 {
-                    b.Navigation("OrderBatches");
-
                     b.Navigation("ProductionOrderDetails");
                 });
 
             modelBuilder.Entity("Domain.ProductionOrders.ProductionOrderDetail", b =>
                 {
                     b.Navigation("OrderBatches");
-                });
-
-            modelBuilder.Entity("Domain.Products.Product", b =>
-                {
-                    b.Navigation("Recipes");
                 });
 
             modelBuilder.Entity("Domain.Recipes.Recipe", b =>

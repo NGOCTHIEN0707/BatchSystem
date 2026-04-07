@@ -12,8 +12,9 @@ namespace Domain.Products
     {
         public string ProductId { get; private set; }
         public string ProductName { get; private set; }
-        public bool IsActive { get; private set; }
-        public List<Recipe> Recipes { get; private set; } = new List<Recipe>();
+        public bool IsActive { get; private set; } = true;
+        public string RecipeId { get; private set; }
+        public Recipe Recipe { get; private set; }
 
 #pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
         public Product()
@@ -22,10 +23,11 @@ namespace Domain.Products
         }
 
 #pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
-        public Product(string productName)
+        public Product(string productName,string recipeId)
 #pragma warning restore CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
         {
             ProductName=productName;
+            RecipeId = recipeId;
         }
     }
 
