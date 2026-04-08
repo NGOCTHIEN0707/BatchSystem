@@ -1,4 +1,5 @@
-﻿using Domain.OrderBatchs;
+﻿using Domain.Lines;
+using Domain.OrderBatchs;
 using Domain.ProductionOrders.SnapShot;
 using Domain.Products;
 using Domain.Recipes;
@@ -42,6 +43,27 @@ namespace Domain.ProductionOrders
             BatchQuantity=batchQuantity;
             SequenceNo=sequenceNo;
         }
+
+        public void CreateOrderBatches()
+        {
+            if (BatchQuantity <= 0)
+                throw new Exception("BatchQuantity must be greater than zero.");
+
+
+            var batches = new List<OrderBatch>();
+
+            for (int i = 1; i <= BatchQuantity; i++)
+            {
+                batches.Add(new OrderBatch(
+                    ProductionOrderId,
+                    ProductionOrderDetailId,
+                    i
+                )); 
+            }
+        }
+
+
+
         public void UpdateRecipeSnapshot(string recipeSnapshotJson)
         {
             RecipeSnapshotJson = recipeSnapshotJson;
@@ -57,5 +79,35 @@ namespace Domain.ProductionOrders
         {
             RecipeSnapshotJson = JsonSerializer.Serialize(snapshot);
         }
+
+        public void UpdateProductId(string productId)
+        {
+            if (string.IsNullOrWhiteSpace(productId))
+                throw new Exception("ProductId cannot be empty.");
+
+            ProductId = productId;
+        }
+        public void UpdateRecipeId(string recipeId)
+        {
+            if (string.IsNullOrWhiteSpace(recipeId))
+                throw new Exception("RecipeId cannot be empty.");
+
+            RecipeId = recipeId;
+        }
+        public void UpdateBatchQuantity(int batchQuantity)
+        {
+            if (batchQuantity <= 0)
+                throw new Exception("Batch quantity must be greater than zero.");
+
+            BatchQuantity = batchQuantity;
+        }
+        public void UpdateSequenceNo(int sequenceNo)
+        {
+            if (sequenceNo < 0)
+                throw new Exception("Sequence number cannot be negative.");
+
+            SequenceNo = sequenceNo;
+        }
+
     }
 }

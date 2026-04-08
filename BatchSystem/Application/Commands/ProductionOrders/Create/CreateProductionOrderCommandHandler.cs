@@ -1,25 +1,28 @@
 ﻿using BatchSystem.Domain.ProductionOrders;
 using BatchSystem.Domain.Products;
 using BatchSystem.Domain.Recipes;
+using BatchSystem.Domain.SeedWork;
 using Domain.ProductionOrders;
 using Domain.ProductionOrders.SnapShot;
 using Domain.Products;
 using Domain.Recipes;
 using MediatR;
 
-namespace BatchSystem.Application.Commands.ProductionOrders
+namespace BatchSystem.Application.Commands.ProductionOrders.Create
 {
     public class CreateProductionOrderCommandHandler : IRequestHandler<CreateProductionOrderCommand, bool>
     {
         private readonly IProductionOrderRepository _productionOrderRepository;
         private readonly IProductRepository _productRepository;
         private readonly IRecipeRepository _recipeRepository;
+        private readonly IUnitOfWork _unitOfWork;
 
-        public CreateProductionOrderCommandHandler(IProductionOrderRepository productionOrderRepository, IProductRepository productRepository, IRecipeRepository recipeRepository)
+        public CreateProductionOrderCommandHandler(IProductionOrderRepository productionOrderRepository, IProductRepository productRepository, IRecipeRepository recipeRepository, IUnitOfWork unitOfWork)
         {
-            _productionOrderRepository=productionOrderRepository;
-            _productRepository=productRepository;
-            _recipeRepository=recipeRepository;
+            _productionOrderRepository = productionOrderRepository;
+            _productRepository = productRepository;
+            _recipeRepository = recipeRepository;
+            _unitOfWork = unitOfWork;
         }
 
         public async Task<bool> Handle(CreateProductionOrderCommand request, CancellationToken cancellationToken)
@@ -31,8 +34,8 @@ namespace BatchSystem.Application.Commands.ProductionOrders
                 request.CreatedBy,
                 DateTime.Now
             );
-           
-           
+
+
             foreach (var item in request.Details)
             {
                 var product = await _productRepository.GetById(item.ProductId);
@@ -57,7 +60,7 @@ namespace BatchSystem.Application.Commands.ProductionOrders
             }
 
             await _productionOrderRepository.AddAsync(order);
-            return await _productionOrderRepository.UnitOfWork.SaveEntitiesAsync(cancellationToken);
+            return await _unitOfWork.SaveEntitiesAsync(cancellationToken);
 
 
         }

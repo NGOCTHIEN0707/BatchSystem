@@ -296,8 +296,10 @@ namespace BatchSystem.Migrations
                     b.Property<string>("CurrentStationId")
                         .HasColumnType("nvarchar(450)");
 
+                    b.Property<int>("CurrentStep")
+                        .HasColumnType("int");
+
                     b.Property<string>("LineId")
-                        .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<Guid>("ProductionOrderDetailId")
@@ -320,44 +322,6 @@ namespace BatchSystem.Migrations
                     b.HasIndex("ProductionOrderId");
 
                     b.ToTable("OrderBatchs");
-                });
-
-            modelBuilder.Entity("Domain.OrderBatchs.OrderBatchStep", b =>
-                {
-                    b.Property<Guid>("OrderBatchStepId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier")
-                        .HasDefaultValueSql("NEWSEQUENTIALID()");
-
-                    b.Property<DateTime?>("CompletedAt")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime?>("EnteredAt")
-                        .HasColumnType("datetime2");
-
-                    b.Property<Guid>("OrderBatchId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<DateTime?>("StartedAt")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("StationId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<int>("Status")
-                        .HasColumnType("int");
-
-                    b.Property<int>("StepNo")
-                        .HasColumnType("int");
-
-                    b.HasKey("OrderBatchStepId");
-
-                    b.HasIndex("OrderBatchId");
-
-                    b.HasIndex("StationId");
-
-                    b.ToTable("OrderBatchSteps");
                 });
 
             modelBuilder.Entity("Domain.ProductionOrders.ProductionOrder", b =>
@@ -700,9 +664,7 @@ namespace BatchSystem.Migrations
 
                     b.HasOne("Domain.Lines.Line", "Line")
                         .WithMany()
-                        .HasForeignKey("LineId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("LineId");
 
                     b.HasOne("Domain.ProductionOrders.ProductionOrderDetail", "ProductionOrderDetail")
                         .WithMany("OrderBatches")
@@ -723,25 +685,6 @@ namespace BatchSystem.Migrations
                     b.Navigation("ProductionOrder");
 
                     b.Navigation("ProductionOrderDetail");
-                });
-
-            modelBuilder.Entity("Domain.OrderBatchs.OrderBatchStep", b =>
-                {
-                    b.HasOne("Domain.OrderBatchs.OrderBatch", "OrderBatch")
-                        .WithMany("OrderBatchSteps")
-                        .HasForeignKey("OrderBatchId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("Domain.Stations.Station", "Station")
-                        .WithMany()
-                        .HasForeignKey("StationId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
-                    b.Navigation("OrderBatch");
-
-                    b.Navigation("Station");
                 });
 
             modelBuilder.Entity("Domain.ProductionOrders.ProductionOrderDetail", b =>
@@ -858,8 +801,6 @@ namespace BatchSystem.Migrations
             modelBuilder.Entity("Domain.OrderBatchs.OrderBatch", b =>
                 {
                     b.Navigation("BatchWeighingResults");
-
-                    b.Navigation("OrderBatchSteps");
                 });
 
             modelBuilder.Entity("Domain.ProductionOrders.ProductionOrder", b =>

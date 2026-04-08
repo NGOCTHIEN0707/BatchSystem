@@ -41,7 +41,6 @@ namespace Infrastructure
         public DbSet<Recipe> Recipes { get; set; }
         public DbSet<LineCurrentStatus> LineCurrentStatuses { get; set; }
         public DbSet<LineStatusHistory> LineStatusHistories { get; set; }
-        public DbSet<OrderBatchStep> OrderBatchSteps { get; set; }
         public DbSet<ProductionOrderDetail> ProductionOrderDetails { get; set; }
         public DbSet<RecipeMaterial> RecipeMaterials { get; set; }
         public DbSet<StationCurrentStatus> StationCurrentStatuses { get; set; }
@@ -71,7 +70,6 @@ namespace Infrastructure
             modelBuilder.ApplyConfiguration(new ProductionOrderEntityTypeConfiguration());
             modelBuilder.ApplyConfiguration(new ProductionOrderDetailEntityTypeConfiguration());
             modelBuilder.ApplyConfiguration(new OrderBatchEntityTypeConfiguration());
-            modelBuilder.ApplyConfiguration(new OrderBatchStepEntityTypeConfiguration());
             modelBuilder.ApplyConfiguration(new BatchWeighingResultEntityTypeConfiguration());
 
             // Cấu hình cho danh mục (Master Data)

@@ -1,7 +1,7 @@
 ﻿using Domain.ProductionOrders;
 using MediatR;
 
-namespace BatchSystem.Application.Commands.ProductionOrders
+namespace BatchSystem.Application.Commands.ProductionOrders.Create
 {
     public class CreateProductionOrderCommand : IRequest<bool>
     {
@@ -21,11 +21,11 @@ namespace BatchSystem.Application.Commands.ProductionOrders
 
         public CreateProductionOrderCommand(int priority, DateTime? plannedStartTime, DateTime? plannedEndTime, string createdBy, List<CreateProductionOrderDetailDto> details)
         {
-            Priority=priority;
-            PlannedStartTime=plannedStartTime;
-            PlannedEndTime=plannedEndTime;
-            CreatedBy=createdBy;
-            Details=details;
+            Priority = priority;
+            PlannedStartTime = plannedStartTime;
+            PlannedEndTime = plannedEndTime;
+            CreatedBy = createdBy;
+            Details = details;
         }
     }
 }

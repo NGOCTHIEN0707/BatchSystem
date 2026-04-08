@@ -10,7 +10,7 @@ namespace BatchSystem.Domain.ProductionOrders
 {
     public interface IProductionOrderRepository 
     {
-        IUnitOfWork UnitOfWork { get; }
+        //IUnitOfWork UnitOfWork { get; }
         Task AddAsync(ProductionOrder productionOrder);
         void Delete(ProductionOrder productionOrder);
         Task<ProductionOrder?> GetById(Guid productionOrderId);

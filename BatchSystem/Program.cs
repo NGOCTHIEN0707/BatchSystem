@@ -1,5 +1,4 @@
-
-using BatchSystem.Application.Commands.ProductionOrders;
+﻿using BatchSystem.Application.Commands.ProductionOrders.Create;
 using BatchSystem.Domain.Alarms;
 using BatchSystem.Domain.Lines;
 using BatchSystem.Domain.Logins;
@@ -32,6 +31,7 @@ namespace BatchSystem
             {
                 options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"), b => b.MigrationsAssembly("BatchSystem"));
             });
+            builder.Services.AddScoped<IUnitOfWork>(sp => sp.GetRequiredService<ApplicationDbContext>());
             builder.Services.AddScoped<IAlarmDefinitionRepository, AlarmDefinitionRepository>();
             builder.Services.AddScoped<IAlarmEventRepository, AlarmEventRepository>();
             builder.Services.AddScoped<ILineRepository, LineRepository>();
@@ -46,9 +46,9 @@ namespace BatchSystem
             builder.Services.AddMediatR(cfg =>
             {
                 //cfg.RegisterServicesFromAssemblyContaining<ModelToViewModelProfile>();
-                cfg.RegisterServicesFromAssemblyContaining<CreateProductionOrderCommandHandler>();
-                cfg.RegisterServicesFromAssemblyContaining<ApplicationDbContext>();
-                cfg.RegisterServicesFromAssemblyContaining<Entity>();
+                cfg.RegisterServicesFromAssemblyContaining<CreateProductionOrderCommandHandler>(); // MediatR nhìn được Assembly API
+                cfg.RegisterServicesFromAssemblyContaining<ApplicationDbContext>(); // MediatR nhìn được Infrastructure
+                cfg.RegisterServicesFromAssemblyContaining<Entity>(); // MediatR nhìn được Domain
                 //cfg.RegisterServicesFromAssemblyContaining<Buffer>();
             });
 

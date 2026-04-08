@@ -29,7 +29,10 @@ namespace BatchSystem.Infrastructure.Repositories
 
         public async Task<ProductionOrder?> GetById(Guid productionOrderId)
         {
-            var productionOrder = await _context.ProductionOrders.AsNoTracking().FirstOrDefaultAsync(x=>x.ProductionOrderId == productionOrderId);
+            var productionOrder = await _context.ProductionOrders.AsNoTracking()
+                .Include(x=>x.ProductionOrderDetails)
+                .ThenInclude(x=>x.OrderBatches)
+                .FirstOrDefaultAsync(x => x.ProductionOrderId == productionOrderId);
             return productionOrder;
         }
 
@@ -37,6 +40,6 @@ namespace BatchSystem.Infrastructure.Repositories
         {
             _context.ProductionOrders.Update(productionOrder);
         }
-       
+        
     }
 }

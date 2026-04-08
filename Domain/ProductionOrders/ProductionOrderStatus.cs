@@ -12,8 +12,10 @@ namespace Domain.ProductionOrders
         Ready = 1,       // Sẵn sàng chạy
         Running = 2,     // Có ít nhất 1 batch đang chạy
         Paused = 3,      // Tạm dừng
-        Stop = 4,        // Dừng
-        Completed = 5,   // Hoàn tất
-        Cancelled = 6    // Hủy
+        Held = 4,        // Dừng
+        Stopped = 5,   // Hoàn tất
+        Completed = 6,    // Hủy
+        Aborted = 7,
+        Cancelled = 8,
     }
 }

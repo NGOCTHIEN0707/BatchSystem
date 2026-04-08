@@ -3,20 +3,126 @@
   "WorkspaceRootPath": "C:\\Users\\herob\\Downloads\\BatchSystem\\BatchSystem\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{F36C6B6E-1BF1-4807-92B5-BC4AA79298B6}|..\\Domain\\BatchSystem.Domain.csproj|c:\\users\\herob\\downloads\\batchsystem\\domain\\orderbatchs\\orderbatch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F36C6B6E-1BF1-4807-92B5-BC4AA79298B6}|..\\Domain\\BatchSystem.Domain.csproj|c:\\users\\herob\\downloads\\batchsystem\\domain\\orderbatchs\\batchweightresults\\batchweighingresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1C1FDB2-EF09-4265-9820-DA1C7AFF97FC}|BatchSystem.csproj|c:\\users\\herob\\downloads\\batchsystem\\batchsystem\\application\\commands\\productionorders\\changestatus\\changeproductionorderstatustoreadycommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1C1FDB2-EF09-4265-9820-DA1C7AFF97FC}|BatchSystem.csproj|solutionrelative:application\\commands\\productionorders\\changestatus\\changeproductionorderstatustoreadycommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1C1FDB2-EF09-4265-9820-DA1C7AFF97FC}|BatchSystem.csproj|c:\\users\\herob\\downloads\\batchsystem\\batchsystem\\application\\commands\\productionorders\\changestatus\\changeproductionorderstatustoreadycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1C1FDB2-EF09-4265-9820-DA1C7AFF97FC}|BatchSystem.csproj|solutionrelative:application\\commands\\productionorders\\changestatus\\changeproductionorderstatustoreadycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\herob\\Downloads\\BatchSystem\\BatchSystem\\Migrations\\20260408173514_DeleteOrderBatchStep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20260408173514_DeleteOrderBatchStep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{46FE65AE-1823-41FE-AF32-60AC021C201B}|..\\Infrastructure\\BatchSystem.Infrastructure.csproj|c:\\users\\herob\\downloads\\batchsystem\\infrastructure\\configurations\\orderbatchentitytypeconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{46FE65AE-1823-41FE-AF32-60AC021C201B}|..\\Infrastructure\\BatchSystem.Infrastructure.csproj|c:\\users\\herob\\downloads\\batchsystem\\infrastructure\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F36C6B6E-1BF1-4807-92B5-BC4AA79298B6}|..\\Domain\\BatchSystem.Domain.csproj|c:\\users\\herob\\downloads\\batchsystem\\domain\\orderbatchs\\batchstep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1C1FDB2-EF09-4265-9820-DA1C7AFF97FC}|BatchSystem.csproj|c:\\users\\herob\\downloads\\batchsystem\\batchsystem\\controllers\\productionordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1C1FDB2-EF09-4265-9820-DA1C7AFF97FC}|BatchSystem.csproj|solutionrelative:controllers\\productionordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1C1FDB2-EF09-4265-9820-DA1C7AFF97FC}|BatchSystem.csproj|c:\\users\\herob\\downloads\\batchsystem\\batchsystem\\application\\commands\\productionorders\\create\\createproductionordercommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1C1FDB2-EF09-4265-9820-DA1C7AFF97FC}|BatchSystem.csproj|solutionrelative:application\\commands\\productionorders\\create\\createproductionordercommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1C1FDB2-EF09-4265-9820-DA1C7AFF97FC}|BatchSystem.csproj|c:\\users\\herob\\downloads\\batchsystem\\batchsystem\\application\\commands\\productionorders\\create\\createproductionordercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1C1FDB2-EF09-4265-9820-DA1C7AFF97FC}|BatchSystem.csproj|solutionrelative:application\\commands\\productionorders\\create\\createproductionordercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\herob\\Downloads\\BatchSystem\\BatchSystem\\Migrations\\20260408171545_UpdateFieldLineId_CanNull_InOrderBatchClass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20260408171545_UpdateFieldLineId_CanNull_InOrderBatchClass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F36C6B6E-1BF1-4807-92B5-BC4AA79298B6}|..\\Domain\\BatchSystem.Domain.csproj|c:\\users\\herob\\downloads\\batchsystem\\domain\\productionorders\\productionorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F36C6B6E-1BF1-4807-92B5-BC4AA79298B6}|..\\Domain\\BatchSystem.Domain.csproj|c:\\users\\herob\\downloads\\batchsystem\\domain\\productionorders\\productionorderdetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{46FE65AE-1823-41FE-AF32-60AC021C201B}|..\\Infrastructure\\BatchSystem.Infrastructure.csproj|c:\\users\\herob\\downloads\\batchsystem\\infrastructure\\repositories\\productionorderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F36C6B6E-1BF1-4807-92B5-BC4AA79298B6}|..\\Domain\\BatchSystem.Domain.csproj|c:\\users\\herob\\downloads\\batchsystem\\domain\\productionorders\\iproductionorderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F36C6B6E-1BF1-4807-92B5-BC4AA79298B6}|..\\Domain\\BatchSystem.Domain.csproj|c:\\users\\herob\\downloads\\batchsystem\\domain\\productionorders\\productionorderstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1C1FDB2-EF09-4265-9820-DA1C7AFF97FC}|BatchSystem.csproj|c:\\users\\herob\\downloads\\batchsystem\\batchsystem\\application\\commands\\productionorders\\delete\\deleteproductionordercommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1C1FDB2-EF09-4265-9820-DA1C7AFF97FC}|BatchSystem.csproj|solutionrelative:application\\commands\\productionorders\\delete\\deleteproductionordercommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1C1FDB2-EF09-4265-9820-DA1C7AFF97FC}|BatchSystem.csproj|c:\\users\\herob\\downloads\\batchsystem\\batchsystem\\application\\commands\\productionorders\\delete\\deleteproductionordercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1C1FDB2-EF09-4265-9820-DA1C7AFF97FC}|BatchSystem.csproj|solutionrelative:application\\commands\\productionorders\\delete\\deleteproductionordercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F36C6B6E-1BF1-4807-92B5-BC4AA79298B6}|..\\Domain\\BatchSystem.Domain.csproj|c:\\users\\herob\\downloads\\batchsystem\\domain\\orderbatchs\\orderbatchstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F36C6B6E-1BF1-4807-92B5-BC4AA79298B6}|..\\Domain\\BatchSystem.Domain.csproj|c:\\users\\herob\\downloads\\batchsystem\\domain\\orderbatchs\\iorderbatchrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{46FE65AE-1823-41FE-AF32-60AC021C201B}|..\\Infrastructure\\BatchSystem.Infrastructure.csproj|c:\\users\\herob\\downloads\\batchsystem\\infrastructure\\configurations\\productionorderdetailentitytypeconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{46FE65AE-1823-41FE-AF32-60AC021C201B}|..\\Infrastructure\\BatchSystem.Infrastructure.csproj|c:\\users\\herob\\downloads\\batchsystem\\infrastructure\\configurations\\productionorderentitytypeconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1C1FDB2-EF09-4265-9820-DA1C7AFF97FC}|BatchSystem.csproj|c:\\users\\herob\\downloads\\batchsystem\\batchsystem\\application\\commands\\productionorders\\update\\updateproductionordercommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1C1FDB2-EF09-4265-9820-DA1C7AFF97FC}|BatchSystem.csproj|solutionrelative:application\\commands\\productionorders\\update\\updateproductionordercommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1C1FDB2-EF09-4265-9820-DA1C7AFF97FC}|BatchSystem.csproj|c:\\users\\herob\\downloads\\batchsystem\\batchsystem\\application\\commands\\productionorders\\update\\updateproductionordercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1C1FDB2-EF09-4265-9820-DA1C7AFF97FC}|BatchSystem.csproj|solutionrelative:application\\commands\\productionorders\\update\\updateproductionordercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{46FE65AE-1823-41FE-AF32-60AC021C201B}|..\\Infrastructure\\BatchSystem.Infrastructure.csproj|c:\\users\\herob\\downloads\\batchsystem\\infrastructure\\repositories\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F36C6B6E-1BF1-4807-92B5-BC4AA79298B6}|..\\Domain\\BatchSystem.Domain.csproj|c:\\users\\herob\\downloads\\batchsystem\\domain\\productionorders\\snapshot\\recipesnapshotdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1C1FDB2-EF09-4265-9820-DA1C7AFF97FC}|BatchSystem.csproj|c:\\users\\herob\\downloads\\batchsystem\\batchsystem\\application\\exceptions\\entitynotfoundexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1C1FDB2-EF09-4265-9820-DA1C7AFF97FC}|BatchSystem.csproj|solutionrelative:application\\exceptions\\entitynotfoundexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1C1FDB2-EF09-4265-9820-DA1C7AFF97FC}|BatchSystem.csproj|c:\\users\\herob\\downloads\\batchsystem\\batchsystem\\migrations\\20260407101106_update_config_product_n_1_recipe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1C1FDB2-EF09-4265-9820-DA1C7AFF97FC}|BatchSystem.csproj|solutionrelative:migrations\\20260407101106_update_config_product_n_1_recipe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1C1FDB2-EF09-4265-9820-DA1C7AFF97FC}|BatchSystem.csproj|c:\\users\\herob\\downloads\\batchsystem\\batchsystem\\migrations\\20260407094842_updateconfigproduct_1_1_recipe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1C1FDB2-EF09-4265-9820-DA1C7AFF97FC}|BatchSystem.csproj|solutionrelative:migrations\\20260407094842_updateconfigproduct_1_1_recipe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1C1FDB2-EF09-4265-9820-DA1C7AFF97FC}|BatchSystem.csproj|c:\\users\\herob\\downloads\\batchsystem\\batchsystem\\migrations\\20260402122906_init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1C1FDB2-EF09-4265-9820-DA1C7AFF97FC}|BatchSystem.csproj|solutionrelative:migrations\\20260402122906_init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{F1C1FDB2-EF09-4265-9820-DA1C7AFF97FC}|BatchSystem.csproj|c:\\users\\herob\\downloads\\batchsystem\\batchsystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F1C1FDB2-EF09-4265-9820-DA1C7AFF97FC}|BatchSystem.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F1C1FDB2-EF09-4265-9820-DA1C7AFF97FC}|BatchSystem.csproj|c:\\users\\herob\\downloads\\batchsystem\\batchsystem\\application\\commands\\productionorders\\createproductionordercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F1C1FDB2-EF09-4265-9820-DA1C7AFF97FC}|BatchSystem.csproj|solutionrelative:application\\commands\\productionorders\\createproductionordercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{46FE65AE-1823-41FE-AF32-60AC021C201B}|..\\Infrastructure\\BatchSystem.Infrastructure.csproj|c:\\users\\herob\\downloads\\batchsystem\\infrastructure\\repositories\\common\\baserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F36C6B6E-1BF1-4807-92B5-BC4AA79298B6}|..\\Domain\\BatchSystem.Domain.csproj|c:\\users\\herob\\downloads\\batchsystem\\domain\\seedwork\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F1C1FDB2-EF09-4265-9820-DA1C7AFF97FC}|BatchSystem.csproj|c:\\users\\herob\\downloads\\batchsystem\\batchsystem\\batchsystem.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{F1C1FDB2-EF09-4265-9820-DA1C7AFF97FC}|BatchSystem.csproj|solutionrelative:batchsystem.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F1C1FDB2-EF09-4265-9820-DA1C7AFF97FC}|BatchSystem.csproj|c:\\users\\herob\\downloads\\batchsystem\\batchsystem\\application\\commands\\productionorders\\createproductionordercommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F1C1FDB2-EF09-4265-9820-DA1C7AFF97FC}|BatchSystem.csproj|solutionrelative:application\\commands\\productionorders\\createproductionordercommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F1C1FDB2-EF09-4265-9820-DA1C7AFF97FC}|BatchSystem.csproj|c:\\users\\herob\\downloads\\batchsystem\\batchsystem\\controllers\\apicontrollerbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -25,17 +131,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{F1C1FDB2-EF09-4265-9820-DA1C7AFF97FC}|BatchSystem.csproj|c:\\users\\herob\\downloads\\batchsystem\\batchsystem\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{F1C1FDB2-EF09-4265-9820-DA1C7AFF97FC}|BatchSystem.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{46FE65AE-1823-41FE-AF32-60AC021C201B}|..\\Infrastructure\\BatchSystem.Infrastructure.csproj|c:\\users\\herob\\downloads\\batchsystem\\infrastructure\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F1C1FDB2-EF09-4265-9820-DA1C7AFF97FC}|BatchSystem.csproj|c:\\users\\herob\\downloads\\batchsystem\\batchsystem\\controllers\\productionordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F1C1FDB2-EF09-4265-9820-DA1C7AFF97FC}|BatchSystem.csproj|solutionrelative:controllers\\productionordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\herob\\Downloads\\BatchSystem\\BatchSystem\\Migrations\\20260407101106_update_config_product_n_1_recipe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20260407101106_update_config_product_n_1_recipe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{46FE65AE-1823-41FE-AF32-60AC021C201B}|..\\Infrastructure\\BatchSystem.Infrastructure.csproj|c:\\users\\herob\\downloads\\batchsystem\\infrastructure\\configurations\\productentitytypeconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -56,57 +151,16 @@
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\herob\\Downloads\\BatchSystem\\BatchSystem\\Migrations\\20260407094842_UpdateConfigProduct_1_1_Recipe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20260407094842_UpdateConfigProduct_1_1_Recipe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F36C6B6E-1BF1-4807-92B5-BC4AA79298B6}|..\\Domain\\BatchSystem.Domain.csproj|c:\\users\\herob\\downloads\\batchsystem\\domain\\productionorders\\productionorderdetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F36C6B6E-1BF1-4807-92B5-BC4AA79298B6}|..\\Domain\\BatchSystem.Domain.csproj|c:\\users\\herob\\downloads\\batchsystem\\domain\\productionorders\\productionorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F36C6B6E-1BF1-4807-92B5-BC4AA79298B6}|..\\Domain\\BatchSystem.Domain.csproj|c:\\users\\herob\\downloads\\batchsystem\\domain\\productionorders\\snapshot\\recipesnapshotmaterialdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F36C6B6E-1BF1-4807-92B5-BC4AA79298B6}|..\\Domain\\BatchSystem.Domain.csproj|c:\\users\\herob\\downloads\\batchsystem\\domain\\productionorders\\snapshot\\recipesnapshotdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F36C6B6E-1BF1-4807-92B5-BC4AA79298B6}|..\\Domain\\BatchSystem.Domain.csproj|c:\\users\\herob\\downloads\\batchsystem\\domain\\seedwork\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F36C6B6E-1BF1-4807-92B5-BC4AA79298B6}|..\\Domain\\BatchSystem.Domain.csproj|c:\\users\\herob\\downloads\\batchsystem\\domain\\seedwork\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F36C6B6E-1BF1-4807-92B5-BC4AA79298B6}|..\\Domain\\BatchSystem.Domain.csproj|c:\\users\\herob\\downloads\\batchsystem\\domain\\productionorders\\iproductionorderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{46FE65AE-1823-41FE-AF32-60AC021C201B}|..\\Infrastructure\\BatchSystem.Infrastructure.csproj|c:\\users\\herob\\downloads\\batchsystem\\infrastructure\\repositories\\common\\baserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F36C6B6E-1BF1-4807-92B5-BC4AA79298B6}|..\\Domain\\BatchSystem.Domain.csproj|c:\\users\\herob\\downloads\\batchsystem\\domain\\recipes\\recipematerial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{46FE65AE-1823-41FE-AF32-60AC021C201B}|..\\Infrastructure\\BatchSystem.Infrastructure.csproj|c:\\users\\herob\\downloads\\batchsystem\\infrastructure\\repositories\\stationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{46FE65AE-1823-41FE-AF32-60AC021C201B}|..\\Infrastructure\\BatchSystem.Infrastructure.csproj|c:\\users\\herob\\downloads\\batchsystem\\infrastructure\\repositories\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{46FE65AE-1823-41FE-AF32-60AC021C201B}|..\\Infrastructure\\BatchSystem.Infrastructure.csproj|c:\\users\\herob\\downloads\\batchsystem\\infrastructure\\repositories\\productionorderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F36C6B6E-1BF1-4807-92B5-BC4AA79298B6}|..\\Domain\\BatchSystem.Domain.csproj|c:\\users\\herob\\downloads\\batchsystem\\domain\\productionorders\\productionorderstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F36C6B6E-1BF1-4807-92B5-BC4AA79298B6}|..\\Domain\\BatchSystem.Domain.csproj|c:\\users\\herob\\downloads\\batchsystem\\domain\\orderbatchs\\batchweightresults\\batchweighingresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F36C6B6E-1BF1-4807-92B5-BC4AA79298B6}|..\\Domain\\BatchSystem.Domain.csproj|c:\\users\\herob\\downloads\\batchsystem\\domain\\orderbatchs\\iorderbatchrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F1C1FDB2-EF09-4265-9820-DA1C7AFF97FC}|BatchSystem.csproj|c:\\users\\herob\\downloads\\batchsystem\\batchsystem\\application\\exceptions\\entitynotfoundexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F1C1FDB2-EF09-4265-9820-DA1C7AFF97FC}|BatchSystem.csproj|solutionrelative:application\\exceptions\\entitynotfoundexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{46FE65AE-1823-41FE-AF32-60AC021C201B}|..\\Infrastructure\\BatchSystem.Infrastructure.csproj|c:\\users\\herob\\downloads\\batchsystem\\infrastructure\\repositories\\orderbatchrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -172,9 +226,6 @@
       "AbsoluteMoniker": "D:0:0:{F36C6B6E-1BF1-4807-92B5-BC4AA79298B6}|..\\Domain\\BatchSystem.Domain.csproj|c:\\users\\herob\\downloads\\batchsystem\\domain\\stations\\station.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F36C6B6E-1BF1-4807-92B5-BC4AA79298B6}|..\\Domain\\BatchSystem.Domain.csproj|c:\\users\\herob\\downloads\\batchsystem\\domain\\orderbatchs\\orderbatchstepstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{46FE65AE-1823-41FE-AF32-60AC021C201B}|..\\Infrastructure\\BatchSystem.Infrastructure.csproj|c:\\users\\herob\\downloads\\batchsystem\\infrastructure\\mediatorextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -188,18 +239,6 @@
     },
     {
       "AbsoluteMoniker": "D:0:0:{F36C6B6E-1BF1-4807-92B5-BC4AA79298B6}|..\\Domain\\BatchSystem.Domain.csproj|c:\\users\\herob\\downloads\\batchsystem\\domain\\stations\\stationtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{46FE65AE-1823-41FE-AF32-60AC021C201B}|..\\Infrastructure\\BatchSystem.Infrastructure.csproj|c:\\users\\herob\\downloads\\batchsystem\\infrastructure\\configurations\\productionorderdetailentitytypeconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{46FE65AE-1823-41FE-AF32-60AC021C201B}|..\\Infrastructure\\BatchSystem.Infrastructure.csproj|c:\\users\\herob\\downloads\\batchsystem\\infrastructure\\configurations\\productionorderentitytypeconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{46FE65AE-1823-41FE-AF32-60AC021C201B}|..\\Infrastructure\\BatchSystem.Infrastructure.csproj|c:\\users\\herob\\downloads\\batchsystem\\infrastructure\\configurations\\orderbatchentitytypeconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{46FE65AE-1823-41FE-AF32-60AC021C201B}|..\\Infrastructure\\BatchSystem.Infrastructure.csproj|c:\\users\\herob\\downloads\\batchsystem\\infrastructure\\configurations\\orderbatchstepentitytypeconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{46FE65AE-1823-41FE-AF32-60AC021C201B}|..\\Infrastructure\\BatchSystem.Infrastructure.csproj|c:\\users\\herob\\downloads\\batchsystem\\infrastructure\\configurations\\batchweighingresultentitytypeconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -279,10 +318,6 @@
     },
     {
       "AbsoluteMoniker": "D:0:0:{F36C6B6E-1BF1-4807-92B5-BC4AA79298B6}|..\\Domain\\BatchSystem.Domain.csproj|c:\\users\\herob\\downloads\\batchsystem\\domain\\logins\\erole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F1C1FDB2-EF09-4265-9820-DA1C7AFF97FC}|BatchSystem.csproj|c:\\users\\herob\\downloads\\batchsystem\\batchsystem\\migrations\\20260402122906_init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F1C1FDB2-EF09-4265-9820-DA1C7AFF97FC}|BatchSystem.csproj|solutionrelative:migrations\\20260402122906_init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -308,41 +343,67 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "CreateProductionOrderCommandHandler.cs",
-              "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\BatchSystem\\Application\\Commands\\ProductionOrders\\CreateProductionOrderCommandHandler.cs",
-              "RelativeDocumentMoniker": "Application\\Commands\\ProductionOrders\\CreateProductionOrderCommandHandler.cs",
-              "ToolTip": "C:\\Users\\herob\\Downloads\\BatchSystem\\BatchSystem\\Application\\Commands\\ProductionOrders\\CreateProductionOrderCommandHandler.cs",
-              "RelativeToolTip": "Application\\Commands\\ProductionOrders\\CreateProductionOrderCommandHandler.cs",
-              "ViewState": "AQIAACcAAAAAAAAAAAAYwAsAAABpAAAA",
+              "DocumentIndex": 4,
+              "Title": "20260408173514_DeleteOrderBatchStep.cs",
+              "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\BatchSystem\\Migrations\\20260408173514_DeleteOrderBatchStep.cs",
+              "RelativeDocumentMoniker": "Migrations\\20260408173514_DeleteOrderBatchStep.cs",
+              "ToolTip": "C:\\Users\\herob\\Downloads\\BatchSystem\\BatchSystem\\Migrations\\20260408173514_DeleteOrderBatchStep.cs",
+              "RelativeToolTip": "Migrations\\20260408173514_DeleteOrderBatchStep.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-07T08:56:10.525Z",
+              "WhenOpened": "2026-04-08T17:35:14.899Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\BatchSystem\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\herob\\Downloads\\BatchSystem\\BatchSystem\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAqAAAA",
+              "Title": "OrderBatch.cs",
+              "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\Domain\\OrderBatchs\\OrderBatch.cs",
+              "RelativeDocumentMoniker": "..\\Domain\\OrderBatchs\\OrderBatch.cs",
+              "ToolTip": "C:\\Users\\herob\\Downloads\\BatchSystem\\Domain\\OrderBatchs\\OrderBatch.cs",
+              "RelativeToolTip": "..\\Domain\\OrderBatchs\\OrderBatch.cs",
+              "ViewState": "AQIAACAAAAAAAAAAAAA3wC0AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-02T11:25:13.286Z",
+              "WhenOpened": "2026-04-08T16:30:54.482Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ProductionOrderController.cs",
-              "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\BatchSystem\\Controllers\\ProductionOrderController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ProductionOrderController.cs",
-              "ToolTip": "C:\\Users\\herob\\Downloads\\BatchSystem\\BatchSystem\\Controllers\\ProductionOrderController.cs",
-              "RelativeToolTip": "Controllers\\ProductionOrderController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAJAAAA",
+              "DocumentIndex": 3,
+              "Title": "ChangeProductionOrderStatusToReadyCommand.cs",
+              "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\BatchSystem\\Application\\Commands\\ProductionOrders\\ChangeStatus\\ChangeProductionOrderStatusToReadyCommand.cs",
+              "RelativeDocumentMoniker": "Application\\Commands\\ProductionOrders\\ChangeStatus\\ChangeProductionOrderStatusToReadyCommand.cs",
+              "ToolTip": "C:\\Users\\herob\\Downloads\\BatchSystem\\BatchSystem\\Application\\Commands\\ProductionOrders\\ChangeStatus\\ChangeProductionOrderStatusToReadyCommand.cs",
+              "RelativeToolTip": "Application\\Commands\\ProductionOrders\\ChangeStatus\\ChangeProductionOrderStatusToReadyCommand.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAABBAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-07T07:38:38.301Z",
+              "WhenOpened": "2026-04-08T16:39:38.934Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ChangeProductionOrderStatusToReadyCommandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\BatchSystem\\Application\\Commands\\ProductionOrders\\ChangeStatus\\ChangeProductionOrderStatusToReadyCommandHandler.cs",
+              "RelativeDocumentMoniker": "Application\\Commands\\ProductionOrders\\ChangeStatus\\ChangeProductionOrderStatusToReadyCommandHandler.cs",
+              "ToolTip": "C:\\Users\\herob\\Downloads\\BatchSystem\\BatchSystem\\Application\\Commands\\ProductionOrders\\ChangeStatus\\ChangeProductionOrderStatusToReadyCommandHandler.cs",
+              "RelativeToolTip": "Application\\Commands\\ProductionOrders\\ChangeStatus\\ChangeProductionOrderStatusToReadyCommandHandler.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAQwBsAAABKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-08T16:41:14.719Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "BatchWeighingResult.cs",
+              "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\Domain\\OrderBatchs\\BatchWeightResults\\BatchWeighingResult.cs",
+              "RelativeDocumentMoniker": "..\\Domain\\OrderBatchs\\BatchWeightResults\\BatchWeighingResult.cs",
+              "ToolTip": "C:\\Users\\herob\\Downloads\\BatchSystem\\Domain\\OrderBatchs\\BatchWeightResults\\BatchWeighingResult.cs",
+              "RelativeToolTip": "..\\Domain\\OrderBatchs\\BatchWeightResults\\BatchWeighingResult.cs",
+              "ViewState": "AQIAAB8AAAAAAAAAAAAgwCwAAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-28T10:30:24.499Z",
               "EditorCaption": ""
             },
             {
@@ -353,300 +414,274 @@
               "RelativeDocumentMoniker": "..\\Infrastructure\\ApplicationDbContext.cs",
               "ToolTip": "C:\\Users\\herob\\Downloads\\BatchSystem\\Infrastructure\\ApplicationDbContext.cs",
               "RelativeToolTip": "..\\Infrastructure\\ApplicationDbContext.cs",
-              "ViewState": "AQIAAEQAAAAAAAAAAAAkwE0AAABSAAAA",
+              "ViewState": "AQIAADwAAAAAAAAAAAAgwEgAAABZAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-07T07:19:00.362Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "BatchSystem.csproj",
-              "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\BatchSystem\\BatchSystem.csproj",
-              "RelativeDocumentMoniker": "BatchSystem.csproj",
-              "ToolTip": "C:\\Users\\herob\\Downloads\\BatchSystem\\BatchSystem\\BatchSystem.csproj",
-              "RelativeToolTip": "BatchSystem.csproj",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-03-30T07:28:25.48Z",
+              "DocumentIndex": 7,
+              "Title": "BatchStep.cs",
+              "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\Domain\\OrderBatchs\\BatchStep.cs",
+              "RelativeDocumentMoniker": "..\\Domain\\OrderBatchs\\BatchStep.cs",
+              "ToolTip": "C:\\Users\\herob\\Downloads\\BatchSystem\\Domain\\OrderBatchs\\BatchStep.cs",
+              "RelativeToolTip": "..\\Domain\\OrderBatchs\\BatchStep.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-08T17:33:04.239Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 8,
+              "Title": "ProductionOrderController.cs",
+              "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\BatchSystem\\Controllers\\ProductionOrderController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ProductionOrderController.cs",
+              "ToolTip": "C:\\Users\\herob\\Downloads\\BatchSystem\\BatchSystem\\Controllers\\ProductionOrderController.cs",
+              "RelativeToolTip": "Controllers\\ProductionOrderController.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAQwBwAAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-07T07:38:38.301Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "OrderBatchEntityTypeConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\Infrastructure\\Configurations\\OrderBatchEntityTypeConfiguration.cs",
+              "RelativeDocumentMoniker": "..\\Infrastructure\\Configurations\\OrderBatchEntityTypeConfiguration.cs",
+              "ToolTip": "C:\\Users\\herob\\Downloads\\BatchSystem\\Infrastructure\\Configurations\\OrderBatchEntityTypeConfiguration.cs",
+              "RelativeToolTip": "..\\Infrastructure\\Configurations\\OrderBatchEntityTypeConfiguration.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAAABMAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-30T08:44:50.071Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "CreateProductionOrderCommandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\BatchSystem\\Application\\Commands\\ProductionOrders\\Create\\CreateProductionOrderCommandHandler.cs",
+              "RelativeDocumentMoniker": "Application\\Commands\\ProductionOrders\\Create\\CreateProductionOrderCommandHandler.cs",
+              "ToolTip": "C:\\Users\\herob\\Downloads\\BatchSystem\\BatchSystem\\Application\\Commands\\ProductionOrders\\Create\\CreateProductionOrderCommandHandler.cs",
+              "RelativeToolTip": "Application\\Commands\\ProductionOrders\\Create\\CreateProductionOrderCommandHandler.cs",
+              "ViewState": "AQIAACQAAAAAAAAAAAAuwDMAAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-08T11:24:55.495Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "CreateProductionOrderCommand.cs",
-              "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\BatchSystem\\Application\\Commands\\ProductionOrders\\CreateProductionOrderCommand.cs",
-              "RelativeDocumentMoniker": "Application\\Commands\\ProductionOrders\\CreateProductionOrderCommand.cs",
-              "ToolTip": "C:\\Users\\herob\\Downloads\\BatchSystem\\BatchSystem\\Application\\Commands\\ProductionOrders\\CreateProductionOrderCommand.cs",
-              "RelativeToolTip": "Application\\Commands\\ProductionOrders\\CreateProductionOrderCommand.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAvAAAA",
+              "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\BatchSystem\\Application\\Commands\\ProductionOrders\\Create\\CreateProductionOrderCommand.cs",
+              "RelativeDocumentMoniker": "Application\\Commands\\ProductionOrders\\Create\\CreateProductionOrderCommand.cs",
+              "ToolTip": "C:\\Users\\herob\\Downloads\\BatchSystem\\BatchSystem\\Application\\Commands\\ProductionOrders\\Create\\CreateProductionOrderCommand.cs",
+              "RelativeToolTip": "Application\\Commands\\ProductionOrders\\Create\\CreateProductionOrderCommand.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAYwA8AAABBAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-07T08:27:00.79Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ApiControllerBase.cs",
-              "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\BatchSystem\\Controllers\\ApiControllerBase.cs",
-              "RelativeDocumentMoniker": "Controllers\\ApiControllerBase.cs",
-              "ToolTip": "C:\\Users\\herob\\Downloads\\BatchSystem\\BatchSystem\\Controllers\\ApiControllerBase.cs",
-              "RelativeToolTip": "Controllers\\ApiControllerBase.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAATAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-07T09:52:04.348Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "20260407101106_update_config_product_n_1_recipe.cs",
-              "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\BatchSystem\\Migrations\\20260407101106_update_config_product_n_1_recipe.cs",
-              "RelativeDocumentMoniker": "Migrations\\20260407101106_update_config_product_n_1_recipe.cs",
-              "ToolTip": "C:\\Users\\herob\\Downloads\\BatchSystem\\BatchSystem\\Migrations\\20260407101106_update_config_product_n_1_recipe.cs",
-              "RelativeToolTip": "Migrations\\20260407101106_update_config_product_n_1_recipe.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-07T10:11:07.038Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\BatchSystem\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "C:\\Users\\herob\\Downloads\\BatchSystem\\BatchSystem\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAADAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-04-02T11:21:37.754Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "RecipeEntityTypeConfiguration.cs",
-              "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\Infrastructure\\Configurations\\RecipeEntityTypeConfiguration.cs",
-              "RelativeDocumentMoniker": "..\\Infrastructure\\Configurations\\RecipeEntityTypeConfiguration.cs",
-              "ToolTip": "C:\\Users\\herob\\Downloads\\BatchSystem\\Infrastructure\\Configurations\\RecipeEntityTypeConfiguration.cs",
-              "RelativeToolTip": "..\\Infrastructure\\Configurations\\RecipeEntityTypeConfiguration.cs",
-              "ViewState": "AQIAAAIAAAAAAAAAAAAYwBIAAAAlAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-30T08:47:07.353Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 11,
-              "Title": "RecipeRepository.cs",
-              "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\Infrastructure\\Repositories\\RecipeRepository.cs",
-              "RelativeDocumentMoniker": "..\\Infrastructure\\Repositories\\RecipeRepository.cs",
-              "ToolTip": "C:\\Users\\herob\\Downloads\\BatchSystem\\Infrastructure\\Repositories\\RecipeRepository.cs",
-              "RelativeToolTip": "..\\Infrastructure\\Repositories\\RecipeRepository.cs",
-              "ViewState": "AQIAABMAAAAAAAAAAAAAwCIAAABCAAAA",
+              "Title": "20260408171545_UpdateFieldLineId_CanNull_InOrderBatchClass.cs",
+              "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\BatchSystem\\Migrations\\20260408171545_UpdateFieldLineId_CanNull_InOrderBatchClass.cs",
+              "RelativeDocumentMoniker": "Migrations\\20260408171545_UpdateFieldLineId_CanNull_InOrderBatchClass.cs",
+              "ToolTip": "C:\\Users\\herob\\Downloads\\BatchSystem\\BatchSystem\\Migrations\\20260408171545_UpdateFieldLineId_CanNull_InOrderBatchClass.cs",
+              "RelativeToolTip": "Migrations\\20260408171545_UpdateFieldLineId_CanNull_InOrderBatchClass.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAA0AAAA0AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-06T17:42:15.485Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Recipe.cs",
-              "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\Domain\\Recipes\\Recipe.cs",
-              "RelativeDocumentMoniker": "..\\Domain\\Recipes\\Recipe.cs",
-              "ToolTip": "C:\\Users\\herob\\Downloads\\BatchSystem\\Domain\\Recipes\\Recipe.cs",
-              "RelativeToolTip": "..\\Domain\\Recipes\\Recipe.cs",
-              "ViewState": "AQIAAAcAAAAAAAAAAAAcwA8AAAAHAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-28T09:56:13.872Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Product.cs",
-              "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\Domain\\Products\\Product.cs",
-              "RelativeDocumentMoniker": "..\\Domain\\Products\\Product.cs",
-              "ToolTip": "C:\\Users\\herob\\Downloads\\BatchSystem\\Domain\\Products\\Product.cs",
-              "RelativeToolTip": "..\\Domain\\Products\\Product.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAxwBAAAAAVAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-28T09:53:32.494Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "ProductEntityTypeConfiguration.cs",
-              "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\Infrastructure\\Configurations\\ProductEntityTypeConfiguration.cs",
-              "RelativeDocumentMoniker": "..\\Infrastructure\\Configurations\\ProductEntityTypeConfiguration.cs",
-              "ToolTip": "C:\\Users\\herob\\Downloads\\BatchSystem\\Infrastructure\\Configurations\\ProductEntityTypeConfiguration.cs",
-              "RelativeToolTip": "..\\Infrastructure\\Configurations\\ProductEntityTypeConfiguration.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAYwBMAAAArAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-30T08:46:07.756Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "ProductionOrder.cs",
-              "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\Domain\\ProductionOrders\\ProductionOrder.cs",
-              "RelativeDocumentMoniker": "..\\Domain\\ProductionOrders\\ProductionOrder.cs",
-              "ToolTip": "C:\\Users\\herob\\Downloads\\BatchSystem\\Domain\\ProductionOrders\\ProductionOrder.cs",
-              "RelativeToolTip": "..\\Domain\\ProductionOrders\\ProductionOrder.cs",
-              "ViewState": "AQIAADEAAAAAAAAAAAAmwEMAAAAaAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-28T10:01:12.012Z",
+              "WhenOpened": "2026-04-08T17:15:45.589Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 14,
-              "Title": "Microsoft.Common.CurrentVersion.targets",
-              "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
-              "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
-              "ViewState": "AQIAAIgUAAAAAAAAAAAQwJUUAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
-              "WhenOpened": "2026-04-07T09:56:09.465Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "RecipeSnapshotMaterialData.cs",
-              "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\Domain\\ProductionOrders\\SnapShot\\RecipeSnapshotMaterialData.cs",
-              "RelativeDocumentMoniker": "..\\Domain\\ProductionOrders\\SnapShot\\RecipeSnapshotMaterialData.cs",
-              "ToolTip": "C:\\Users\\herob\\Downloads\\BatchSystem\\Domain\\ProductionOrders\\SnapShot\\RecipeSnapshotMaterialData.cs",
-              "RelativeToolTip": "..\\Domain\\ProductionOrders\\SnapShot\\RecipeSnapshotMaterialData.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
+              "Title": "ProductionOrderRepository.cs",
+              "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\Infrastructure\\Repositories\\ProductionOrderRepository.cs",
+              "RelativeDocumentMoniker": "..\\Infrastructure\\Repositories\\ProductionOrderRepository.cs",
+              "ToolTip": "C:\\Users\\herob\\Downloads\\BatchSystem\\Infrastructure\\Repositories\\ProductionOrderRepository.cs",
+              "RelativeToolTip": "..\\Infrastructure\\Repositories\\ProductionOrderRepository.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAAAjwCIAAABFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-29T11:28:55.884Z",
+              "WhenOpened": "2026-04-06T15:49:01.388Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "20260407094842_UpdateConfigProduct_1_1_Recipe.cs",
-              "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\BatchSystem\\Migrations\\20260407094842_UpdateConfigProduct_1_1_Recipe.cs",
-              "RelativeDocumentMoniker": "Migrations\\20260407094842_UpdateConfigProduct_1_1_Recipe.cs",
-              "ToolTip": "C:\\Users\\herob\\Downloads\\BatchSystem\\BatchSystem\\Migrations\\20260407094842_UpdateConfigProduct_1_1_Recipe.cs",
-              "RelativeToolTip": "Migrations\\20260407094842_UpdateConfigProduct_1_1_Recipe.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-07T09:48:42.532Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "RecipeSnapshotData.cs",
-              "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\Domain\\ProductionOrders\\SnapShot\\RecipeSnapshotData.cs",
-              "RelativeDocumentMoniker": "..\\Domain\\ProductionOrders\\SnapShot\\RecipeSnapshotData.cs",
-              "ToolTip": "C:\\Users\\herob\\Downloads\\BatchSystem\\Domain\\ProductionOrders\\SnapShot\\RecipeSnapshotData.cs",
-              "RelativeToolTip": "..\\Domain\\ProductionOrders\\SnapShot\\RecipeSnapshotData.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAqwBIAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-29T11:28:16.037Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 13,
               "Title": "ProductionOrderDetail.cs",
               "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\Domain\\ProductionOrders\\ProductionOrderDetail.cs",
               "RelativeDocumentMoniker": "..\\Domain\\ProductionOrders\\ProductionOrderDetail.cs",
               "ToolTip": "C:\\Users\\herob\\Downloads\\BatchSystem\\Domain\\ProductionOrders\\ProductionOrderDetail.cs",
               "RelativeToolTip": "..\\Domain\\ProductionOrders\\ProductionOrderDetail.cs",
-              "ViewState": "AQIAACIAAAAAAAAAAAAswDkAAAAgAAAA",
+              "ViewState": "AQIAACkAAAAAAAAAAAAIwDIAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-28T10:06:25.714Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "IRepository.cs",
-              "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\Domain\\SeedWork\\IRepository.cs",
-              "RelativeDocumentMoniker": "..\\Domain\\SeedWork\\IRepository.cs",
-              "ToolTip": "C:\\Users\\herob\\Downloads\\BatchSystem\\Domain\\SeedWork\\IRepository.cs",
-              "RelativeToolTip": "..\\Domain\\SeedWork\\IRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAgAAAA",
+              "DocumentIndex": 12,
+              "Title": "ProductionOrder.cs",
+              "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\Domain\\ProductionOrders\\ProductionOrder.cs",
+              "RelativeDocumentMoniker": "..\\Domain\\ProductionOrders\\ProductionOrder.cs",
+              "ToolTip": "C:\\Users\\herob\\Downloads\\BatchSystem\\Domain\\ProductionOrders\\ProductionOrder.cs",
+              "RelativeToolTip": "..\\Domain\\ProductionOrders\\ProductionOrder.cs",
+              "ViewState": "AQIAACEAAAAAAAAAAADwvysAAAAUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-07T09:30:22.475Z",
+              "WhenOpened": "2026-03-28T10:01:12.012Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "IUnitOfWork.cs",
-              "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\Domain\\SeedWork\\IUnitOfWork.cs",
-              "RelativeDocumentMoniker": "..\\Domain\\SeedWork\\IUnitOfWork.cs",
-              "ToolTip": "C:\\Users\\herob\\Downloads\\BatchSystem\\Domain\\SeedWork\\IUnitOfWork.cs",
-              "RelativeToolTip": "..\\Domain\\SeedWork\\IUnitOfWork.cs",
-              "ViewState": "AQIAAAEAAAAAAAAAAAAwwAoAAAAcAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-07T09:35:21.511Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 15,
               "Title": "IProductionOrderRepository.cs",
               "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\Domain\\ProductionOrders\\IProductionOrderRepository.cs",
               "RelativeDocumentMoniker": "..\\Domain\\ProductionOrders\\IProductionOrderRepository.cs",
               "ToolTip": "C:\\Users\\herob\\Downloads\\BatchSystem\\Domain\\ProductionOrders\\IProductionOrderRepository.cs",
               "RelativeToolTip": "..\\Domain\\ProductionOrders\\IProductionOrderRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAwAAAAnAAAA",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAswA8AAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-06T17:30:47.335Z",
+              "WhenOpened": "2026-04-08T13:09:45.332Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "ProductionOrderStatus.cs",
+              "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\Domain\\ProductionOrders\\ProductionOrderStatus.cs",
+              "RelativeDocumentMoniker": "..\\Domain\\ProductionOrders\\ProductionOrderStatus.cs",
+              "ToolTip": "C:\\Users\\herob\\Downloads\\BatchSystem\\Domain\\ProductionOrders\\ProductionOrderStatus.cs",
+              "RelativeToolTip": "..\\Domain\\ProductionOrders\\ProductionOrderStatus.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwBIAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-28T10:02:29.377Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "DeleteProductionOrderCommandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\BatchSystem\\Application\\Commands\\ProductionOrders\\Delete\\DeleteProductionOrderCommandHandler.cs",
+              "RelativeDocumentMoniker": "Application\\Commands\\ProductionOrders\\Delete\\DeleteProductionOrderCommandHandler.cs",
+              "ToolTip": "C:\\Users\\herob\\Downloads\\BatchSystem\\BatchSystem\\Application\\Commands\\ProductionOrders\\Delete\\DeleteProductionOrderCommandHandler.cs",
+              "RelativeToolTip": "Application\\Commands\\ProductionOrders\\Delete\\DeleteProductionOrderCommandHandler.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-08T16:13:08.089Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "DeleteProductionOrderCommand.cs",
+              "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\BatchSystem\\Application\\Commands\\ProductionOrders\\Delete\\DeleteProductionOrderCommand.cs",
+              "RelativeDocumentMoniker": "Application\\Commands\\ProductionOrders\\Delete\\DeleteProductionOrderCommand.cs",
+              "ToolTip": "C:\\Users\\herob\\Downloads\\BatchSystem\\BatchSystem\\Application\\Commands\\ProductionOrders\\Delete\\DeleteProductionOrderCommand.cs",
+              "RelativeToolTip": "Application\\Commands\\ProductionOrders\\Delete\\DeleteProductionOrderCommand.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-08T16:11:13.606Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "OrderBatchStatus.cs",
+              "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\Domain\\OrderBatchs\\OrderBatchStatus.cs",
+              "RelativeDocumentMoniker": "..\\Domain\\OrderBatchs\\OrderBatchStatus.cs",
+              "ToolTip": "C:\\Users\\herob\\Downloads\\BatchSystem\\Domain\\OrderBatchs\\OrderBatchStatus.cs",
+              "RelativeToolTip": "..\\Domain\\OrderBatchs\\OrderBatchStatus.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-08T16:32:21.496Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "IOrderBatchRepository.cs",
+              "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\Domain\\OrderBatchs\\IOrderBatchRepository.cs",
+              "RelativeDocumentMoniker": "..\\Domain\\OrderBatchs\\IOrderBatchRepository.cs",
+              "ToolTip": "C:\\Users\\herob\\Downloads\\BatchSystem\\Domain\\OrderBatchs\\IOrderBatchRepository.cs",
+              "RelativeToolTip": "..\\Domain\\OrderBatchs\\IOrderBatchRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-06T17:40:54.969Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "ProductionOrderDetailEntityTypeConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\Infrastructure\\Configurations\\ProductionOrderDetailEntityTypeConfiguration.cs",
+              "RelativeDocumentMoniker": "..\\Infrastructure\\Configurations\\ProductionOrderDetailEntityTypeConfiguration.cs",
+              "ToolTip": "C:\\Users\\herob\\Downloads\\BatchSystem\\Infrastructure\\Configurations\\ProductionOrderDetailEntityTypeConfiguration.cs",
+              "RelativeToolTip": "..\\Infrastructure\\Configurations\\ProductionOrderDetailEntityTypeConfiguration.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABEAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-08T16:17:27.59Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "ProductionOrderEntityTypeConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\Infrastructure\\Configurations\\ProductionOrderEntityTypeConfiguration.cs",
+              "RelativeDocumentMoniker": "..\\Infrastructure\\Configurations\\ProductionOrderEntityTypeConfiguration.cs",
+              "ToolTip": "C:\\Users\\herob\\Downloads\\BatchSystem\\Infrastructure\\Configurations\\ProductionOrderEntityTypeConfiguration.cs",
+              "RelativeToolTip": "..\\Infrastructure\\Configurations\\ProductionOrderEntityTypeConfiguration.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAA2AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-08T16:18:12.628Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 23,
-              "Title": "BaseRepository.cs",
-              "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\Infrastructure\\Repositories\\Common\\BaseRepository.cs",
-              "RelativeDocumentMoniker": "..\\Infrastructure\\Repositories\\Common\\BaseRepository.cs",
-              "ToolTip": "C:\\Users\\herob\\Downloads\\BatchSystem\\Infrastructure\\Repositories\\Common\\BaseRepository.cs",
-              "RelativeToolTip": "..\\Infrastructure\\Repositories\\Common\\BaseRepository.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAEAAAAVAAAA",
+              "Title": "UpdateProductionOrderCommandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\BatchSystem\\Application\\Commands\\ProductionOrders\\Update\\UpdateProductionOrderCommandHandler.cs",
+              "RelativeDocumentMoniker": "Application\\Commands\\ProductionOrders\\Update\\UpdateProductionOrderCommandHandler.cs",
+              "ToolTip": "C:\\Users\\herob\\Downloads\\BatchSystem\\BatchSystem\\Application\\Commands\\ProductionOrders\\Update\\UpdateProductionOrderCommandHandler.cs",
+              "RelativeToolTip": "Application\\Commands\\ProductionOrders\\Update\\UpdateProductionOrderCommandHandler.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAAAzwCMAAAAxAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-06T17:47:07.209Z",
+              "WhenOpened": "2026-04-08T11:24:00.526Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 24,
-              "Title": "RecipeMaterial.cs",
-              "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\Domain\\Recipes\\RecipeMaterial.cs",
-              "RelativeDocumentMoniker": "..\\Domain\\Recipes\\RecipeMaterial.cs",
-              "ToolTip": "C:\\Users\\herob\\Downloads\\BatchSystem\\Domain\\Recipes\\RecipeMaterial.cs",
-              "RelativeToolTip": "..\\Domain\\Recipes\\RecipeMaterial.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAuwB8AAAAkAAAA",
+              "Title": "UpdateProductionOrderCommand.cs",
+              "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\BatchSystem\\Application\\Commands\\ProductionOrders\\Update\\UpdateProductionOrderCommand.cs",
+              "RelativeDocumentMoniker": "Application\\Commands\\ProductionOrders\\Update\\UpdateProductionOrderCommand.cs",
+              "ToolTip": "C:\\Users\\herob\\Downloads\\BatchSystem\\BatchSystem\\Application\\Commands\\ProductionOrders\\Update\\UpdateProductionOrderCommand.cs",
+              "RelativeToolTip": "Application\\Commands\\ProductionOrders\\Update\\UpdateProductionOrderCommand.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAuwA8AAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-28T09:57:16.814Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "StationRepository.cs",
-              "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\Infrastructure\\Repositories\\StationRepository.cs",
-              "RelativeDocumentMoniker": "..\\Infrastructure\\Repositories\\StationRepository.cs",
-              "ToolTip": "C:\\Users\\herob\\Downloads\\BatchSystem\\Infrastructure\\Repositories\\StationRepository.cs",
-              "RelativeToolTip": "..\\Infrastructure\\Repositories\\StationRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAhAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-06T17:43:59.755Z",
+              "WhenOpened": "2026-04-08T11:02:52.761Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 26,
+              "Title": "RecipeSnapshotData.cs",
+              "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\Domain\\ProductionOrders\\SnapShot\\RecipeSnapshotData.cs",
+              "RelativeDocumentMoniker": "..\\Domain\\ProductionOrders\\SnapShot\\RecipeSnapshotData.cs",
+              "ToolTip": "C:\\Users\\herob\\Downloads\\BatchSystem\\Domain\\ProductionOrders\\SnapShot\\RecipeSnapshotData.cs",
+              "RelativeToolTip": "..\\Domain\\ProductionOrders\\SnapShot\\RecipeSnapshotData.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-29T11:28:16.037Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
               "Title": "ProductRepository.cs",
               "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\Infrastructure\\Repositories\\ProductRepository.cs",
               "RelativeDocumentMoniker": "..\\Infrastructure\\Repositories\\ProductRepository.cs",
@@ -660,71 +695,253 @@
             {
               "$type": "Document",
               "DocumentIndex": 27,
-              "Title": "ProductionOrderRepository.cs",
-              "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\Infrastructure\\Repositories\\ProductionOrderRepository.cs",
-              "RelativeDocumentMoniker": "..\\Infrastructure\\Repositories\\ProductionOrderRepository.cs",
-              "ToolTip": "C:\\Users\\herob\\Downloads\\BatchSystem\\Infrastructure\\Repositories\\ProductionOrderRepository.cs",
-              "RelativeToolTip": "..\\Infrastructure\\Repositories\\ProductionOrderRepository.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAqwCcAAAAHAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-06T15:49:01.388Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "ProductionOrderStatus.cs",
-              "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\Domain\\ProductionOrders\\ProductionOrderStatus.cs",
-              "RelativeDocumentMoniker": "..\\Domain\\ProductionOrders\\ProductionOrderStatus.cs",
-              "ToolTip": "C:\\Users\\herob\\Downloads\\BatchSystem\\Domain\\ProductionOrders\\ProductionOrderStatus.cs",
-              "RelativeToolTip": "..\\Domain\\ProductionOrders\\ProductionOrderStatus.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAgAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-28T10:02:29.377Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "BatchWeighingResult.cs",
-              "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\Domain\\OrderBatchs\\BatchWeightResults\\BatchWeighingResult.cs",
-              "RelativeDocumentMoniker": "..\\Domain\\OrderBatchs\\BatchWeightResults\\BatchWeighingResult.cs",
-              "ToolTip": "C:\\Users\\herob\\Downloads\\BatchSystem\\Domain\\OrderBatchs\\BatchWeightResults\\BatchWeighingResult.cs",
-              "RelativeToolTip": "..\\Domain\\OrderBatchs\\BatchWeightResults\\BatchWeighingResult.cs",
-              "ViewState": "AQIAAB0AAAAAAAAAAAAAwCMAAAAdAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-28T10:30:24.499Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "IOrderBatchRepository.cs",
-              "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\Domain\\OrderBatchs\\IOrderBatchRepository.cs",
-              "RelativeDocumentMoniker": "..\\Domain\\OrderBatchs\\IOrderBatchRepository.cs",
-              "ToolTip": "C:\\Users\\herob\\Downloads\\BatchSystem\\Domain\\OrderBatchs\\IOrderBatchRepository.cs",
-              "RelativeToolTip": "..\\Domain\\OrderBatchs\\IOrderBatchRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-06T17:40:54.969Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 31,
               "Title": "EntityNotFoundException.cs",
               "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\BatchSystem\\Application\\Exceptions\\EntityNotFoundException.cs",
               "RelativeDocumentMoniker": "Application\\Exceptions\\EntityNotFoundException.cs",
               "ToolTip": "C:\\Users\\herob\\Downloads\\BatchSystem\\BatchSystem\\Application\\Exceptions\\EntityNotFoundException.cs",
               "RelativeToolTip": "Application\\Exceptions\\EntityNotFoundException.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAkAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAYAAAAPAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-07T07:44:42.002Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "20260407101106_update_config_product_n_1_recipe.cs",
+              "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\BatchSystem\\Migrations\\20260407101106_update_config_product_n_1_recipe.cs",
+              "RelativeDocumentMoniker": "Migrations\\20260407101106_update_config_product_n_1_recipe.cs",
+              "ToolTip": "C:\\Users\\herob\\Downloads\\BatchSystem\\BatchSystem\\Migrations\\20260407101106_update_config_product_n_1_recipe.cs",
+              "RelativeToolTip": "Migrations\\20260407101106_update_config_product_n_1_recipe.cs",
+              "ViewState": "AQIAABsAAAAAAAAAAAA5wCwAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-07T10:11:07.038Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "20260407094842_UpdateConfigProduct_1_1_Recipe.cs",
+              "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\BatchSystem\\Migrations\\20260407094842_UpdateConfigProduct_1_1_Recipe.cs",
+              "RelativeDocumentMoniker": "Migrations\\20260407094842_UpdateConfigProduct_1_1_Recipe.cs",
+              "ToolTip": "C:\\Users\\herob\\Downloads\\BatchSystem\\BatchSystem\\Migrations\\20260407094842_UpdateConfigProduct_1_1_Recipe.cs",
+              "RelativeToolTip": "Migrations\\20260407094842_UpdateConfigProduct_1_1_Recipe.cs",
+              "ViewState": "AQIAAEAAAAAAAAAAAAAkwE8AAAA2AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-07T09:48:42.532Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "20260402122906_INIT.cs",
+              "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\BatchSystem\\Migrations\\20260402122906_INIT.cs",
+              "RelativeDocumentMoniker": "Migrations\\20260402122906_INIT.cs",
+              "ToolTip": "C:\\Users\\herob\\Downloads\\BatchSystem\\BatchSystem\\Migrations\\20260402122906_INIT.cs",
+              "RelativeToolTip": "Migrations\\20260402122906_INIT.cs",
+              "ViewState": "AQIAAG4CAAAAAAAAAAAkwH8CAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-02T12:29:06.897Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\BatchSystem\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\herob\\Downloads\\BatchSystem\\BatchSystem\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAACIAAAAAAAAAAAAkwDQAAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-02T11:25:13.286Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 32,
+              "Title": "BaseRepository.cs",
+              "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\Infrastructure\\Repositories\\Common\\BaseRepository.cs",
+              "RelativeDocumentMoniker": "..\\Infrastructure\\Repositories\\Common\\BaseRepository.cs",
+              "ToolTip": "C:\\Users\\herob\\Downloads\\BatchSystem\\Infrastructure\\Repositories\\Common\\BaseRepository.cs",
+              "RelativeToolTip": "..\\Infrastructure\\Repositories\\Common\\BaseRepository.cs",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAQwBEAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-06T17:47:07.209Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "IUnitOfWork.cs",
+              "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\Domain\\SeedWork\\IUnitOfWork.cs",
+              "RelativeDocumentMoniker": "..\\Domain\\SeedWork\\IUnitOfWork.cs",
+              "ToolTip": "C:\\Users\\herob\\Downloads\\BatchSystem\\Domain\\SeedWork\\IUnitOfWork.cs",
+              "RelativeToolTip": "..\\Domain\\SeedWork\\IUnitOfWork.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-07T09:35:21.511Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "BatchSystem.csproj",
+              "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\BatchSystem\\BatchSystem.csproj",
+              "RelativeDocumentMoniker": "BatchSystem.csproj",
+              "ToolTip": "C:\\Users\\herob\\Downloads\\BatchSystem\\BatchSystem\\BatchSystem.csproj",
+              "RelativeToolTip": "BatchSystem.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-03-30T07:28:25.48Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "ApiControllerBase.cs",
+              "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\BatchSystem\\Controllers\\ApiControllerBase.cs",
+              "RelativeDocumentMoniker": "Controllers\\ApiControllerBase.cs",
+              "ToolTip": "C:\\Users\\herob\\Downloads\\BatchSystem\\BatchSystem\\Controllers\\ApiControllerBase.cs",
+              "RelativeToolTip": "Controllers\\ApiControllerBase.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-07T09:52:04.348Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\BatchSystem\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\herob\\Downloads\\BatchSystem\\BatchSystem\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAADAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-04-02T11:21:37.754Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "RecipeEntityTypeConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\Infrastructure\\Configurations\\RecipeEntityTypeConfiguration.cs",
+              "RelativeDocumentMoniker": "..\\Infrastructure\\Configurations\\RecipeEntityTypeConfiguration.cs",
+              "ToolTip": "C:\\Users\\herob\\Downloads\\BatchSystem\\Infrastructure\\Configurations\\RecipeEntityTypeConfiguration.cs",
+              "RelativeToolTip": "..\\Infrastructure\\Configurations\\RecipeEntityTypeConfiguration.cs",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAYwBIAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-30T08:47:07.353Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "RecipeRepository.cs",
+              "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\Infrastructure\\Repositories\\RecipeRepository.cs",
+              "RelativeDocumentMoniker": "..\\Infrastructure\\Repositories\\RecipeRepository.cs",
+              "ToolTip": "C:\\Users\\herob\\Downloads\\BatchSystem\\Infrastructure\\Repositories\\RecipeRepository.cs",
+              "RelativeToolTip": "..\\Infrastructure\\Repositories\\RecipeRepository.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAAAwCIAAABCAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-06T17:42:15.485Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "Recipe.cs",
+              "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\Domain\\Recipes\\Recipe.cs",
+              "RelativeDocumentMoniker": "..\\Domain\\Recipes\\Recipe.cs",
+              "ToolTip": "C:\\Users\\herob\\Downloads\\BatchSystem\\Domain\\Recipes\\Recipe.cs",
+              "RelativeToolTip": "..\\Domain\\Recipes\\Recipe.cs",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAcwA8AAAAHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-28T09:56:13.872Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "Product.cs",
+              "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\Domain\\Products\\Product.cs",
+              "RelativeDocumentMoniker": "..\\Domain\\Products\\Product.cs",
+              "ToolTip": "C:\\Users\\herob\\Downloads\\BatchSystem\\Domain\\Products\\Product.cs",
+              "RelativeToolTip": "..\\Domain\\Products\\Product.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAxwBAAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-28T09:53:32.494Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "ProductEntityTypeConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\Infrastructure\\Configurations\\ProductEntityTypeConfiguration.cs",
+              "RelativeDocumentMoniker": "..\\Infrastructure\\Configurations\\ProductEntityTypeConfiguration.cs",
+              "ToolTip": "C:\\Users\\herob\\Downloads\\BatchSystem\\Infrastructure\\Configurations\\ProductEntityTypeConfiguration.cs",
+              "RelativeToolTip": "..\\Infrastructure\\Configurations\\ProductEntityTypeConfiguration.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAYwBMAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-30T08:46:07.756Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "Microsoft.Common.CurrentVersion.targets",
+              "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "ViewState": "AQIAAIgUAAAAAAAAAAAQwJUUAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
+              "WhenOpened": "2026-04-07T09:56:09.465Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "RecipeSnapshotMaterialData.cs",
+              "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\Domain\\ProductionOrders\\SnapShot\\RecipeSnapshotMaterialData.cs",
+              "RelativeDocumentMoniker": "..\\Domain\\ProductionOrders\\SnapShot\\RecipeSnapshotMaterialData.cs",
+              "ToolTip": "C:\\Users\\herob\\Downloads\\BatchSystem\\Domain\\ProductionOrders\\SnapShot\\RecipeSnapshotMaterialData.cs",
+              "RelativeToolTip": "..\\Domain\\ProductionOrders\\SnapShot\\RecipeSnapshotMaterialData.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-29T11:28:55.884Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "IRepository.cs",
+              "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\Domain\\SeedWork\\IRepository.cs",
+              "RelativeDocumentMoniker": "..\\Domain\\SeedWork\\IRepository.cs",
+              "ToolTip": "C:\\Users\\herob\\Downloads\\BatchSystem\\Domain\\SeedWork\\IRepository.cs",
+              "RelativeToolTip": "..\\Domain\\SeedWork\\IRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-07T09:30:22.475Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "RecipeMaterial.cs",
+              "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\Domain\\Recipes\\RecipeMaterial.cs",
+              "RelativeDocumentMoniker": "..\\Domain\\Recipes\\RecipeMaterial.cs",
+              "ToolTip": "C:\\Users\\herob\\Downloads\\BatchSystem\\Domain\\Recipes\\RecipeMaterial.cs",
+              "RelativeToolTip": "..\\Domain\\Recipes\\RecipeMaterial.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAuwB8AAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-28T09:57:16.814Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "StationRepository.cs",
+              "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\Infrastructure\\Repositories\\StationRepository.cs",
+              "RelativeDocumentMoniker": "..\\Infrastructure\\Repositories\\StationRepository.cs",
+              "ToolTip": "C:\\Users\\herob\\Downloads\\BatchSystem\\Infrastructure\\Repositories\\StationRepository.cs",
+              "RelativeToolTip": "..\\Infrastructure\\Repositories\\StationRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-06T17:43:59.755Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
               "Title": "OrderBatchRepository.cs",
               "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\Infrastructure\\Repositories\\OrderBatchRepository.cs",
               "RelativeDocumentMoniker": "..\\Infrastructure\\Repositories\\OrderBatchRepository.cs",
@@ -732,12 +949,11 @@
               "RelativeToolTip": "..\\Infrastructure\\Repositories\\OrderBatchRepository.cs",
               "ViewState": "AQIAABQAAAAAAAAAAAAQwCUAAAA0AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-06T17:40:29.34Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-06T17:40:29.34Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 48,
               "Title": "MaterialRepository.cs",
               "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\Infrastructure\\Repositories\\MaterialRepository.cs",
               "RelativeDocumentMoniker": "..\\Infrastructure\\Repositories\\MaterialRepository.cs",
@@ -745,12 +961,11 @@
               "RelativeToolTip": "..\\Infrastructure\\Repositories\\MaterialRepository.cs",
               "ViewState": "AQIAABgAAAAAAAAAAAAQwCUAAAAwAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-06T17:52:17.656Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-06T17:52:17.656Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 49,
               "Title": "LoginRepository.cs",
               "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\Infrastructure\\Repositories\\LoginRepository.cs",
               "RelativeDocumentMoniker": "..\\Infrastructure\\Repositories\\LoginRepository.cs",
@@ -758,12 +973,11 @@
               "RelativeToolTip": "..\\Infrastructure\\Repositories\\LoginRepository.cs",
               "ViewState": "AQIAAAgAAAAAAAAAAAAuwCUAAAAqAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-06T17:50:58.46Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-06T17:50:58.46Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 50,
               "Title": "LineRepository.cs",
               "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\Infrastructure\\Repositories\\LineRepository.cs",
               "RelativeDocumentMoniker": "..\\Infrastructure\\Repositories\\LineRepository.cs",
@@ -771,12 +985,11 @@
               "RelativeToolTip": "..\\Infrastructure\\Repositories\\LineRepository.cs",
               "ViewState": "AQIAAA8AAAAAAAAAAAAxwB8AAAA+AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-06T17:38:49.583Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-06T17:38:49.583Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 51,
               "Title": "AlarmEventRepository.cs",
               "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\Infrastructure\\Repositories\\AlarmEventRepository.cs",
               "RelativeDocumentMoniker": "..\\Infrastructure\\Repositories\\AlarmEventRepository.cs",
@@ -784,12 +997,11 @@
               "RelativeToolTip": "..\\Infrastructure\\Repositories\\AlarmEventRepository.cs",
               "ViewState": "AQIAAAoAAAAAAAAAAAAuwCUAAAA0AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-06T17:48:03.828Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-06T17:48:03.828Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 52,
               "Title": "IAlarmEventRepository.cs",
               "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\Domain\\Alarms\\IAlarmEventRepository.cs",
               "RelativeDocumentMoniker": "..\\Domain\\Alarms\\IAlarmEventRepository.cs",
@@ -797,12 +1009,11 @@
               "RelativeToolTip": "..\\Domain\\Alarms\\IAlarmEventRepository.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-06T17:48:32.542Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-06T17:48:32.542Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 53,
               "Title": "AlarmDefinitionRepository.cs",
               "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\Infrastructure\\Repositories\\AlarmDefinitionRepository.cs",
               "RelativeDocumentMoniker": "..\\Infrastructure\\Repositories\\AlarmDefinitionRepository.cs",
@@ -810,12 +1021,11 @@
               "RelativeToolTip": "..\\Infrastructure\\Repositories\\AlarmDefinitionRepository.cs",
               "ViewState": "AQIAAAIAAAAAAAAAAAAnwCYAAAA+AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-06T17:46:00.565Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-06T17:46:00.565Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 54,
               "Title": "IAlarmDefinitionRepository.cs",
               "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\Domain\\Alarms\\IAlarmDefinitionRepository.cs",
               "RelativeDocumentMoniker": "..\\Domain\\Alarms\\IAlarmDefinitionRepository.cs",
@@ -823,12 +1033,11 @@
               "RelativeToolTip": "..\\Domain\\Alarms\\IAlarmDefinitionRepository.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-06T17:46:26.308Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-06T17:46:26.308Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 55,
               "Title": "IMaterialRepository.cs",
               "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\Domain\\Materials\\IMaterialRepository.cs",
               "RelativeDocumentMoniker": "..\\Domain\\Materials\\IMaterialRepository.cs",
@@ -836,12 +1045,11 @@
               "RelativeToolTip": "..\\Domain\\Materials\\IMaterialRepository.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-06T17:52:48.46Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-06T17:52:48.46Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 56,
               "Title": "IRecipeRepository.cs",
               "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\Domain\\Recipes\\IRecipeRepository.cs",
               "RelativeDocumentMoniker": "..\\Domain\\Recipes\\IRecipeRepository.cs",
@@ -849,12 +1057,11 @@
               "RelativeToolTip": "..\\Domain\\Recipes\\IRecipeRepository.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAZAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-06T17:42:38.575Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-06T17:42:38.575Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 57,
               "Title": "IProductRepository.cs",
               "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\Domain\\Products\\IProductRepository.cs",
               "RelativeDocumentMoniker": "..\\Domain\\Products\\IProductRepository.cs",
@@ -862,12 +1069,11 @@
               "RelativeToolTip": "..\\Domain\\Products\\IProductRepository.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAZAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-06T17:53:59.339Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-06T17:53:59.339Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 58,
               "Title": "ILoginRepository.cs",
               "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\Domain\\Logins\\ILoginRepository.cs",
               "RelativeDocumentMoniker": "..\\Domain\\Logins\\ILoginRepository.cs",
@@ -875,12 +1081,11 @@
               "RelativeToolTip": "..\\Domain\\Logins\\ILoginRepository.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAmAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-06T17:51:21.513Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-06T17:51:21.513Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 59,
               "Title": "IStationRepository.cs",
               "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\Domain\\Stations\\IStationRepository.cs",
               "RelativeDocumentMoniker": "..\\Domain\\Stations\\IStationRepository.cs",
@@ -888,12 +1093,11 @@
               "RelativeToolTip": "..\\Domain\\Stations\\IStationRepository.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-06T17:44:24.216Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-06T17:44:24.216Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 60,
               "Title": "ILineRepository.cs",
               "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\Domain\\Lines\\ILineRepository.cs",
               "RelativeDocumentMoniker": "..\\Domain\\Lines\\ILineRepository.cs",
@@ -901,12 +1105,11 @@
               "RelativeToolTip": "..\\Domain\\Lines\\ILineRepository.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAuwAoAAAAVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-06T17:39:22.398Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-06T17:39:22.398Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 61,
               "Title": "Line.cs",
               "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\Domain\\Lines\\Line.cs",
               "RelativeDocumentMoniker": "..\\Domain\\Lines\\Line.cs",
@@ -914,12 +1117,11 @@
               "RelativeToolTip": "..\\Domain\\Lines\\Line.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-28T09:42:50.301Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-28T09:42:50.301Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 62,
               "Title": "AlarmEvent.cs",
               "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\Domain\\Alarms\\AlarmEvent.cs",
               "RelativeDocumentMoniker": "..\\Domain\\Alarms\\AlarmEvent.cs",
@@ -931,7 +1133,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 63,
               "Title": "Material.cs",
               "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\Domain\\Materials\\Material.cs",
               "RelativeDocumentMoniker": "..\\Domain\\Materials\\Material.cs",
@@ -943,7 +1145,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 64,
               "Title": "Login.cs",
               "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\Domain\\Logins\\Login.cs",
               "RelativeDocumentMoniker": "..\\Domain\\Logins\\Login.cs",
@@ -955,7 +1157,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 65,
               "Title": "AlarmDefinition.cs",
               "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\Domain\\Alarms\\AlarmDefinition.cs",
               "RelativeDocumentMoniker": "..\\Domain\\Alarms\\AlarmDefinition.cs",
@@ -967,7 +1169,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
+              "DocumentIndex": 66,
               "Title": "AlarmClass.cs",
               "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\Domain\\Alarms\\AlarmClass.cs",
               "RelativeDocumentMoniker": "..\\Domain\\Alarms\\AlarmClass.cs",
@@ -979,19 +1181,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 53,
-              "Title": "OrderBatchStepStatus.cs",
-              "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\Domain\\OrderBatchs\\OrderBatchStepStatus.cs",
-              "RelativeDocumentMoniker": "..\\Domain\\OrderBatchs\\OrderBatchStepStatus.cs",
-              "ToolTip": "C:\\Users\\herob\\Downloads\\BatchSystem\\Domain\\OrderBatchs\\OrderBatchStepStatus.cs",
-              "RelativeToolTip": "..\\Domain\\OrderBatchs\\OrderBatchStepStatus.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAuwA8AAAAyAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-28T10:21:57.646Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 52,
+              "DocumentIndex": 67,
               "Title": "Station.cs",
               "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\Domain\\Stations\\Station.cs",
               "RelativeDocumentMoniker": "..\\Domain\\Stations\\Station.cs",
@@ -1003,7 +1193,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 54,
+              "DocumentIndex": 68,
               "Title": "MediatorExtension.cs",
               "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\Infrastructure\\MediatorExtension.cs",
               "RelativeDocumentMoniker": "..\\Infrastructure\\MediatorExtension.cs",
@@ -1015,7 +1205,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 55,
+              "DocumentIndex": 69,
               "Title": "Entity.cs",
               "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\Domain\\SeedWork\\Entity.cs",
               "RelativeDocumentMoniker": "..\\Domain\\SeedWork\\Entity.cs",
@@ -1027,7 +1217,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 57,
+              "DocumentIndex": 71,
               "Title": "LineStatusHistory.cs",
               "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\Domain\\Lines\\LineStatusHistory.cs",
               "RelativeDocumentMoniker": "..\\Domain\\Lines\\LineStatusHistory.cs",
@@ -1039,7 +1229,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 56,
+              "DocumentIndex": 70,
               "Title": "LineEntityTypeConfiguration.cs",
               "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\Infrastructure\\Configurations\\LineEntityTypeConfiguration.cs",
               "RelativeDocumentMoniker": "..\\Infrastructure\\Configurations\\LineEntityTypeConfiguration.cs",
@@ -1051,31 +1241,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 59,
-              "Title": "ProductionOrderDetailEntityTypeConfiguration.cs",
-              "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\Infrastructure\\Configurations\\ProductionOrderDetailEntityTypeConfiguration.cs",
-              "RelativeDocumentMoniker": "..\\Infrastructure\\Configurations\\ProductionOrderDetailEntityTypeConfiguration.cs",
-              "ToolTip": "C:\\Users\\herob\\Downloads\\BatchSystem\\Infrastructure\\Configurations\\ProductionOrderDetailEntityTypeConfiguration.cs",
-              "RelativeToolTip": "..\\Infrastructure\\Configurations\\ProductionOrderDetailEntityTypeConfiguration.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAA1AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-30T08:44:11.499Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 88,
-              "Title": "20260402122906_INIT.cs",
-              "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\BatchSystem\\Migrations\\20260402122906_INIT.cs",
-              "RelativeDocumentMoniker": "Migrations\\20260402122906_INIT.cs",
-              "ToolTip": "C:\\Users\\herob\\Downloads\\BatchSystem\\BatchSystem\\Migrations\\20260402122906_INIT.cs",
-              "RelativeToolTip": "Migrations\\20260402122906_INIT.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAxwBcAAABAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-02T12:29:06.897Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 58,
+              "DocumentIndex": 72,
               "Title": "StationType.cs",
               "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\Domain\\Stations\\StationType.cs",
               "RelativeDocumentMoniker": "..\\Domain\\Stations\\StationType.cs",
@@ -1087,43 +1253,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 60,
-              "Title": "ProductionOrderEntityTypeConfiguration.cs",
-              "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\Infrastructure\\Configurations\\ProductionOrderEntityTypeConfiguration.cs",
-              "RelativeDocumentMoniker": "..\\Infrastructure\\Configurations\\ProductionOrderEntityTypeConfiguration.cs",
-              "ToolTip": "C:\\Users\\herob\\Downloads\\BatchSystem\\Infrastructure\\Configurations\\ProductionOrderEntityTypeConfiguration.cs",
-              "RelativeToolTip": "..\\Infrastructure\\Configurations\\ProductionOrderEntityTypeConfiguration.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAyAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-30T08:43:43.724Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 61,
-              "Title": "OrderBatchEntityTypeConfiguration.cs",
-              "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\Infrastructure\\Configurations\\OrderBatchEntityTypeConfiguration.cs",
-              "RelativeDocumentMoniker": "..\\Infrastructure\\Configurations\\OrderBatchEntityTypeConfiguration.cs",
-              "ToolTip": "C:\\Users\\herob\\Downloads\\BatchSystem\\Infrastructure\\Configurations\\OrderBatchEntityTypeConfiguration.cs",
-              "RelativeToolTip": "..\\Infrastructure\\Configurations\\OrderBatchEntityTypeConfiguration.cs",
-              "ViewState": "AQIAAAEAAAAAAAAAAIBJwBUAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-30T08:44:50.071Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 62,
-              "Title": "OrderBatchStepEntityTypeConfiguration.cs",
-              "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\Infrastructure\\Configurations\\OrderBatchStepEntityTypeConfiguration.cs",
-              "RelativeDocumentMoniker": "..\\Infrastructure\\Configurations\\OrderBatchStepEntityTypeConfiguration.cs",
-              "ToolTip": "C:\\Users\\herob\\Downloads\\BatchSystem\\Infrastructure\\Configurations\\OrderBatchStepEntityTypeConfiguration.cs",
-              "RelativeToolTip": "..\\Infrastructure\\Configurations\\OrderBatchStepEntityTypeConfiguration.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAIBJwBgAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-30T08:45:18.264Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 63,
+              "DocumentIndex": 73,
               "Title": "BatchWeighingResultEntityTypeConfiguration.cs",
               "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\Infrastructure\\Configurations\\BatchWeighingResultEntityTypeConfiguration.cs",
               "RelativeDocumentMoniker": "..\\Infrastructure\\Configurations\\BatchWeighingResultEntityTypeConfiguration.cs",
@@ -1135,7 +1265,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 64,
+              "DocumentIndex": 74,
               "Title": "MaterialEntityTypeConfiguration.cs",
               "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\Infrastructure\\Configurations\\MaterialEntityTypeConfiguration.cs",
               "RelativeDocumentMoniker": "..\\Infrastructure\\Configurations\\MaterialEntityTypeConfiguration.cs",
@@ -1147,7 +1277,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 65,
+              "DocumentIndex": 75,
               "Title": "LoginEntityTypeConfiguration.cs",
               "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\Infrastructure\\Configurations\\LoginEntityTypeConfiguration.cs",
               "RelativeDocumentMoniker": "..\\Infrastructure\\Configurations\\LoginEntityTypeConfiguration.cs",
@@ -1159,7 +1289,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 66,
+              "DocumentIndex": 76,
               "Title": "LineStatusHistoryEntityTypeConfiguration.cs",
               "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\Infrastructure\\Configurations\\LineStatusHistoryEntityTypeConfiguration.cs",
               "RelativeDocumentMoniker": "..\\Infrastructure\\Configurations\\LineStatusHistoryEntityTypeConfiguration.cs",
@@ -1171,7 +1301,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 67,
+              "DocumentIndex": 77,
               "Title": "LineCurrentStatusEntityTypeConfiguration.cs",
               "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\Infrastructure\\Configurations\\LineCurrentStatusEntityTypeConfiguration.cs",
               "RelativeDocumentMoniker": "..\\Infrastructure\\Configurations\\LineCurrentStatusEntityTypeConfiguration.cs",
@@ -1183,7 +1313,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 68,
+              "DocumentIndex": 78,
               "Title": "AlarmEventEntityTypeConfiguration.cs",
               "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\Infrastructure\\Configurations\\AlarmEventEntityTypeConfiguration.cs",
               "RelativeDocumentMoniker": "..\\Infrastructure\\Configurations\\AlarmEventEntityTypeConfiguration.cs",
@@ -1195,7 +1325,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 69,
+              "DocumentIndex": 79,
               "Title": "AlarmDefinitionEntityTypeConfiguration.cs",
               "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\Infrastructure\\Configurations\\AlarmDefinitionEntityTypeConfiguration.cs",
               "RelativeDocumentMoniker": "..\\Infrastructure\\Configurations\\AlarmDefinitionEntityTypeConfiguration.cs",
@@ -1207,7 +1337,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 70,
+              "DocumentIndex": 80,
               "Title": "StationCurrentStatusEntityTypeConfiguration.cs",
               "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\Infrastructure\\Configurations\\StationCurrentStatusEntityTypeConfiguration.cs",
               "RelativeDocumentMoniker": "..\\Infrastructure\\Configurations\\StationCurrentStatusEntityTypeConfiguration.cs",
@@ -1219,7 +1349,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 71,
+              "DocumentIndex": 81,
               "Title": "20260402121748_Init.cs",
               "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\BatchSystem\\Migrations\\20260402121748_Init.cs",
               "RelativeDocumentMoniker": "Migrations\\20260402121748_Init.cs",
@@ -1230,7 +1360,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 72,
+              "DocumentIndex": 82,
               "Title": "StationState.cs",
               "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\Domain\\Stations\\StationState.cs",
               "RelativeDocumentMoniker": "..\\Domain\\Stations\\StationState.cs",
@@ -1242,7 +1372,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 73,
+              "DocumentIndex": 83,
               "Title": "StationCurrentStatus.cs",
               "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\Domain\\Stations\\StationCurrentStatus.cs",
               "RelativeDocumentMoniker": "..\\Domain\\Stations\\StationCurrentStatus.cs",
@@ -1254,7 +1384,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 74,
+              "DocumentIndex": 84,
               "Title": "LineStatus.cs",
               "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\Domain\\Lines\\LineStatus.cs",
               "RelativeDocumentMoniker": "..\\Domain\\Lines\\LineStatus.cs",
@@ -1266,7 +1396,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 75,
+              "DocumentIndex": 85,
               "Title": "LineMode.cs",
               "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\Domain\\Lines\\LineMode.cs",
               "RelativeDocumentMoniker": "..\\Domain\\Lines\\LineMode.cs",
@@ -1278,7 +1408,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 76,
+              "DocumentIndex": 86,
               "Title": "LineCurrentStatus.cs",
               "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\Domain\\Lines\\LineCurrentStatus.cs",
               "RelativeDocumentMoniker": "..\\Domain\\Lines\\LineCurrentStatus.cs",
@@ -1290,7 +1420,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 77,
+              "DocumentIndex": 87,
               "Title": "StationTypeEntityTypeConfiguration.cs",
               "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\Infrastructure\\Configurations\\StationTypeEntityTypeConfiguration.cs",
               "RelativeDocumentMoniker": "..\\Infrastructure\\Configurations\\StationTypeEntityTypeConfiguration.cs",
@@ -1302,7 +1432,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 78,
+              "DocumentIndex": 88,
               "Title": "StationEntityTypeConfiguration.cs",
               "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\Infrastructure\\Configurations\\StationEntityTypeConfiguration.cs",
               "RelativeDocumentMoniker": "..\\Infrastructure\\Configurations\\StationEntityTypeConfiguration.cs",
@@ -1314,7 +1444,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 79,
+              "DocumentIndex": 89,
               "Title": "RecipeMaterialEntityTypeConfiguration.cs",
               "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\Infrastructure\\Configurations\\RecipeMaterialEntityTypeConfiguration.cs",
               "RelativeDocumentMoniker": "..\\Infrastructure\\Configurations\\RecipeMaterialEntityTypeConfiguration.cs",
@@ -1326,7 +1456,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 80,
+              "DocumentIndex": 90,
               "Title": "20260402120113_INIT.cs",
               "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\BatchSystem\\Migrations\\20260402120113_INIT.cs",
               "RelativeDocumentMoniker": "Migrations\\20260402120113_INIT.cs",
@@ -1337,7 +1467,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 81,
+              "DocumentIndex": 91,
               "Title": "20260402115620_INIT.cs",
               "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\BatchSystem\\Migrations\\20260402115620_INIT.cs",
               "RelativeDocumentMoniker": "Migrations\\20260402115620_INIT.cs",
@@ -1348,7 +1478,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 82,
+              "DocumentIndex": 92,
               "Title": "BatchSystem.Infrastructure.csproj",
               "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\Infrastructure\\BatchSystem.Infrastructure.csproj",
               "RelativeDocumentMoniker": "..\\Infrastructure\\BatchSystem.Infrastructure.csproj",
@@ -1356,12 +1486,11 @@
               "RelativeToolTip": "..\\Infrastructure\\BatchSystem.Infrastructure.csproj",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAABGAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-03-30T07:19:53.068Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-30T07:19:53.068Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 84,
+              "DocumentIndex": 94,
               "Title": "BatchSystem.http",
               "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\BatchSystem\\BatchSystem.http",
               "RelativeDocumentMoniker": "BatchSystem.http",
@@ -1373,7 +1502,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 83,
+              "DocumentIndex": 93,
               "Title": "BatchSystem.Domain.csproj",
               "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\Domain\\BatchSystem.Domain.csproj",
               "RelativeDocumentMoniker": "..\\Domain\\BatchSystem.Domain.csproj",
@@ -1381,12 +1510,11 @@
               "RelativeToolTip": "..\\Domain\\BatchSystem.Domain.csproj",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-03-28T09:42:33.917Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-28T09:42:33.917Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 86,
+              "DocumentIndex": 96,
               "Title": "SecurePasswordHasher.cs",
               "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\Domain\\Logins\\SecurePasswordHasher.cs",
               "RelativeDocumentMoniker": "..\\Domain\\Logins\\SecurePasswordHasher.cs",
@@ -1398,7 +1526,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 87,
+              "DocumentIndex": 97,
               "Title": "ERole.cs",
               "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\Domain\\Logins\\ERole.cs",
               "RelativeDocumentMoniker": "..\\Domain\\Logins\\ERole.cs",
@@ -1410,15 +1538,14 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 85,
+              "DocumentIndex": 95,
               "Title": "BatchSystem.Infrastructure",
               "DocumentMoniker": "C:\\Users\\herob\\Downloads\\BatchSystem\\Infrastructure\\BatchSystem.Infrastructure.csproj",
               "RelativeDocumentMoniker": "..\\Infrastructure\\BatchSystem.Infrastructure.csproj",
               "ToolTip": "C:\\Users\\herob\\Downloads\\BatchSystem\\Infrastructure\\BatchSystem.Infrastructure.csproj",
               "RelativeToolTip": "..\\Infrastructure\\BatchSystem.Infrastructure.csproj",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-03-30T08:13:16.741Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-30T08:13:16.741Z"
             }
           ]
         }
