@@ -29,4 +29,6 @@ public class Line
         LineName = lineName;
         LineCode = lineCode;
     }
+    public void UpdateLineName( string lineName) => LineName = lineName;
+    public void UpdateLineCode(string lineCode) => LineCode = lineCode;
 }

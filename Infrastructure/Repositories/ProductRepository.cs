@@ -33,6 +33,12 @@ namespace BatchSystem.Infrastructure.Repositories
             return product;
         }
 
+        public async Task<bool> IsProductNameExisted(string productName)
+        {
+            var productNameCheck = await _context.Products.AnyAsync(x=> x.ProductName == productName);
+            return productNameCheck;
+        }
+
         public void UpdateAsync(Product product)
         {
             _context.Products.Update(product);

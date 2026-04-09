@@ -12,6 +12,8 @@ namespace BatchSystem.Domain.Stations
     {
         Task AddAsync(Station station);
         void Delete(Station station);
+        Task<bool> IsStationNameExisted(string stationName);
+        Task<bool> IsStationCodeExisted(string stationCode);
         Task<Station?> GetById(string stationId);
         // Ở đây vẫn cần GetById để phục vụ cho các lệnh khác chứ không dùng Get ngay đây để truy vấn dữ liệu
         void UpdateAsync(Station station);

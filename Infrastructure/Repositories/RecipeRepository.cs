@@ -37,6 +37,12 @@ namespace BatchSystem.Infrastructure.Repositories
             return recipe;
         }
 
+        public async Task<bool> IsRecipeNameExisted(string recipeName)
+        {
+            var isRecipeNameExisted = await _context.Recipes.AnyAsync(x=>x.RecipeName == recipeName);
+            return isRecipeNameExisted;
+        }
+
         public void UpdateAsync(Recipe recipe)
         {
             _context.Recipes.Update(recipe);

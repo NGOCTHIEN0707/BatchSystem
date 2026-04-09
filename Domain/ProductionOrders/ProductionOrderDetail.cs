@@ -60,6 +60,7 @@ namespace Domain.ProductionOrders
                     i
                 )); 
             }
+            OrderBatches = batches;
         }
 
 

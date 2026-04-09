@@ -12,6 +12,9 @@ namespace BatchSystem.Domain.Lines
     {
         Task AddAsync(Line line);
         void Delete(Line line);
+        Task<bool> IsLineNameExisted(string lineName);
+        Task<bool> IsLineCodeExisted(string lineCode);
+
         Task<Line?> GetById(string lineId);
         // Ở đây vẫn cần GetById để phục vụ cho các lệnh khác chứ không dùng Get ngay đây để truy vấn dữ liệu
         void UpdateAsync(Line line);

@@ -29,6 +29,12 @@ namespace Domain.Products
             ProductName=productName;
             RecipeId = recipeId;
         }
+        public void UpdateProductName (string  productName) => ProductName = productName;
+        public void UpdateRecipeId (string recipeId) => RecipeId = recipeId;
+        public void DeactivateProduct()
+        {
+            IsActive = false;
+        }
     }
 
 }

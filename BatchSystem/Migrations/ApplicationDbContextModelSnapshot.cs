@@ -497,19 +497,17 @@ namespace BatchSystem.Migrations
                     b.Property<int>("SequenceNo")
                         .HasColumnType("int");
 
+                    b.Property<string>("StationCode")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("StationName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("StationTypeId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
-
                     b.HasKey("StationId");
 
                     b.HasIndex("LineId");
-
-                    b.HasIndex("StationTypeId");
 
                     b.ToTable("Stations");
                 });
@@ -553,22 +551,6 @@ namespace BatchSystem.Migrations
                         .IsUnique();
 
                     b.ToTable("StationCurrentStatuses");
-                });
-
-            modelBuilder.Entity("Domain.Stations.StationType", b =>
-                {
-                    b.Property<string>("StationTypeId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("nvarchar(450)")
-                        .HasDefaultValueSql("NEWID()");
-
-                    b.Property<string>("StationTypeName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("StationTypeId");
-
-                    b.ToTable("StationTypes");
                 });
 
             modelBuilder.Entity("Domain.Alarms.AlarmDefinition", b =>
@@ -752,15 +734,7 @@ namespace BatchSystem.Migrations
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
-                    b.HasOne("Domain.Stations.StationType", "StationType")
-                        .WithMany("Stations")
-                        .HasForeignKey("StationTypeId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
                     b.Navigation("Line");
-
-                    b.Navigation("StationType");
                 });
 
             modelBuilder.Entity("Domain.Stations.StationCurrentStatus", b =>
@@ -823,11 +797,6 @@ namespace BatchSystem.Migrations
                     b.Navigation("AlarmDefinitions");
 
                     b.Navigation("CurrentStatus");
-                });
-
-            modelBuilder.Entity("Domain.Stations.StationType", b =>
-                {
-                    b.Navigation("Stations");
                 });
 #pragma warning restore 612, 618
         }

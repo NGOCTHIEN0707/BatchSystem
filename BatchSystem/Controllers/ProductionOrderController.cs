@@ -1,5 +1,6 @@
 ﻿using BatchSystem.Application.Commands.ProductionOrders.ChangeStatus;
 using BatchSystem.Application.Commands.ProductionOrders.Create;
+using BatchSystem.Application.Commands.ProductionOrders.Delete;
 using BatchSystem.Application.Commands.ProductionOrders.Update;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
@@ -25,6 +26,11 @@ namespace BatchSystem.Controllers
         }
         [HttpPatch("ConfirmReady")]
         public async Task<IActionResult> ConfirmReady([FromBody] ChangeProductionOrderStatusToReadyCommand command)
+        {
+            return await SendCommand(command);
+        }
+        [HttpDelete]
+        public async Task<IActionResult> DeleteProductionOrder([FromQuery] DeleteProductionOrderCommand command)
         {
             return await SendCommand(command);
         }

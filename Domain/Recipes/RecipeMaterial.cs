@@ -34,5 +34,19 @@ namespace Domain.Recipes
             ToleranceMinKg = toleranceMinKg;
             ToleranceMaxKg = toleranceMaxKg;
         }
+
+
+        public void Update(decimal targetKg, decimal toleranceMinKg, decimal toleranceMaxKg)
+        {
+            if (targetKg <= 0)
+                throw new ArgumentException("TargetKg must be greater than zero.");
+
+            if (toleranceMinKg > toleranceMaxKg)
+                throw new ArgumentException("ToleranceMinKg cannot be greater than ToleranceMaxKg.");
+
+            TargetKg = targetKg;
+            ToleranceMinKg = toleranceMinKg;
+            ToleranceMaxKg = toleranceMaxKg;
+        }
     }
 }

@@ -44,7 +44,6 @@ namespace Infrastructure
         public DbSet<ProductionOrderDetail> ProductionOrderDetails { get; set; }
         public DbSet<RecipeMaterial> RecipeMaterials { get; set; }
         public DbSet<StationCurrentStatus> StationCurrentStatuses { get; set; }
-        public DbSet<StationType> StationTypes { get; set; }
         public DbSet<AlarmDefinition> AlarmDefinitions { get; set; }
         public DbSet<AlarmEvent> AlarmEvents { get; set; }
         public DbSet<Login> Logins { get; set; }
@@ -61,7 +60,6 @@ namespace Infrastructure
             base.OnModelCreating(modelBuilder);
             modelBuilder.ApplyConfiguration(new LineEntityTypeConfiguration());
             modelBuilder.ApplyConfiguration(new StationEntityTypeConfiguration());
-            modelBuilder.ApplyConfiguration(new StationTypeEntityTypeConfiguration());
             modelBuilder.ApplyConfiguration(new StationCurrentStatusEntityTypeConfiguration());
             modelBuilder.ApplyConfiguration(new LineCurrentStatusEntityTypeConfiguration());
             modelBuilder.ApplyConfiguration(new LineStatusHistoryEntityTypeConfiguration());

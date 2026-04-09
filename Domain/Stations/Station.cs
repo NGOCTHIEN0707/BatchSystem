@@ -11,9 +11,8 @@ namespace Domain.Stations;
 public class Station
 {
     public string StationId { get; private set; }
-    public string StationTypeId { get; private set; }
     public string StationName { get; private set; }
-    public StationType StationType { get; private set; }
+    public string StationCode { get; private set; }
     public Line Line { get; private set; }
     public string LineId { get; private set; }
     public int SequenceNo { get; private set; }
@@ -27,12 +26,20 @@ public class Station
     }
 
 #pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
-    public Station(string stationTypeId, string stationName, string lineId, int sequenceNo)
+    public Station(string stationCode, string stationName, string lineId, int sequenceNo)
 #pragma warning restore CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
     {
-        StationTypeId = stationTypeId;
+        StationCode = stationCode;
         StationName = stationName;
         LineId = lineId;
+        SequenceNo = sequenceNo;
+    }
+    public void UpdateStationName(string stationName) => StationName = stationName;
+    public void UpdateStationCode(string stationCode) => StationCode = stationCode;
+    public void UpdateLineIdForStation(string lineId) => LineId = lineId;
+    public void UpdateSequenceNo(int sequenceNo)
+    {
+        if (sequenceNo < 0) throw new Exception("Invalid SequenceNo for Station");
         SequenceNo = sequenceNo;
     }
 }

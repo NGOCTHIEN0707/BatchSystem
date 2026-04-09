@@ -12,6 +12,7 @@ namespace BatchSystem.Domain.Recipes
     {
         Task AddAsync(Recipe recipe);
         void Delete(Recipe recipe);
+        Task<bool> IsRecipeNameExisted(string recipeId);
         Task<Recipe?> GetById(string recipeId);
         // Ở đây vẫn cần GetById để phục vụ cho các lệnh khác chứ không dùng Get ngay đây để truy vấn dữ liệu
         void UpdateAsync(Recipe recipe);

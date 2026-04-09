@@ -33,6 +33,18 @@ namespace BatchSystem.Infrastructure.Repositories
             return line;
         }
 
+        public async Task<bool> IsLineCodeExisted(string lineCode)
+        {
+            var isLineCodeExisted = await _context.Lines.AsNoTracking().AnyAsync(x => x.LineCode == lineCode);
+            return isLineCodeExisted;
+        }
+
+        public async Task<bool> IsLineNameExisted(string lineName)
+        {
+            var isLineNameExisted = await _context.Lines.AsNoTracking().AnyAsync(x => x.LineName == lineName);
+            return isLineNameExisted;
+        }
+
         public void UpdateAsync(Line line)
         {
             var linetoUpdate =  _context.Lines.Update(line);
