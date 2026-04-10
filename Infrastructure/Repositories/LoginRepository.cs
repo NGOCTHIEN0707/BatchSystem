@@ -33,6 +33,18 @@ namespace BatchSystem.Infrastructure.Repositories
             return user;
         }
 
+        public async Task<Login?> GetByName(string userName)
+        {
+            var user = await _context.Logins.AsNoTracking().FirstOrDefaultAsync(x => x.UserName == userName);
+            return user;
+        }
+
+        public async Task<bool> IsUserNameExisted(string userName)
+        {
+            var isUserNameExisted = await _context.Logins.AsNoTracking().AnyAsync(x=>x.UserName == userName);
+            return isUserNameExisted;
+        }
+
         public void UpdateAsync(Login login)
         {
             _context.Logins.Update(login);

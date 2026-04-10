@@ -30,5 +30,9 @@ namespace Domain.Materials
             MaterialName=materialName;
             Unit=unit;
         }
+        public void UpdateMaterialName (string materialName) => MaterialName = materialName;
+        public void UpdateUnit (string unit) => Unit = unit;
+        public void Deactivate() => IsActive = false;
+
     }
 }

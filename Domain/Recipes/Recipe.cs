@@ -29,6 +29,7 @@ namespace Domain.Recipes
             RecipeName = recipeName;
             CreatedDate = createdDate;
         }
+        public void Deactivate() => IsActive = false;
         public void UpdateRecipeName(string recipeName) => RecipeName = recipeName;
         public RecipeMaterial AddRecipeMaterial(string materialId, decimal targetKg, decimal toleranceMinKg, decimal toleranceMaxKg)
         {

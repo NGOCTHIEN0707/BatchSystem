@@ -33,6 +33,12 @@ namespace BatchSystem.Infrastructure.Repositories
             return material;
         }
 
+        public async Task<bool> IsMaterialNameExisted(string materialName)
+        {
+            var isMaterialNameExisted = await _context.Materials.AsNoTracking().AnyAsync(x=>x.MaterialName == materialName);
+            return isMaterialNameExisted;
+        }
+
         public void UpdateAsync(Material material)
         {
             _context.Materials.Update(material);

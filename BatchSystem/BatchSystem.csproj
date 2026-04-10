@@ -19,13 +19,6 @@
 
   <ItemGroup>
     <Folder Include="Application\Commands\Lines\Delete\" />
-    <Folder Include="Application\Commands\Logins\Create\" />
-    <Folder Include="Application\Commands\Logins\Delete\" />
-    <Folder Include="Application\Commands\Logins\Update\" />
-    <Folder Include="Application\Commands\Materials\Create\" />
-    <Folder Include="Application\Commands\Materials\Delete\" />
-    <Folder Include="Application\Commands\Materials\Update\" />
-    <Folder Include="Application\Commands\Recipes\Delete\" />
     <Folder Include="Application\Commands\Stations\Delete\" />
     <Folder Include="Application\Queries\" />
   </ItemGroup>

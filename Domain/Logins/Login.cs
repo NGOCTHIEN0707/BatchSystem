@@ -30,9 +30,9 @@ namespace Domain.Logins
         {
             UserName = userName;
         }
-        public void UpdatePassword(string password)
+        public void UpdatePassword(string newPassword)
         {
-            Password = password;
+            Password = newPassword;
         }
         public void UpdateRole(ERole role)
         {

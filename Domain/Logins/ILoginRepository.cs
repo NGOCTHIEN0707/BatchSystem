@@ -12,6 +12,9 @@ namespace BatchSystem.Domain.Logins
     {
         Task AddAsync(Login login);
         void Delete(Login login);
+        Task<bool> IsUserNameExisted(string userName);
+        Task<Login?> GetByName(string userName);
+
         Task<Login?> GetById(string loginId);
         // Ở đây vẫnLine line cần GetById để phục vụ cho các lệnh khác chứ không dùng Get ngay đây để truy vấn dữ liệu
         void UpdateAsync(Login login);

@@ -15,6 +15,10 @@ namespace Infrastructure.Configurations
         {
             builder.HasKey(x => x.LoginId);
             builder.Property(x => x.LoginId).HasDefaultValueSql("NEWID()");
+            builder.Property(x => x.UserName).IsRequired();
+            builder.Property(x => x.Password).IsRequired();
+            builder.Property(x => x.Role).IsRequired();
+            builder.HasIndex(x => x.UserName).IsUnique();
 
         }
     }
