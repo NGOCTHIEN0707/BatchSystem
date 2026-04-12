@@ -21,7 +21,7 @@ namespace BatchSystem.Application.Commands.Logins.Create
             if (isUserNameExisted) throw new EntityDuplicationException(nameof(Login),request.UserName);
 
             var hashedPassword = SecurePasswordHasher.Hash(request.Password);
-            var loginToAdd = new Login(request.UserName, hashedPassword, request.Role);
+            var loginToAdd = new Login(request.UserName, hashedPassword, request.FullName,request.PhoneNumber,request.Role);
             await _loginRepository.AddAsync(loginToAdd);
             return await _unitOfWork.SaveEntitiesAsync(cancellationToken);
 

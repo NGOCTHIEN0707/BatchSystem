@@ -19,6 +19,9 @@ namespace Infrastructure.Configurations
             builder.Property(x => x.Password).IsRequired();
             builder.Property(x => x.Role).IsRequired();
             builder.HasIndex(x => x.UserName).IsUnique();
+            builder.Property(x=>x.FullName).IsRequired();
+            builder.Property(x=>x.PhoneNumber).IsRequired();
+
 
         }
     }

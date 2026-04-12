@@ -192,18 +192,31 @@ namespace BatchSystem.Migrations
                         .HasColumnType("nvarchar(450)")
                         .HasDefaultValueSql("NEWID()");
 
+                    b.Property<string>("FullName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
                     b.Property<string>("Password")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("PhoneNumber")
+                        .HasColumnType("int");
 
                     b.Property<int>("Role")
                         .HasColumnType("int");
 
                     b.Property<string>("UserName")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.HasKey("LoginId");
+
+                    b.HasIndex("UserName")
+                        .IsUnique();
 
                     b.ToTable("Logins");
                 });
@@ -340,9 +353,8 @@ namespace BatchSystem.Migrations
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("CreatedBy")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<string>("CustomerLoginId")
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<DateTime?>("PlannedEndTime")
                         .HasColumnType("datetime2");
@@ -357,6 +369,8 @@ namespace BatchSystem.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("ProductionOrderId");
+
+                    b.HasIndex("CustomerLoginId");
 
                     b.ToTable("ProductionOrders");
                 });
@@ -669,6 +683,16 @@ namespace BatchSystem.Migrations
                     b.Navigation("ProductionOrderDetail");
                 });
 
+            modelBuilder.Entity("Domain.ProductionOrders.ProductionOrder", b =>
+                {
+                    b.HasOne("Domain.Logins.Login", "CustomerLogin")
+                        .WithMany("ProductionOrders")
+                        .HasForeignKey("CustomerLoginId")
+                        .OnDelete(DeleteBehavior.Restrict);
+
+                    b.Navigation("CustomerLogin");
+                });
+
             modelBuilder.Entity("Domain.ProductionOrders.ProductionOrderDetail", b =>
                 {
                     b.HasOne("Domain.Products.Product", "Product")
@@ -765,6 +789,11 @@ namespace BatchSystem.Migrations
                     b.Navigation("CurrentStatus");
 
                     b.Navigation("Stations");
+                });
+
+            modelBuilder.Entity("Domain.Logins.Login", b =>
+                {
+                    b.Navigation("ProductionOrders");
                 });
 
             modelBuilder.Entity("Domain.Materials.Material", b =>

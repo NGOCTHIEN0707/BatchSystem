@@ -15,11 +15,14 @@ namespace Infrastructure.Configurations
         {
             builder.HasKey(x => x.ProductionOrderId);
             builder.Property(x => x.ProductionOrderId).HasDefaultValueSql("NEWSEQUENTIALID()");
-            builder.HasMany(x=>x.ProductionOrderDetails)
-                .WithOne(x=>x.ProductionOrder)
-                .HasForeignKey(x=>x.ProductionOrderId)
+            builder.HasMany(x => x.ProductionOrderDetails)
+                .WithOne(x => x.ProductionOrder)
+                .HasForeignKey(x => x.ProductionOrderId)
                 .OnDelete(DeleteBehavior.Cascade);
-
+            builder.HasOne(x => x.CustomerLogin)
+                   .WithMany(x => x.ProductionOrders)
+                   .HasForeignKey(x => x.CustomerLoginId)
+                   .OnDelete(DeleteBehavior.Restrict);
         }
     }
 }

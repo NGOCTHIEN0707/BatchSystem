@@ -8,5 +8,7 @@ namespace BatchSystem.Application.Commands.Logins.Update
         public string? OldPassWord { get; set; }
         public string? NewPassWord { get; set; }
         public ERole? Role { get; set; }
+        public string? FullName { get; set; }
+        public int? PhoneNumber { get; set; }
     }
 }

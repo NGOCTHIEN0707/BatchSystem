@@ -10,8 +10,12 @@ using BatchSystem.Domain.Recipes;
 using BatchSystem.Domain.SeedWork;
 using BatchSystem.Domain.Stations;
 using BatchSystem.Infrastructure.Repositories;
+using BatchSystem.TokenServices;
 using Infrastructure;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 
 namespace BatchSystem
 {
@@ -31,6 +35,23 @@ namespace BatchSystem
             {
                 options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"), b => b.MigrationsAssembly("BatchSystem"));
             });
+
+            builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+            .AddJwtBearer(options =>
+            {
+                options.TokenValidationParameters = new TokenValidationParameters
+                {
+                    ValidateIssuer = true,
+                    ValidateAudience = true,
+                    ValidateLifetime = true,
+                    ValidateIssuerSigningKey = true,
+                    ValidIssuer = "BatchSystem",
+                    ValidAudience = "BatchSystemClient",
+                    IssuerSigningKey = new SymmetricSecurityKey(
+                        Encoding.UTF8.GetBytes("your-secret-key"))
+                };
+            });
+
             builder.Services.AddScoped<IUnitOfWork>(sp => sp.GetRequiredService<ApplicationDbContext>());
             builder.Services.AddScoped<IAlarmDefinitionRepository, AlarmDefinitionRepository>();
             builder.Services.AddScoped<IAlarmEventRepository, AlarmEventRepository>();
@@ -42,7 +63,7 @@ namespace BatchSystem
             builder.Services.AddScoped<IProductRepository, ProductRepository>();
             builder.Services.AddScoped<IRecipeRepository, RecipeRepository>();
             builder.Services.AddScoped<IStationRepository, StationRepository>();
-
+            builder.Services.AddScoped<ITokenService, TokenService>();
             builder.Services.AddMediatR(cfg =>
             {
                 //cfg.RegisterServicesFromAssemblyContaining<ModelToViewModelProfile>();
@@ -62,7 +83,7 @@ namespace BatchSystem
             }
 
             app.UseHttpsRedirection();
-
+            app.UseAuthentication();
             app.UseAuthorization();
 
 

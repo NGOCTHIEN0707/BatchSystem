@@ -36,7 +36,8 @@ namespace BatchSystem.Application.Commands.Logins.Update
             }
 
             if (request.Role.HasValue) loginToUpdate.UpdateRole(request.Role.Value);
-
+            if(request.FullName!=null) loginToUpdate.UpdateFullName(request.FullName);
+            if (request.PhoneNumber!=null) loginToUpdate.UpdatePhoneNumber(request.PhoneNumber.Value);
             _loginRepository.UpdateAsync(loginToUpdate);
             return await _unitOfWork.SaveEntitiesAsync(cancellationToken);
 

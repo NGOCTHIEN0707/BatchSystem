@@ -1,4 +1,5 @@
 ﻿using Domain.Alarms;
+using Domain.Logins;
 using Domain.OrderBatchs;
 using Domain.ProductionOrders.SnapShot;
 using System;
@@ -18,8 +19,9 @@ namespace Domain.ProductionOrders
         public DateTime? PlannedEndTime { get; private set; }
         public DateTime? ActualStartTime { get; private set; }
         public DateTime? ActualEndTime { get; private set; }
-        public string CreatedBy { get; private set; }
+        public string? CustomerLoginId { get; private set; }
         public DateTime CreatedAt { get; set; } = DateTime.Now;
+        public Login? CustomerLogin { get; private set; }
 
         public List<ProductionOrderDetail> ProductionOrderDetails { get; private set; } = new List<ProductionOrderDetail>();
         //public List<OrderBatch> OrderBatches { get; private set; } = new List<OrderBatch>();
@@ -37,7 +39,7 @@ namespace Domain.ProductionOrders
             Priority=priority;
             PlannedStartTime=plannedStartTime;
             PlannedEndTime=plannedEndTime;
-            CreatedBy=createdBy;
+            CustomerLoginId =createdBy;
             CreatedAt=createdAt;
         }
 

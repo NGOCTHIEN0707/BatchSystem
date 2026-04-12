@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BatchSystem.Infrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5c94281d65ecd74b129b243eeb213d845fcf6be2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0d80fb38c26c80e2e2b2bd8dbce5118e86f0cdc3")]
 [assembly: System.Reflection.AssemblyProductAttribute("BatchSystem.Infrastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BatchSystem.Infrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
