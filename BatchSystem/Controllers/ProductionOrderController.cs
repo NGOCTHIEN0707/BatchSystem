@@ -2,6 +2,8 @@
 using BatchSystem.Application.Commands.ProductionOrders.Create;
 using BatchSystem.Application.Commands.ProductionOrders.Delete;
 using BatchSystem.Application.Commands.ProductionOrders.Update;
+using BatchSystem.Application.Queries.ProductionOrder;
+using BatchSystem.Application.Queries.ProductionOrder.DTO;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -33,6 +35,11 @@ namespace BatchSystem.Controllers
         public async Task<IActionResult> DeleteProductionOrder([FromQuery] DeleteProductionOrderCommand command)
         {
             return await SendCommand(command);
+        }
+        [HttpGet("GetOrderReportByUserName")]
+        public async Task<IEnumerable<ProductionOrderReport>> Get([FromQuery] ProductionOrderQuery query)
+        {
+            return await _mediator.Send(query);
         }
     }
 }

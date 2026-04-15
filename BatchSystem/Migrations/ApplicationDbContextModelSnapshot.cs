@@ -203,8 +203,10 @@ namespace BatchSystem.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("PhoneNumber")
-                        .HasColumnType("int");
+                    b.Property<string>("PhoneNumber")
+                        .IsRequired()
+                        .HasMaxLength(15)
+                        .HasColumnType("nvarchar(15)");
 
                     b.Property<int>("Role")
                         .HasColumnType("int");

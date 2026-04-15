@@ -2,7 +2,7 @@
 {
     public class CreateProductCommand : IRequest<bool>
     {
-        public string? ProductName { get; private set; }
-        public string RecipeId { get; private set; }
+        public string? ProductName { get;  set; }
+        public string RecipeId { get;  set; }
     }
 }

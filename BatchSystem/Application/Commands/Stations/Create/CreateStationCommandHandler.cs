@@ -22,10 +22,10 @@ namespace BatchSystem.Application.Commands.Stations.Create
 
         public async Task<bool> Handle(CreateStationCommand request, CancellationToken cancellationToken)
         {
-            var lineIdCheck = await _lineRepository.IsLineCodeExisted(request.LineId);
-            if(!lineIdCheck) throw new EntityNotFoundException(nameof(Line),request.LineId);
+            var line = await _lineRepository.GetByLineCode(request.LineCode);
+            if(line == null) throw new EntityNotFoundException(nameof(Line),request.LineCode);
 
-
+            
             if (request.StationCode == null || request.StationName ==null)
                 throw new Exception("Invalided Data to create Station");
 
@@ -33,7 +33,7 @@ namespace BatchSystem.Application.Commands.Stations.Create
             if (stationNameCheck) throw new EntityDuplicationException(nameof(Station), request.StationName);
             var stationCodeCheck = await _stationRepository.IsStationCodeExisted(request.StationCode);
             if (stationCodeCheck) throw new EntityDuplicationException(nameof(Station), request.StationCode);
-            var stationToCreaet = new Station(request.StationCode, request.StationName,request.LineId,request.SequenceNo);
+            var stationToCreaet = new Station(request.StationCode, request.StationName,line.LineId, request.SequenceNo);
             
             await _stationRepository.AddAsync(stationToCreaet);
             return await _unitOfWork.SaveEntitiesAsync(cancellationToken);

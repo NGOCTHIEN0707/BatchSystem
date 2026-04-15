@@ -24,12 +24,18 @@ namespace BatchSystem.Infrastructure.Repositories
 
         public void Delete(Line line)
         {
-             _context.Lines.Remove(line);
+            _context.Lines.Remove(line);
         }
 
         public async Task<Line?> GetById(string lineId)
         {
-            var line = await _context.Lines.AsNoTracking().FirstOrDefaultAsync(x=>x.LineId==lineId);
+            var line = await _context.Lines.AsNoTracking().FirstOrDefaultAsync(x => x.LineId==lineId);
+            return line;
+        }
+
+        public async Task<Line?> GetByLineCode(string lineCode)
+        {
+            var line = await _context.Lines.AsNoTracking().FirstOrDefaultAsync(x => x.LineCode==lineCode);
             return line;
         }
 
@@ -47,7 +53,7 @@ namespace BatchSystem.Infrastructure.Repositories
 
         public void UpdateAsync(Line line)
         {
-            var linetoUpdate =  _context.Lines.Update(line);
+            var linetoUpdate = _context.Lines.Update(line);
         }
     }
 }

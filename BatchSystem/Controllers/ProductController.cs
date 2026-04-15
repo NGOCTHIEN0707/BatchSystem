@@ -15,7 +15,7 @@ namespace BatchSystem.Controllers
         public ProductController(IMediator mediator) : base(mediator)
         {
         }
-        [HttpPost]
+        [HttpPost("CreateProduct")]
         public async Task<IActionResult> CreateProduct([FromBody] CreateProductCommand command)
         {
             return await SendCommand(command);
@@ -30,7 +30,7 @@ namespace BatchSystem.Controllers
         {
             return await SendCommand(command);
         }
-        [HttpGet]
+        [HttpGet("GetAll")]
         public async Task<List<ProductWithRecipeDto>> GetProducts([FromQuery] GetAllProductsWithRecipeQuery query)
         {
             return await _mediator.Send(query);

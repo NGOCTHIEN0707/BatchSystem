@@ -1,7 +1,9 @@
-﻿using BatchSystem.Domain.ProductionOrders;
+﻿using BatchSystem.Domain.Logins;
+using BatchSystem.Domain.ProductionOrders;
 using BatchSystem.Domain.Products;
 using BatchSystem.Domain.Recipes;
 using BatchSystem.Domain.SeedWork;
+using Domain.Logins;
 using Domain.ProductionOrders;
 using Domain.ProductionOrders.SnapShot;
 using Domain.Products;
@@ -16,22 +18,26 @@ namespace BatchSystem.Application.Commands.ProductionOrders.Create
         private readonly IProductRepository _productRepository;
         private readonly IRecipeRepository _recipeRepository;
         private readonly IUnitOfWork _unitOfWork;
+        private readonly ILoginRepository _loginRepository;
 
-        public CreateProductionOrderCommandHandler(IProductionOrderRepository productionOrderRepository, IProductRepository productRepository, IRecipeRepository recipeRepository, IUnitOfWork unitOfWork)
+        public CreateProductionOrderCommandHandler(IProductionOrderRepository productionOrderRepository, IProductRepository productRepository, IRecipeRepository recipeRepository, IUnitOfWork unitOfWork, ILoginRepository loginRepository)
         {
-            _productionOrderRepository = productionOrderRepository;
-            _productRepository = productRepository;
-            _recipeRepository = recipeRepository;
-            _unitOfWork = unitOfWork;
+            _productionOrderRepository=productionOrderRepository;
+            _productRepository=productRepository;
+            _recipeRepository=recipeRepository;
+            _unitOfWork=unitOfWork;
+            _loginRepository=loginRepository;
         }
 
         public async Task<bool> Handle(CreateProductionOrderCommand request, CancellationToken cancellationToken)
         {
+            var userName = await _loginRepository.GetByName(request.UserName);
+            if (userName == null) throw new EntityNotFoundException(nameof(Login), request.UserName);
             var order = new ProductionOrder(
                 request.Priority,
                 request.PlannedStartTime,
                 request.PlannedEndTime,
-                request.CreatedBy,
+                userName.LoginId,
                 DateTime.Now
             );
 

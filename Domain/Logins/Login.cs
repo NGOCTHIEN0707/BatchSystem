@@ -13,7 +13,7 @@ namespace Domain.Logins
         public string UserName { get; private set; }
         public string Password { get; private set; }
         public string FullName { get; private set; }
-        public int PhoneNumber { get; set; }
+        public string PhoneNumber { get; set; }
         public ERole Role { get; private set; }
         public bool IsActive { get; private set; } = true;
         public List<ProductionOrder> ProductionOrders { get; private set; } = new List<ProductionOrder>();
@@ -27,7 +27,7 @@ namespace Domain.Logins
         {
             IsActive = false;
         }
-        public Login(string userName, string password, string fullName, int phoneNumber, ERole role)
+        public Login(string userName, string password, string fullName, string phoneNumber, ERole role)
         {
             UserName=userName;
             Password=password;
@@ -36,7 +36,7 @@ namespace Domain.Logins
             Role=role;
         }
         public void UpdateFullName (string fullName) => FullName = fullName;
-        public void UpdatePhoneNumber(int phoneNumber ) => PhoneNumber = phoneNumber;
+        public void UpdatePhoneNumber(string phoneNumber ) => PhoneNumber = phoneNumber;
         public void UpdateUserName(string userName)
         {
             UserName = userName;

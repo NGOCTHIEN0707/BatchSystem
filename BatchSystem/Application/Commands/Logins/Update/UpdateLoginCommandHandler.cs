@@ -1,6 +1,7 @@
 ﻿
 using BatchSystem.Domain.Logins;
 using Domain.Logins;
+using System.Text.RegularExpressions;
 
 namespace BatchSystem.Application.Commands.Logins.Update
 {
@@ -37,7 +38,12 @@ namespace BatchSystem.Application.Commands.Logins.Update
 
             if (request.Role.HasValue) loginToUpdate.UpdateRole(request.Role.Value);
             if(request.FullName!=null) loginToUpdate.UpdateFullName(request.FullName);
-            if (request.PhoneNumber!=null) loginToUpdate.UpdatePhoneNumber(request.PhoneNumber.Value);
+            if (string.IsNullOrWhiteSpace(request.PhoneNumber) || !Regex.IsMatch(request.PhoneNumber, @"^(0|\+84)[0-9]{9,10}$"))
+            {
+                throw new ArgumentException("Phone number is invalid");
+            }
+            loginToUpdate.UpdatePhoneNumber(request.PhoneNumber);
+            
             _loginRepository.UpdateAsync(loginToUpdate);
             return await _unitOfWork.SaveEntitiesAsync(cancellationToken);
 

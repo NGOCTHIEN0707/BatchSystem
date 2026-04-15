@@ -8,7 +8,7 @@ namespace BatchSystem.Application.Commands.ProductionOrders.Create
         public int Priority { get; set; }
         public DateTime? PlannedStartTime { get; set; }
         public DateTime? PlannedEndTime { get; set; }
-        public string CreatedBy { get; set; } = string.Empty;
+        public string UserName { get; set; } = string.Empty;
         public List<CreateProductionOrderDetailDto> Details { get; set; } = new List<CreateProductionOrderDetailDto>();
 
         public class CreateProductionOrderDetailDto
@@ -19,13 +19,6 @@ namespace BatchSystem.Application.Commands.ProductionOrders.Create
             public int SequenceNo { get; set; }
         }
 
-        public CreateProductionOrderCommand(int priority, DateTime? plannedStartTime, DateTime? plannedEndTime, string createdBy, List<CreateProductionOrderDetailDto> details)
-        {
-            Priority = priority;
-            PlannedStartTime = plannedStartTime;
-            PlannedEndTime = plannedEndTime;
-            CreatedBy = createdBy;
-            Details = details;
-        }
+        
     }
 }

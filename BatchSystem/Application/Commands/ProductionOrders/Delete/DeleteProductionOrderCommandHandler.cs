@@ -19,9 +19,12 @@ namespace BatchSystem.Application.Commands.ProductionOrders.Delete
 
         public async Task<bool> Handle(DeleteProductionOrderCommand request, CancellationToken cancellationToken)
         {
-            var productionOrdertoDelete = await _productionOrderRepository.GetById(request.ProductionOrderId);
+            if (!Guid.TryParse(request.ProductionOrderId, out var productionOrderId))
+                throw new EntityNotFoundException(nameof(ProductionOrder), request.ProductionOrderId);
+            var productionOrdertoDelete = await _productionOrderRepository.GetById(productionOrderId);
             if (productionOrdertoDelete == null) throw new EntityNotFoundException(nameof(ProductionOrder), request.ProductionOrderId.ToString());
-            if(productionOrdertoDelete.Status != ProductionOrderStatus.Pending && productionOrdertoDelete.Status != ProductionOrderStatus.Cancelled)
+            if(productionOrdertoDelete.Status != ProductionOrderStatus.Pending && productionOrdertoDelete.Status != ProductionOrderStatus.Cancelled 
+                && productionOrdertoDelete.Status != ProductionOrderStatus.Ready)
             {
                 throw new BusinessRuleException($"The order is {productionOrdertoDelete.Status}");
             }

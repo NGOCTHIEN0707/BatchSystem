@@ -10,10 +10,12 @@ using BatchSystem.Domain.Recipes;
 using BatchSystem.Domain.SeedWork;
 using BatchSystem.Domain.Stations;
 using BatchSystem.Infrastructure.Repositories;
+using BatchSystem.Mapping;
 using BatchSystem.TokenServices;
 using Infrastructure;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 
@@ -66,12 +68,13 @@ namespace BatchSystem
             builder.Services.AddScoped<ITokenService, TokenService>();
             builder.Services.AddMediatR(cfg =>
             {
-                //cfg.RegisterServicesFromAssemblyContaining<ModelToViewModelProfile>();
+                cfg.RegisterServicesFromAssemblyContaining<ModelToViewModelProfile>();
                 cfg.RegisterServicesFromAssemblyContaining<CreateProductionOrderCommandHandler>(); // MediatR nhìn được Assembly API
                 cfg.RegisterServicesFromAssemblyContaining<ApplicationDbContext>(); // MediatR nhìn được Infrastructure
                 cfg.RegisterServicesFromAssemblyContaining<Entity>(); // MediatR nhìn được Domain
                 //cfg.RegisterServicesFromAssemblyContaining<Buffer>();
             });
+            builder.Services.AddAutoMapper(x=>x.AddProfile<ModelToViewModelProfile>());
 
             var app = builder.Build();
 
