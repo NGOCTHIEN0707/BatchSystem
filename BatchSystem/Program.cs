@@ -1,4 +1,5 @@
 ﻿using BatchSystem.Application.Commands.ProductionOrders.Create;
+using BatchSystem.Application.Notifications.ProductionOrders.OrderBatchPublishers;
 using BatchSystem.Domain.Alarms;
 using BatchSystem.Domain.Lines;
 using BatchSystem.Domain.Logins;
@@ -9,6 +10,7 @@ using BatchSystem.Domain.Products;
 using BatchSystem.Domain.Recipes;
 using BatchSystem.Domain.SeedWork;
 using BatchSystem.Domain.Stations;
+using BatchSystem.Infrastructure.Communication;
 using BatchSystem.Infrastructure.Repositories;
 using BatchSystem.Mapping;
 using BatchSystem.TokenServices;
@@ -66,6 +68,7 @@ namespace BatchSystem
             builder.Services.AddScoped<IRecipeRepository, RecipeRepository>();
             builder.Services.AddScoped<IStationRepository, StationRepository>();
             builder.Services.AddScoped<ITokenService, TokenService>();
+            builder.Services.AddScoped<IOrderBatchCommandPublisher, OrderBatchCommandPublisher>();  
             builder.Services.AddMediatR(cfg =>
             {
                 cfg.RegisterServicesFromAssemblyContaining<ModelToViewModelProfile>();
@@ -74,8 +77,9 @@ namespace BatchSystem
                 cfg.RegisterServicesFromAssemblyContaining<Entity>(); // MediatR nhìn được Domain
                 //cfg.RegisterServicesFromAssemblyContaining<Buffer>();
             });
-            builder.Services.AddAutoMapper(x=>x.AddProfile<ModelToViewModelProfile>());
-
+            builder.Services.Configure<MqttOptions>(builder.Configuration.GetSection("Mqtt"));
+            builder.Services.AddAutoMapper(x => x.AddProfile<ModelToViewModelProfile>());
+            builder.Services.AddSingleton<IManagedMqttClient, ManagedMqttClient>();
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.

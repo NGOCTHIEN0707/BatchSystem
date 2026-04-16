@@ -10,10 +10,12 @@ namespace BatchSystem.Infrastructure.Communication
     {
         public string? Topic { get; set; }
         public string? Payload { get; set; }
+        public DateTime ReceivedAt { get; }
         public MqttMessage(string topic, string payload)
         {
             Topic = topic;
             Payload = payload;
+            ReceivedAt = DateTime.Now;
         }
     }
 }

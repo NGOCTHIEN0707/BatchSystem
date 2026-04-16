@@ -29,7 +29,9 @@ namespace BatchSystem.Infrastructure.Repositories
 
         public async Task<OrderBatch?> GetById(Guid orderBatchId)
         {
-            var orderBatch = await _context.OrderBatchs.AsNoTracking().FirstOrDefaultAsync(x=>x.OrderBatchId == orderBatchId);
+            var orderBatch = await _context.OrderBatchs.AsNoTracking()
+                .Include(x=>x.ProductionOrderDetail)
+                .FirstOrDefaultAsync(x => x.OrderBatchId == orderBatchId);
             return orderBatch;
         }
 
