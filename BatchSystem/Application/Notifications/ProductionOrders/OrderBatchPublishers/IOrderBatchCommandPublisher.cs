@@ -1,9 +1,10 @@
 ﻿using Domain.OrderBatchs;
+using Domain.ProductionOrders;
 
 namespace BatchSystem.Application.Notifications.ProductionOrders.OrderBatchPublishers
 {
     public interface IOrderBatchCommandPublisher
     {
-        Task PublishBatchReadyAsync(OrderBatch orderBatch, CancellationToken cancellationToken = default);
+        Task PublishBatchGroupReadyAsync(ProductionOrderDetail detail, List<OrderBatch> batches,int productCode, int customerCode, CancellationToken cancellationToken = default);
     }
 }

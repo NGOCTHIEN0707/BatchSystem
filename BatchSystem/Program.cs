@@ -1,21 +1,28 @@
 ﻿using BatchSystem.Application.Commands.ProductionOrders.Create;
 using BatchSystem.Application.Notifications.ProductionOrders.OrderBatchPublishers;
+using BatchSystem.Application.ProductionOrderDispatchers;
 using BatchSystem.Domain.Alarms;
 using BatchSystem.Domain.Lines;
 using BatchSystem.Domain.Logins;
+using BatchSystem.Domain.Logins.StaffCodes;
 using BatchSystem.Domain.Materials;
 using BatchSystem.Domain.OrderBatchs;
+using BatchSystem.Domain.OrderBatchs.OrderBatchStatusHistories;
 using BatchSystem.Domain.ProductionOrders;
+using BatchSystem.Domain.ProductionOrders.ProductionOrderStatusHistories;
 using BatchSystem.Domain.Products;
 using BatchSystem.Domain.Recipes;
 using BatchSystem.Domain.SeedWork;
 using BatchSystem.Domain.Stations;
+using BatchSystem.DTOs;
+using BatchSystem.Hubs;
 using BatchSystem.Infrastructure.Communication;
 using BatchSystem.Infrastructure.Repositories;
 using BatchSystem.Mapping;
 using BatchSystem.TokenServices;
 using Infrastructure;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.SignalR;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
@@ -39,7 +46,17 @@ namespace BatchSystem
             {
                 options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"), b => b.MigrationsAssembly("BatchSystem"));
             });
-
+            builder.Services.AddCors(options =>
+            {
+                options.AddDefaultPolicy(policy =>
+                {
+                    policy
+                        .SetIsOriginAllowed(_ => true)
+                        .AllowAnyHeader()
+                        .AllowAnyMethod()
+                        .AllowCredentials();
+                });
+            });
             builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
             .AddJwtBearer(options =>
             {
@@ -63,12 +80,16 @@ namespace BatchSystem
             builder.Services.AddScoped<ILoginRepository, LoginRepository>();
             builder.Services.AddScoped<IMaterialRepository, MaterialRepository>();
             builder.Services.AddScoped<IOrderBatchRepository, OrderBatchRepository>();
+            builder.Services.AddScoped<IProductionOrderStatusHistoryRepository, ProductionOrderStatusHistoryRepository>();
+            builder.Services.AddScoped<IOrderBatchStatusHistoryRepository, OrderBatchStatusHistoryRepository>();
             builder.Services.AddScoped<IProductionOrderRepository, ProductionOrderRepository>();
             builder.Services.AddScoped<IProductRepository, ProductRepository>();
             builder.Services.AddScoped<IRecipeRepository, RecipeRepository>();
             builder.Services.AddScoped<IStationRepository, StationRepository>();
             builder.Services.AddScoped<ITokenService, TokenService>();
-            builder.Services.AddScoped<IOrderBatchCommandPublisher, OrderBatchCommandPublisher>();  
+            builder.Services.AddScoped<IOrderBatchCommandPublisher, OrderBatchCommandPublisher>();
+            builder.Services.AddScoped<IProductionOrderDispatcher, ProductionOrderDispatcher>();
+            builder.Services.AddScoped<IStaffCodeRepository, StaffCodeRepository>();
             builder.Services.AddMediatR(cfg =>
             {
                 cfg.RegisterServicesFromAssemblyContaining<ModelToViewModelProfile>();
@@ -80,7 +101,10 @@ namespace BatchSystem
             builder.Services.Configure<MqttOptions>(builder.Configuration.GetSection("Mqtt"));
             builder.Services.AddAutoMapper(x => x.AddProfile<ModelToViewModelProfile>());
             builder.Services.AddSingleton<IManagedMqttClient, ManagedMqttClient>();
+            builder.Services.AddSignalR();
+
             var app = builder.Build();
+
 
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
@@ -90,10 +114,59 @@ namespace BatchSystem
             }
 
             app.UseHttpsRedirection();
+            app.UseCors();
+
             app.UseAuthentication();
             app.UseAuthorization();
 
+            app.MapHub<ProcessDataHub>("/hubs/process-data");
+            app.MapHub<AlarmHub>("/hubs/alarms");
+            app.MapHub<StatusHub>("/hubs/status");
+            app.MapPost("/internal/realtime/process-data",
+            async (
+                ProcessDataRealtimeDto data,
+                IHubContext<ProcessDataHub> hubContext,
+                CancellationToken cancellationToken) =>
+            {
+                Console.WriteLine("API received process data");
 
+                await hubContext.Clients.All.SendAsync(
+                    "processData",
+                    data,
+                    cancellationToken);
+
+                return Results.Ok();
+            });
+            app.MapPost("/internal/realtime/status",
+            async (
+                object data,
+                IHubContext<StatusHub> hubContext,
+                CancellationToken cancellationToken) =>
+            {
+                Console.WriteLine("API received status");
+
+                await hubContext.Clients.All.SendAsync(
+                    "StatusUpdated",
+                    data,
+                    cancellationToken);
+
+                return Results.Ok();
+            });
+            app.MapPost("/internal/realtime/alarm",
+            async (
+                object data,
+                IHubContext<AlarmHub> hubContext,
+                CancellationToken cancellationToken) =>
+            {
+                Console.WriteLine("API received alarm");
+
+                await hubContext.Clients.All.SendAsync(
+                    "ReceiveAlarmUpdate",
+                    data,
+                    cancellationToken);
+
+                return Results.Ok();
+            });
             app.MapControllers();
 
             app.Run();

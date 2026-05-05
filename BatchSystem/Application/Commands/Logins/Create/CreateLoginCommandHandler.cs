@@ -1,5 +1,6 @@
 ﻿
 using BatchSystem.Domain.Logins;
+using BatchSystem.Domain.Logins.StaffCodes;
 using Domain.Logins;
 using System.Text.RegularExpressions;
 
@@ -9,11 +10,13 @@ namespace BatchSystem.Application.Commands.Logins.Create
     {
         private readonly ILoginRepository _loginRepository;
         private readonly IUnitOfWork _unitOfWork;
+        private readonly IStaffCodeRepository _staffCodeRepository;
 
-        public CreateLoginCommandHandler(ILoginRepository loginRepository, IUnitOfWork unitOfWork)
+        public CreateLoginCommandHandler(ILoginRepository loginRepository, IUnitOfWork unitOfWork, IStaffCodeRepository staffCodeRepository)
         {
             _loginRepository=loginRepository;
             _unitOfWork=unitOfWork;
+            _staffCodeRepository=staffCodeRepository;
         }
 
         public async Task<bool> Handle(CreateLoginCommand request, CancellationToken cancellationToken)
@@ -24,9 +27,40 @@ namespace BatchSystem.Application.Commands.Logins.Create
             {
                 throw new ArgumentException("Phone number is invalid");
             }
+
+            ERole role;
+
+            // 🔥 CASE 1: Staff / Manager → bắt buộc có code
+            if (request.Role == ERole.Staff || request.Role == ERole.Manager)
+            {
+                if (!request.StaffCode.HasValue)
+                    throw new ArgumentException("Staff code is required");
+
+                var staffCode = await _staffCodeRepository.GetStaffCodeByCode(request.StaffCode.Value);
+
+                if (staffCode == null)
+                    throw new ArgumentException("Staff code is invalid");
+
+                if (staffCode.IsUsed)
+                    throw new ArgumentException("Staff code has already been used");
+                
+                if (staffCode.Role != request.Role)
+                    throw new ArgumentException("Staff code does not match selected role");
+                
+                role = staffCode.Role;
+
+                staffCode.MarkAsUsed();
+            }
+            else
+            {
+                // 🔥 CASE 2: Customer → không cần code
+                role = request.Role;
+            }
+
+
             var hashedPassword = SecurePasswordHasher.Hash(request.Password);
 
-            var loginToAdd = new Login(request.UserName, hashedPassword, request.FullName, request.PhoneNumber, request.Role);
+            var loginToAdd = new Login(request.UserName, hashedPassword, request.FullName, request.PhoneNumber, role);
             await _loginRepository.AddAsync(loginToAdd);
             return await _unitOfWork.SaveEntitiesAsync(cancellationToken);
 

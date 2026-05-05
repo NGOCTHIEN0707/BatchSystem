@@ -3,6 +3,7 @@ using BatchSystem.Application.Commands.Products.DeactivateProduct;
 using BatchSystem.Application.Commands.Prpoducts.Update;
 using BatchSystem.Application.Queries.GetAllWithRecipe;
 using BatchSystem.Application.Queries.Product_Recipe;
+using BatchSystem.Application.Queries.Products;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -20,7 +21,7 @@ namespace BatchSystem.Controllers
         {
             return await SendCommand(command);
         }
-        [HttpPatch]
+        [HttpPatch] 
         public async Task<IActionResult> UpdateProduct([FromBody] UpdateProductCommand command)
         {
             return await SendCommand(command);
@@ -32,6 +33,11 @@ namespace BatchSystem.Controllers
         }
         [HttpGet("GetAll")]
         public async Task<List<ProductWithRecipeDto>> GetProducts([FromQuery] GetAllProductsWithRecipeQuery query)
+        {
+            return await _mediator.Send(query);
+        }
+        [HttpGet("GetAllProductId")]
+        public async Task<List<string>> GetAllProductsId([FromQuery] GetAllProductIdQuery query)
         {
             return await _mediator.Send(query);
         }

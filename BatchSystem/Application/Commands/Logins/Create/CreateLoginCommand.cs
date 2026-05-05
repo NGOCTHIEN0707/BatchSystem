@@ -7,9 +7,10 @@ namespace BatchSystem.Application.Commands.Logins.Create
         public string UserName { get; set; }
         public string Password { get; set; }
         public ERole Role { get; set; }
+        public int? StaffCode { get; set; }
         public string FullName { get; set; } 
         public string PhoneNumber { get; set; }
-
+        // cần thêm xác nhận mã pin
 
     }
 }

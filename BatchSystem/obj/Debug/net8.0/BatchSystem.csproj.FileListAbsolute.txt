@@ -1,11 +1,3 @@
-C:\Users\herob\Downloads\BatchSystem\BatchSystem\obj\Debug\net8.0\BatchSystem.csproj.AssemblyReference.cache
-C:\Users\herob\Downloads\BatchSystem\BatchSystem\obj\Debug\net8.0\BatchSystem.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\herob\Downloads\BatchSystem\BatchSystem\obj\Debug\net8.0\BatchSystem.AssemblyInfoInputs.cache
-C:\Users\herob\Downloads\BatchSystem\BatchSystem\obj\Debug\net8.0\BatchSystem.AssemblyInfo.cs
-C:\Users\herob\Downloads\BatchSystem\BatchSystem\obj\Debug\net8.0\BatchSystem.csproj.CoreCompileInputs.cache
-C:\Users\herob\Downloads\BatchSystem\BatchSystem\obj\Debug\net8.0\BatchSystem.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\herob\Downloads\BatchSystem\BatchSystem\obj\Debug\net8.0\BatchSystem.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\herob\Downloads\BatchSystem\BatchSystem\obj\Debug\net8.0\BatchSystem.sourcelink.json
 C:\Users\herob\Downloads\BatchSystem\BatchSystem\bin\Debug\net8.0\appsettings.json
 C:\Users\herob\Downloads\BatchSystem\BatchSystem\bin\Debug\net8.0\BatchSystem.exe
 C:\Users\herob\Downloads\BatchSystem\BatchSystem\bin\Debug\net8.0\BatchSystem.deps.json
@@ -137,6 +129,14 @@ C:\Users\herob\Downloads\BatchSystem\BatchSystem\bin\Debug\net8.0\BatchSystem.Do
 C:\Users\herob\Downloads\BatchSystem\BatchSystem\bin\Debug\net8.0\BatchSystem.Infrastructure.dll
 C:\Users\herob\Downloads\BatchSystem\BatchSystem\bin\Debug\net8.0\BatchSystem.Infrastructure.pdb
 C:\Users\herob\Downloads\BatchSystem\BatchSystem\bin\Debug\net8.0\BatchSystem.Domain.pdb
+C:\Users\herob\Downloads\BatchSystem\BatchSystem\obj\Debug\net8.0\BatchSystem.csproj.AssemblyReference.cache
+C:\Users\herob\Downloads\BatchSystem\BatchSystem\obj\Debug\net8.0\BatchSystem.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\herob\Downloads\BatchSystem\BatchSystem\obj\Debug\net8.0\BatchSystem.AssemblyInfoInputs.cache
+C:\Users\herob\Downloads\BatchSystem\BatchSystem\obj\Debug\net8.0\BatchSystem.AssemblyInfo.cs
+C:\Users\herob\Downloads\BatchSystem\BatchSystem\obj\Debug\net8.0\BatchSystem.csproj.CoreCompileInputs.cache
+C:\Users\herob\Downloads\BatchSystem\BatchSystem\obj\Debug\net8.0\BatchSystem.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\herob\Downloads\BatchSystem\BatchSystem\obj\Debug\net8.0\BatchSystem.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\herob\Downloads\BatchSystem\BatchSystem\obj\Debug\net8.0\BatchSystem.sourcelink.json
 C:\Users\herob\Downloads\BatchSystem\BatchSystem\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\herob\Downloads\BatchSystem\BatchSystem\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\herob\Downloads\BatchSystem\BatchSystem\obj\Debug\net8.0\staticwebassets\msbuild.BatchSystem.Microsoft.AspNetCore.StaticWebAssets.props

@@ -1,6 +1,8 @@
 ﻿using BatchSystem.Infrastructure.Communication;
 using Domain.OrderBatchs;
+using Domain.ProductionOrders;
 using Domain.ProductionOrders.SnapShot;
+using Microsoft.Extensions.FileSystemGlobbing;
 using System.Text.Json;
 
 namespace BatchSystem.Application.Notifications.ProductionOrders.OrderBatchPublishers
@@ -11,47 +13,62 @@ namespace BatchSystem.Application.Notifications.ProductionOrders.OrderBatchPubli
 
         public OrderBatchCommandPublisher(IManagedMqttClient mqttClient)
         {
-            _mqttClient=mqttClient;
+            _mqttClient = mqttClient;
         }
 
-        public async Task PublishBatchReadyAsync(OrderBatch orderBatch, CancellationToken cancellationToken = default)
+        public async Task PublishBatchGroupReadyAsync(ProductionOrderDetail detail, List<OrderBatch> batches,int productCode,int customerCode ,CancellationToken cancellationToken = default)
         {
-            if (orderBatch.ProductionOrderDetail == null)
-                throw new InvalidOperationException("OrderBatch chưa có ProductionOrderDetail.");
+            if (detail == null)
+                throw new InvalidOperationException("ProductionOrderDetail không tồn tại.");
 
-            if (string.IsNullOrWhiteSpace(orderBatch.ProductionOrderDetail.RecipeSnapshotJson))
+            if (batches == null || !batches.Any())
+                throw new InvalidOperationException("Danh sách OrderBatch rỗng.");
+
+            if (string.IsNullOrWhiteSpace(detail.RecipeSnapshotJson))
                 throw new InvalidOperationException("RecipeSnapshotJson không tồn tại.");
-
-            var snapshot = JsonSerializer.Deserialize<RecipeSnapshotData>(
-                orderBatch.ProductionOrderDetail.RecipeSnapshotJson);
-
+            var snapshot = JsonSerializer.Deserialize<RecipeSnapshotData>(detail.RecipeSnapshotJson);
             if (snapshot == null)
                 throw new InvalidOperationException("Không thể deserialize RecipeSnapshotJson.");
 
-            var payload = new
+            var orderedBatches = batches
+                .OrderBy(x => x.BatchNo)
+                .ToList();
+            var firstBatch = orderedBatches.First();
+            var payload = new LoadBatchCommandMessage
             {
-                command = "LoadBatch",
-                orderBatchId = orderBatch.OrderBatchId,
-                productionOrderId = orderBatch.ProductionOrderId,
-                productionOrderDetailId = orderBatch.ProductionOrderDetailId,
-                batchNo = orderBatch.BatchNo,
-                lineId = orderBatch.LineId,
-                productId = snapshot.ProductId,
-                productName = snapshot.ProductName,
-                recipeId = snapshot.RecipeId,
-                recipeName = snapshot.RecipeName,
-                materials = snapshot.Materials.Select(x => new
-                {
-                    materialId = x.MaterialId,
-                    materialName = x.MaterialName,
-                    targetKg = x.TargetKg,
-                    toleranceMinKg = x.ToleranceMinKg,
-                    toleranceMaxKg = x.ToleranceMaxKg
-                }),
-                timestamp = DateTime.Now
+                Command = "LoadBatch",
+                ProductionOrderId = firstBatch.ProductionOrderId.ToString(),
+                ProductionOrderDetailId = firstBatch.ProductionOrderDetailId.ToString(),
+
+                StartBatchNo = firstBatch.BatchNo,
+                BatchCount = batches.Count,
+
+                Batches = orderedBatches
+                    .Select(x => new LoadBatchItemMessage
+                    {
+                        OrderBatchId = x.OrderBatchId.ToString(),
+                        BatchNo = x.BatchNo
+                    })
+                    .ToList(),
+
+                ProductCode = productCode,
+                CustomerCode = customerCode,
+                //NumberOfPieces = ResolveNumberOfPieces(orderBatch, snapshot),
+                //WeightOfAPiece = ResolveWeightOfAPiece(orderBatch, snapshot),
+                GrindingTimeSeconds = snapshot.GrindingTimeSeconds,
+                MixingTimeSeconds = snapshot.MixingTimeSeconds,
+                Materials = snapshot.Materials
+                   .Select((x, index) => new LoadBatchMaterialMessage
+                   {
+                       MaterialId = MapMaterialId(x),
+                       TargetKg = (float)x.TargetKg
+                   })
+                   .ToList(),
+
+                Timestamp = DateTime.UtcNow
             };
 
-            var topic = BuildTopic(orderBatch);
+            var topic = BuildTopic(firstBatch);
 
             var json = JsonSerializer.Serialize(payload);
 
@@ -64,13 +81,26 @@ namespace BatchSystem.Application.Notifications.ProductionOrders.OrderBatchPubli
         }
         private static string BuildTopic(OrderBatch orderBatch)
         {
-            if (!string.IsNullOrWhiteSpace(orderBatch.LineId))
-            {
-                return $"factory/line/{orderBatch.LineId}/commands/load-batch";
-            }
-
-            return "factory/commands/load-batch";
+            return "batchsystem/line1/command";
         }
+        private static string MapMaterialId(RecipeSnapshotMaterialData material)
+        {
+            var id = material.MaterialId?.Trim().ToUpperInvariant();
+
+            return id switch
+            {
+                "MAT_CARROT" => "RAW1",
+                "MAT_CHICKEN" => "RAW2",
+                "MAT_CORN" => "RAW3",
+                "MAT_WATER" => "MAT_WATER",
+                "MAT_ADDITIVE" => "MAT_ADDITIVE",
+
+                _ => throw new InvalidOperationException(
+                    $"Material không hỗ trợ: {material.MaterialId} - {material.MaterialName}")
+            };
+        }
+
+
     }
 
 }

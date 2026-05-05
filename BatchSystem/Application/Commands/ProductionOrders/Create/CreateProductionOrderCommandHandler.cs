@@ -45,10 +45,12 @@ namespace BatchSystem.Application.Commands.ProductionOrders.Create
             foreach (var item in request.Details)
             {
                 var product = await _productRepository.GetById(item.ProductId);
-                if (string.IsNullOrWhiteSpace(product.RecipeId))
-                    throw new Exception($"Product {item.ProductId} has no recipe assigned");
+                
                 if (product == null)
                     throw new Exception($"Product {item.ProductId} not found");
+
+                if (string.IsNullOrWhiteSpace(product.RecipeId))
+                    throw new Exception($"Product {item.ProductId} has no recipe assigned");
 
                 var recipeId = product.RecipeId; // lấy recipe từ product
                 var recipe = await _recipeRepository.GetById(product.RecipeId);
@@ -80,6 +82,9 @@ namespace BatchSystem.Application.Commands.ProductionOrders.Create
                 ProductId = product.ProductId,
                 ProductName = product.ProductName,
                 SnapshotCreatedAt = DateTime.Now,
+                GrindingTimeSeconds = recipe.GrindingTimeSeconds,
+                MixingTimeSeconds = recipe.MixingTimeSeconds,
+
                 Materials = recipe.RecipeMaterials.Select(rm => new RecipeSnapshotMaterialData
                 {
                     MaterialId = rm.MaterialId,

@@ -27,6 +27,14 @@ namespace BatchSystem.Application.Commands.Recipes.Update
             var hasNameUpdate = !string.IsNullOrWhiteSpace(request.RecipeName);
             var hasMaterialUpdate = request.RecipeMaterials != null;
 
+            if (request.GrindingTimeSeconds != null)
+            {
+                recipeToUpdate.UpdateGrindingTimeSeconds(request.GrindingTimeSeconds.Value);
+            }
+            if (request.MixingTimeSeconds !=null)
+            {
+                recipeToUpdate.UpdateMixingTimeSeconds(request.MixingTimeSeconds.Value);
+            }
             if (!hasNameUpdate && !hasMaterialUpdate)
                 throw new BusinessRuleException("Nothing to update.");
             if (hasNameUpdate)

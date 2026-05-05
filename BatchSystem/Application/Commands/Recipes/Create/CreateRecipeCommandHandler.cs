@@ -41,7 +41,7 @@ namespace BatchSystem.Application.Commands.Recipes.Create
                     throw new EntityNotFoundException(nameof(Material), item.MaterialId);
             }
 
-            var recipe = new Recipe(request.RecipeName, DateTime.Now);
+            var recipe = new Recipe(request.RecipeName, DateTime.Now,request.GrindingTimeSeconds,request.MixingTimeSeconds);
 
             foreach (var item in request.RecipeMaterials)
             {

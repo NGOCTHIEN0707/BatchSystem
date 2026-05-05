@@ -22,6 +22,82 @@ namespace BatchSystem.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.Entity("BatchSystem.Domain.Logins.StaffCodes.StaffCode", b =>
+                {
+                    b.Property<string>("StaffCodeId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("nvarchar(450)")
+                        .HasDefaultValueSql("NEWID()");
+
+                    b.Property<int>("Code")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("IsUsed")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("Role")
+                        .HasColumnType("int");
+
+                    b.HasKey("StaffCodeId");
+
+                    b.HasIndex("Code")
+                        .IsUnique();
+
+                    b.ToTable("StaffCodes");
+                });
+
+            modelBuilder.Entity("BatchSystem.Domain.OrderBatchs.OrderBatchStatusHistories.OrderBatchStatusHistory", b =>
+                {
+                    b.Property<Guid>("OrderBatchStatusHistoryId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier")
+                        .HasDefaultValueSql("NEWSEQUENTIALID()");
+
+                    b.Property<DateTime>("ChangedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<Guid>("OrderBatchId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<int?>("PreviousStatus")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
+
+                    b.HasKey("OrderBatchStatusHistoryId");
+
+                    b.HasIndex("OrderBatchId");
+
+                    b.ToTable("OrderBatchStatusHistories");
+                });
+
+            modelBuilder.Entity("BatchSystem.Domain.ProductionOrders.ProductionOrderStatusHistories.ProductionOrderStatusHistory", b =>
+                {
+                    b.Property<Guid>("ProductionOrderStatusHistoryId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier")
+                        .HasDefaultValueSql("NEWSEQUENTIALID()");
+
+                    b.Property<DateTime>("ChangedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int?>("PreviousStatus")
+                        .HasColumnType("int");
+
+                    b.Property<Guid>("ProductionOrderId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
+
+                    b.HasKey("ProductionOrderStatusHistoryId");
+
+                    b.HasIndex("ProductionOrderId");
+
+                    b.ToTable("ProductionOrderStatusHistories");
+                });
+
             modelBuilder.Entity("Domain.Alarms.AlarmDefinition", b =>
                 {
                     b.Property<string>("AlarmDefinitionId")
@@ -122,38 +198,6 @@ namespace BatchSystem.Migrations
                     b.ToTable("Lines");
                 });
 
-            modelBuilder.Entity("Domain.Lines.LineCurrentStatus", b =>
-                {
-                    b.Property<string>("LineCurrentStatusId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("nvarchar(450)")
-                        .HasDefaultValueSql("NEWID()");
-
-                    b.Property<string>("LineId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<int>("Mode")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Status")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("UpdatedAt")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("UpdatedBy")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("LineCurrentStatusId");
-
-                    b.HasIndex("LineId")
-                        .IsUnique();
-
-                    b.ToTable("LineCurrentStatuses");
-                });
-
             modelBuilder.Entity("Domain.Lines.LineStatusHistory", b =>
                 {
                     b.Property<Guid>("LineStatusHistoryId")
@@ -199,6 +243,12 @@ namespace BatchSystem.Migrations
                     b.Property<bool>("IsActive")
                         .HasColumnType("bit");
 
+                    b.Property<int>("LoginCode")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("LoginCode"));
+
                     b.Property<string>("Password")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -216,6 +266,9 @@ namespace BatchSystem.Migrations
                         .HasColumnType("nvarchar(450)");
 
                     b.HasKey("LoginId");
+
+                    b.HasIndex("LoginCode")
+                        .IsUnique();
 
                     b.HasIndex("UserName")
                         .IsUnique();
@@ -253,16 +306,14 @@ namespace BatchSystem.Migrations
                         .HasColumnType("uniqueidentifier")
                         .HasDefaultValueSql("NEWSEQUENTIALID()");
 
-                    b.Property<decimal>("ActualKg")
-                        .HasPrecision(18, 3)
-                        .HasColumnType("decimal(18,3)");
+                    b.Property<float>("ActualKg")
+                        .HasColumnType("real");
 
                     b.Property<DateTime>("CapturedAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<decimal>("DeviationKg")
-                        .HasPrecision(18, 3)
-                        .HasColumnType("decimal(18,3)");
+                    b.Property<float>("DeviationKg")
+                        .HasColumnType("real");
 
                     b.Property<bool>("IsWithinTolerance")
                         .HasColumnType("bit");
@@ -274,17 +325,14 @@ namespace BatchSystem.Migrations
                     b.Property<Guid>("OrderBatchId")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<decimal>("TargetKg")
-                        .HasPrecision(18, 3)
-                        .HasColumnType("decimal(18,3)");
+                    b.Property<float>("TargetKg")
+                        .HasColumnType("real");
 
-                    b.Property<decimal>("ToleranceMaxKg")
-                        .HasPrecision(18, 3)
-                        .HasColumnType("decimal(18,3)");
+                    b.Property<float>("ToleranceMaxKg")
+                        .HasColumnType("real");
 
-                    b.Property<decimal>("ToleranceMinKg")
-                        .HasPrecision(18, 3)
-                        .HasColumnType("decimal(18,3)");
+                    b.Property<float>("ToleranceMinKg")
+                        .HasColumnType("real");
 
                     b.HasKey("BatchWeighingResultId");
 
@@ -384,7 +432,7 @@ namespace BatchSystem.Migrations
                         .HasColumnType("uniqueidentifier")
                         .HasDefaultValueSql("NEWSEQUENTIALID()");
 
-                    b.Property<int>("BatchQuantity")
+                    b.Property<int>("NumberOfPieces")
                         .HasColumnType("int");
 
                     b.Property<string>("ProductId")
@@ -426,6 +474,12 @@ namespace BatchSystem.Migrations
                     b.Property<bool>("IsActive")
                         .HasColumnType("bit");
 
+                    b.Property<int>("ProductCode")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ProductCode"));
+
                     b.Property<string>("ProductName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -434,7 +488,13 @@ namespace BatchSystem.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
+                    b.Property<int>("WeightPerPieceKg")
+                        .HasColumnType("int");
+
                     b.HasKey("ProductId");
+
+                    b.HasIndex("ProductCode")
+                        .IsUnique();
 
                     b.HasIndex("RecipeId");
 
@@ -451,8 +511,14 @@ namespace BatchSystem.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime2");
 
+                    b.Property<int>("GrindingTimeSeconds")
+                        .HasColumnType("int");
+
                     b.Property<bool>("IsActive")
                         .HasColumnType("bit");
+
+                    b.Property<int>("MixingTimeSeconds")
+                        .HasColumnType("int");
 
                     b.Property<string>("RecipeName")
                         .IsRequired()
@@ -569,6 +635,28 @@ namespace BatchSystem.Migrations
                     b.ToTable("StationCurrentStatuses");
                 });
 
+            modelBuilder.Entity("BatchSystem.Domain.OrderBatchs.OrderBatchStatusHistories.OrderBatchStatusHistory", b =>
+                {
+                    b.HasOne("Domain.OrderBatchs.OrderBatch", "OrderBatch")
+                        .WithMany()
+                        .HasForeignKey("OrderBatchId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("OrderBatch");
+                });
+
+            modelBuilder.Entity("BatchSystem.Domain.ProductionOrders.ProductionOrderStatusHistories.ProductionOrderStatusHistory", b =>
+                {
+                    b.HasOne("Domain.ProductionOrders.ProductionOrder", "ProductionOrder")
+                        .WithMany()
+                        .HasForeignKey("ProductionOrderId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("ProductionOrder");
+                });
+
             modelBuilder.Entity("Domain.Alarms.AlarmDefinition", b =>
                 {
                     b.HasOne("Domain.Stations.Station", "Station")
@@ -611,17 +699,6 @@ namespace BatchSystem.Migrations
                     b.Navigation("ProductionOrder");
 
                     b.Navigation("Station");
-                });
-
-            modelBuilder.Entity("Domain.Lines.LineCurrentStatus", b =>
-                {
-                    b.HasOne("Domain.Lines.Line", "Line")
-                        .WithOne("CurrentStatus")
-                        .HasForeignKey("Domain.Lines.LineCurrentStatus", "LineId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Line");
                 });
 
             modelBuilder.Entity("Domain.Lines.LineStatusHistory", b =>
@@ -788,8 +865,6 @@ namespace BatchSystem.Migrations
 
             modelBuilder.Entity("Domain.Lines.Line", b =>
                 {
-                    b.Navigation("CurrentStatus");
-
                     b.Navigation("Stations");
                 });
 

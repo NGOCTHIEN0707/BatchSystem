@@ -26,8 +26,8 @@ namespace BatchSystem.Application.Commands.Logins.Authenticate
             var IsSuccess = SecurePasswordHasher.Verify(request.Password, user.Password);
             if (!IsSuccess) return new AuthenticateResponse(false, "Username or password is incorrect.");
             var loginProfile = new InformationAccount(user.UserName, user.FullName, user.Role, user.PhoneNumber);
-            var accessToken = _tokenService.GenerateToken(user);
-            var authenticateResult = new AuthenticateResponse(accessToken, loginProfile);
+           // var accessToken = _tokenService.GenerateToken(user);
+            var authenticateResult = new AuthenticateResponse(loginProfile);
             return authenticateResult;
         }
     }

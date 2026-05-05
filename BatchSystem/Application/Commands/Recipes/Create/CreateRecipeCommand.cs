@@ -3,6 +3,8 @@
     public class CreateRecipeCommand : IRequest<bool>
     {
         public string RecipeName { get; set; }
+        public int GrindingTimeSeconds { get;  set; }
+        public int MixingTimeSeconds { get;  set; }
         public List<CreateRecipeMaterialDto> RecipeMaterials { get; set; } = new List<CreateRecipeMaterialDto>();
     }
     public class CreateRecipeMaterialDto

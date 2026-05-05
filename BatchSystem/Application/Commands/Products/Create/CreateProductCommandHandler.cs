@@ -27,7 +27,7 @@ namespace BatchSystem.Application.Commands.Products.Create
             var isProductNameExisted = await _productRepostiory.IsProductNameExisted(request.ProductName);
             if (isProductNameExisted) throw new EntityDuplicationException(nameof(Product), request.ProductName);
 
-            var productToCreate = new Product(request.ProductName, request.RecipeId);
+            var productToCreate = new Product(request.ProductName, request.RecipeId, request.weightPerPieceKg);
             await _productRepostiory.AddAsync(productToCreate);
             return await _unitOfWork.SaveEntitiesAsync(cancellationToken);
 

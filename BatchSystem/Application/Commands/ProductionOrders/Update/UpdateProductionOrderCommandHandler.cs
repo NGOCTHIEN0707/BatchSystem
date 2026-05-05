@@ -48,7 +48,7 @@ namespace BatchSystem.Application.Commands.ProductionOrders.Update
             {
 
                 var detailInputs = new List<ProductionOrderDetailInput>();
-                var snapshotMap = new Dictionary<int, RecipeSnapshotData>();
+                //var snapshotMap = new Dictionary<int, RecipeSnapshotData>();
 
                 foreach (var item in request.Details)
                 {
@@ -56,6 +56,9 @@ namespace BatchSystem.Application.Commands.ProductionOrders.Update
 
                     if (product == null)
                         throw new EntityNotFoundException(nameof(Product), item.ProductId);
+
+                    if (string.IsNullOrWhiteSpace(product.RecipeId))
+                        throw new BusinessRuleException($"Product {item.ProductId} has no recipe assigned.");
 
                     var recipe = await _recipeRepository.GetById(product.RecipeId);
                     if (recipe == null)
@@ -67,7 +70,7 @@ namespace BatchSystem.Application.Commands.ProductionOrders.Update
                         ProductionOrderDetailId = item.ProductionOrderDetailId,
                         ProductId = item.ProductId,
                         RecipeId = product.RecipeId,
-                        BatchQuantity = item.BatchQuantity,
+                        BatchQuantity = item.NumberOfPieces,
                         SequenceNo = item.SequenceNo,
                         RecipeSnapshot = snapshot
                     });
@@ -91,6 +94,8 @@ namespace BatchSystem.Application.Commands.ProductionOrders.Update
                 ProductId = product.ProductId,
                 ProductName = product.ProductName,
                 SnapshotCreatedAt = DateTime.Now,
+                GrindingTimeSeconds = recipe.GrindingTimeSeconds,
+                MixingTimeSeconds = recipe.MixingTimeSeconds,
                 Materials = recipe.RecipeMaterials.Select(rm => new RecipeSnapshotMaterialData
                 {
                     MaterialId = rm.MaterialId,

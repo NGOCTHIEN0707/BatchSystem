@@ -27,7 +27,6 @@ namespace BatchSystem.Application.Commands.Products.Update
             if (recipeCheck == null) throw new EntityNotFoundException(nameof(Recipe), request.RecipeId);
             if(request.ProductName != null) productToUpdate.UpdateProductName(request.ProductName);
             if(request.RecipeId != null) productToUpdate.UpdateRecipeId(request.RecipeId);
-
             _productRepostiory.UpdateAsync(productToUpdate);
             return await _unitOfWork.SaveEntitiesAsync(cancellationToken);
             

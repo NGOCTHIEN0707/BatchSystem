@@ -4,5 +4,6 @@
     {
         public string? ProductName { get;  set; }
         public string RecipeId { get;  set; }
+        public int weightPerPieceKg { get; set; }
     }
 }

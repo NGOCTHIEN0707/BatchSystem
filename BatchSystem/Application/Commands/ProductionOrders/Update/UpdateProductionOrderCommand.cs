@@ -16,7 +16,7 @@ namespace BatchSystem.Application.Commands.ProductionOrders.Update
         {
             public Guid ProductionOrderDetailId { get; set; } = Guid.Empty;
             public string ProductId { get; set; } = string.Empty;
-            public int BatchQuantity { get; set; }
+            public int NumberOfPieces { get; set; }
             public int SequenceNo { get; set; }
         }
     }

@@ -1,6 +1,8 @@
 ﻿using BatchSystem.Application.Commands.Recipes.Create;
 using BatchSystem.Application.Commands.Recipes.Deactivate;
 using BatchSystem.Application.Commands.Recipes.Update;
+using BatchSystem.Application.Queries.Products;
+using BatchSystem.Application.Queries.Recipes;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -27,6 +29,11 @@ namespace BatchSystem.Controllers
         public async Task<IActionResult> DeactivateRecipe([FromQuery] DeactivateRecipeCommand command)
         {
             return await SendCommand(command);
+        }
+        [HttpGet("GetAllRecipeId")]
+        public async Task<List<string>> GetAllProductsId([FromQuery] GetAllRecipeIdQuery query)
+        {
+            return await _mediator.Send(query);
         }
     }
 }

@@ -43,7 +43,7 @@ namespace BatchSystem.Mapping
                 .ForMember(dest => dest.ProductName,
                     opt => opt.MapFrom(src => src.Product != null ? src.Product.ProductName : null))
                 .ForMember(dest => dest.TargetBatch,
-                    opt => opt.MapFrom(src => src.BatchQuantity))
+                    opt => opt.MapFrom(src => src.NumberOfPieces))
                 .ForMember(dest => dest.CurrentBatch,
                     opt => opt.MapFrom(src => src.OrderBatches.Count(b => b.Status == OrderBatchStatus.Completed)))
                 .ForMember(dest => dest.RecipeSnapshot,

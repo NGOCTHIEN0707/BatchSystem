@@ -38,11 +38,12 @@ namespace BatchSystem.Application.Commands.Logins.Update
 
             if (request.Role.HasValue) loginToUpdate.UpdateRole(request.Role.Value);
             if(request.FullName!=null) loginToUpdate.UpdateFullName(request.FullName);
-            if (string.IsNullOrWhiteSpace(request.PhoneNumber) || !Regex.IsMatch(request.PhoneNumber, @"^(0|\+84)[0-9]{9,10}$"))
+            if (!string.IsNullOrWhiteSpace(request.PhoneNumber))
             {
-                throw new ArgumentException("Phone number is invalid");
+                if (!Regex.IsMatch(request.PhoneNumber, @"^(0|\+84)[0-9]{9,10}$"))
+                loginToUpdate.UpdatePhoneNumber(request.PhoneNumber);
             }
-            loginToUpdate.UpdatePhoneNumber(request.PhoneNumber);
+            
             
             _loginRepository.UpdateAsync(loginToUpdate);
             return await _unitOfWork.SaveEntitiesAsync(cancellationToken);
