@@ -1,5 +1,6 @@
 ﻿using Domain.Logins;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System;
 using System.Collections.Generic;
@@ -19,8 +20,13 @@ namespace Infrastructure.Configurations
             builder.Property(x => x.Password).IsRequired();
             builder.Property(x => x.Role).IsRequired();
             builder.HasIndex(x => x.UserName).IsUnique();
-            builder.Property(x=>x.FullName).IsRequired();
+            builder.Property(x => x.FullName).IsRequired();
             builder.Property(x => x.PhoneNumber).IsRequired().HasMaxLength(15);
+            builder.Property(x => x.LoginCode)
+              .ValueGeneratedOnAdd() // Tự động sinh khi thêm mới
+              .UseIdentityColumn()
+              .Metadata.SetAfterSaveBehavior(PropertySaveBehavior.Ignore);
+            builder.HasIndex(x => x.LoginCode).IsUnique();
 
 
 

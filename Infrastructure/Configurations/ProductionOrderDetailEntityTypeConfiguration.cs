@@ -19,6 +19,10 @@ namespace Infrastructure.Configurations
                 .WithOne(x=>x.ProductionOrderDetail)
                 .HasForeignKey(x=>x.ProductionOrderDetailId)
                 .OnDelete(DeleteBehavior.Restrict); // coi lai restrict hay cascade
+            builder.HasOne(x => x.Product)
+                .WithMany()
+                .HasForeignKey(x => x.ProductId);
+                
         }
     }
 }

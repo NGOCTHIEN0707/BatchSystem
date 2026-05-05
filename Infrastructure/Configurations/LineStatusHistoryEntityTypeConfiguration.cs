@@ -14,7 +14,9 @@ namespace Infrastructure.Configurations
         public void Configure(EntityTypeBuilder<LineStatusHistory> builder)
         {
             builder.HasKey(x => x.LineStatusHistoryId);
-            builder.Property(x => x.LineStatusHistoryId).HasDefaultValueSql("NEWSEQUENTIALID()");
+            builder.Property(x => x.LineStatusHistoryId)
+                .HasDefaultValueSql("NEWSEQUENTIALID()")
+                .ValueGeneratedOnAdd();
             builder.HasOne(x => x.Line)
                 .WithMany()
                 .HasForeignKey(x => x.LineId)

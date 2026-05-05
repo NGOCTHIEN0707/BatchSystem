@@ -34,15 +34,34 @@ namespace Domain.Alarms
         }
 
 #pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
-        public AlarmEvent(string alarmDefinitionId, Guid? productionOrderId, Guid? orderBatchId, string stationId)
+        public AlarmEvent(string alarmDefinitionId, Guid? productionOrderId, Guid? orderBatchId, string stationId, DateTime occurredAt)
 #pragma warning restore CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
         {
             AlarmDefinitionId = alarmDefinitionId;
             ProductionOrderId = productionOrderId;
             OrderBatchId = orderBatchId;
             StationId = stationId;
-            OccurredAt = DateTime.Now;
-            EventDate = DateTime.Today;
+            OccurredAt = occurredAt;
+            EventDate = occurredAt.Date;
+        }
+
+
+        public void MarkAsEnded(DateTime endedAt)
+        {
+            if (EndedAt == null)
+            {
+                EndedAt = endedAt;
+            }
+        }
+
+        public void Acknowledge(string user, DateTime ackAt)
+        {
+            if (!IsAcked)
+            {
+                IsAcked = true;
+                AckBy = user;
+                AckAt = ackAt;
+            }
         }
     }
 }

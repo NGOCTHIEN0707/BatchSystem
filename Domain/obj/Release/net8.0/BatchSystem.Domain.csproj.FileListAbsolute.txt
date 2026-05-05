@@ -1,0 +1,15 @@
+C:\Users\herob\Downloads\BatchSystem\Domain\bin\Release\net8.0\BatchSystem.Domain.deps.json
+C:\Users\herob\Downloads\BatchSystem\Domain\bin\Release\net8.0\BatchSystem.Domain.runtimeconfig.json
+C:\Users\herob\Downloads\BatchSystem\Domain\bin\Release\net8.0\BatchSystem.Domain.dll
+C:\Users\herob\Downloads\BatchSystem\Domain\bin\Release\net8.0\BatchSystem.Domain.pdb
+C:\Users\herob\Downloads\BatchSystem\Domain\obj\Release\net8.0\BatchSystem.Domain.csproj.AssemblyReference.cache
+C:\Users\herob\Downloads\BatchSystem\Domain\obj\Release\net8.0\BatchSystem.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\herob\Downloads\BatchSystem\Domain\obj\Release\net8.0\BatchSystem.Domain.AssemblyInfoInputs.cache
+C:\Users\herob\Downloads\BatchSystem\Domain\obj\Release\net8.0\BatchSystem.Domain.AssemblyInfo.cs
+C:\Users\herob\Downloads\BatchSystem\Domain\obj\Release\net8.0\BatchSystem.Domain.csproj.CoreCompileInputs.cache
+C:\Users\herob\Downloads\BatchSystem\Domain\obj\Release\net8.0\BatchSystem.Domain.sourcelink.json
+C:\Users\herob\Downloads\BatchSystem\Domain\obj\Release\net8.0\BatchSystem.Domain.dll
+C:\Users\herob\Downloads\BatchSystem\Domain\obj\Release\net8.0\refint\BatchSystem.Domain.dll
+C:\Users\herob\Downloads\BatchSystem\Domain\obj\Release\net8.0\BatchSystem.Domain.pdb
+C:\Users\herob\Downloads\BatchSystem\Domain\obj\Release\net8.0\BatchSystem.Domain.genruntimeconfig.cache
+C:\Users\herob\Downloads\BatchSystem\Domain\obj\Release\net8.0\ref\BatchSystem.Domain.dll

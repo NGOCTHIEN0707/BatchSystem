@@ -1,4 +1,6 @@
-﻿using Domain.Alarms;
+﻿using BatchSystem.Domain.OrderBatchs.OrderBatchStatusHistories;
+using BatchSystem.Domain.ProductionOrders.ProductionOrderStatusHistories;
+using Domain.Alarms;
 using Domain.Logins;
 using Domain.OrderBatchs;
 using Domain.ProductionOrders.SnapShot;
@@ -50,11 +52,6 @@ namespace Domain.ProductionOrders
 
             if (!ProductionOrderDetails.Any())
                 throw new Exception("Production order must have at least one detail.");
-
-            foreach (var detail in ProductionOrderDetails.OrderBy(x => x.SequenceNo))
-            {
-                detail.CreateOrderBatches();
-            }
 
             Status = ProductionOrderStatus.Ready;
         }
@@ -143,8 +140,17 @@ namespace Domain.ProductionOrders
         }
         public void UpdateProductionOrderPriority(int priority) => Priority=priority;
         public void UpdateProductionOrderStatus(ProductionOrderStatus status) => Status=status;
-        public void UpdateProductionOrderActualStartTime(DateTime actualStartTime) => ActualStartTime=actualStartTime;
-        public void UpdateProductionOrderActualEndTime(DateTime actualEndTime) => ActualEndTime=actualEndTime;
+        public void UpdateProductionOrderActualStartTime(DateTime actualStartTime)
+        {
+            if (ActualStartTime == null)
+                ActualStartTime = actualStartTime;
+        }
+        public void UpdateProductionOrderActualEndTime(DateTime actualEndTime)
+        {
+            if (ActualEndTime == null)
+                ActualEndTime = actualEndTime;
+        }
+
 
         public void UpdateSchedule(DateTime? newStart, DateTime? newEnd)
         {
@@ -194,7 +200,7 @@ namespace Domain.ProductionOrders
                     // Cập nhật thông tin
                     existingDetail.UpdateProductId(item.ProductId);
                     existingDetail.UpdateRecipeId(item.RecipeId);
-                    existingDetail.UpdateBatchQuantity(item.BatchQuantity);
+                    existingDetail.UpdateNumberOfPieces(item.BatchQuantity);
                     existingDetail.UpdateSequenceNo(item.SequenceNo);
 
                     // Gán Snapshot (đã được chuẩn bị từ Handler)
@@ -223,6 +229,18 @@ namespace Domain.ProductionOrders
             public int SequenceNo { get; set; }
             public RecipeSnapshotData RecipeSnapshot { get; set; }
         }
+        public ProductionOrderStatusHistory ChangeStatus(ProductionOrderStatus newStatus)
+        {
+            var previousStatus = Status;
 
+            Status = newStatus;
+
+            return new ProductionOrderStatusHistory(
+                ProductionOrderId,
+                DateTime.UtcNow,
+                newStatus,
+                previousStatus
+            );
+        }
     }
 }

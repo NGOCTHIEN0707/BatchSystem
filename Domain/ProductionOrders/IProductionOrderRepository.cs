@@ -13,10 +13,12 @@ namespace BatchSystem.Domain.ProductionOrders
         //IUnitOfWork UnitOfWork { get; }
         Task AddAsync(ProductionOrder productionOrder);
         void Delete(ProductionOrder productionOrder);
+        Task<ProductionOrder?> GetByIdTracking(Guid productionOrderId);
         Task<ProductionOrder?> GetById(Guid productionOrderId);
         // Ở đây vẫn cần GetById để phục vụ cho các lệnh khác chứ không dùng Get ngay đây để truy vấn dữ liệu
         void UpdateAsync(ProductionOrder productionOrder);
-
+        Task<bool> HasRunningOrder();
+        Task<ProductionOrder?> GetNextReadyOrderTracking();
 
     }
 }

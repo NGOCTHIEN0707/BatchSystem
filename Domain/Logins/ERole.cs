@@ -8,9 +8,9 @@ namespace Domain.Logins
 {
     public enum ERole
     {
-        Manager,
+        Customer,
         Staff,
-        Customer
+        Manager
 
     }
 }

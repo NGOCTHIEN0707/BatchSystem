@@ -12,6 +12,8 @@ namespace Domain.Recipes
         public string RecipeId { get; private set; }
         public string RecipeName { get; private set; }
         public DateTime CreatedDate { get; private set; } = DateTime.Now;
+        public int GrindingTimeSeconds { get; private set; }
+        public int MixingTimeSeconds { get; private set; }
         public bool IsActive { get; private set; } = true;
 
         public List<RecipeMaterial> RecipeMaterials { get; private set; } = new List<RecipeMaterial>();
@@ -23,11 +25,32 @@ namespace Domain.Recipes
         {
         }
 #pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
-        public Recipe(string recipeName, DateTime createdDate)
+        public Recipe(string recipeName, DateTime createdDate,int grindingTimeSeconds, int mixingTimeSeconds)
 #pragma warning restore CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
         {
             RecipeName = recipeName;
             CreatedDate = createdDate;
+            GrindingTimeSeconds = grindingTimeSeconds;
+            MixingTimeSeconds = mixingTimeSeconds;
+        }
+        public void UpdateGrindingTimeSeconds(int grindingTimeSeconds)
+        {
+            if (grindingTimeSeconds < 0)
+                throw new ArgumentException("Grinding time must be >= 0.");
+            if (GrindingTimeSeconds == grindingTimeSeconds)
+                return;
+            GrindingTimeSeconds = grindingTimeSeconds;
+
+        }
+        public void UpdateMixingTimeSeconds(int  mixingTimeSeconds)
+        {
+            if (mixingTimeSeconds < 0)
+                throw new ArgumentException("Mixing time must be >= 0.");
+            if (MixingTimeSeconds == mixingTimeSeconds)
+                return;
+
+            MixingTimeSeconds = mixingTimeSeconds;
+
         }
         public void Deactivate() => IsActive = false;
         public void UpdateRecipeName(string recipeName) => RecipeName = recipeName;

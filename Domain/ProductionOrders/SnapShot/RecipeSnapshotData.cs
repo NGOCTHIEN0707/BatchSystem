@@ -10,6 +10,8 @@ namespace Domain.ProductionOrders.SnapShot
     {
         public string RecipeId { get; set; }
         public string RecipeName { get; set; }
+        public int GrindingTimeSeconds { get; set; }
+        public int MixingTimeSeconds { get; set; }
         public string ProductId { get; set; }
         public string ProductName { get; set; }
         public DateTime SnapshotCreatedAt { get; set; }

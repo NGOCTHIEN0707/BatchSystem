@@ -13,7 +13,7 @@ public class Line
     public string LineName { get; private set; }
     public string LineCode { get; private set; }
     public List<Station> Stations { get; private set; } = new List<Station>();
-    public LineCurrentStatus? CurrentStatus { get; private set; }
+    //public LineCurrentStatus? CurrentStatus { get; private set; }
 
 #pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
     public Line()

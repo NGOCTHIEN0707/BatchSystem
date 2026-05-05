@@ -6,14 +6,15 @@ using System.Threading.Tasks;
 
 namespace Domain.Lines
 {
-    public enum LineStatus
+    public enum LineStatus : ushort
     {
-        Stop = 0,        // Dừng hoàn toàn
-        Run = 1,         // Đang chạy
-        Hold = 2,        // Tạm giữ (chờ điều kiện)
-        Pause = 3,          //operation action
-        Abort = 4,       // Dừng khẩn cấp có kiểm soát
-        Emergency = 5    // Dừng khẩn cấp (E-Stop)
+        Idle = 0,
+        Running = 1,
+        Aborting = 2,
+        Stopping = 3,
+        Pausing = 4,
+        Holding = 5,
+        Complete = 6
 
     }
 }

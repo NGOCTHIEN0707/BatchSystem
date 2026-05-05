@@ -8,7 +8,7 @@ namespace BatchSystem.Infrastructure.Communication
 {
     public interface IManagedMqttClient
     {
-        event Func<MqttMessage, Task>? MessageReceived;
+        event Func<MqttMessage, Task>? MessageReceived; // cái này dùng để tương tác khi message từ Mqtt gửi lên cho tầng dưới thì cái này dùng cho tầng trên xử lý
         bool IsConnected { get; }
         Task ConnectAsync(CancellationToken cancellationToken = default);
         Task DisconnectAsync(CancellationToken cancellationToken = default);

@@ -37,5 +37,14 @@ namespace BatchSystem.Infrastructure.Repositories
         {
             _context.AlarmEvents.Update(alarmEvent);
         }
+        public async Task<AlarmEvent?> GetActiveEventAsync(string alarmId, Guid? orderBatchId)
+        {
+            return await _context.AlarmEvents
+                .Where(e => e.AlarmDefinitionId == alarmId
+                         && e.EndedAt == null
+                         && e.OrderBatchId == orderBatchId) // EF Core xử lý được so sánh Guid? với Guid?
+                .OrderByDescending(e => e.OccurredAt)
+                .FirstOrDefaultAsync();
+        }
     }
 }

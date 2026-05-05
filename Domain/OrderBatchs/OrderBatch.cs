@@ -1,4 +1,5 @@
 ﻿using BatchSystem.Domain.OrderBatchs;
+using BatchSystem.Domain.OrderBatchs.OrderBatchStatusHistories;
 using Domain.Alarms;
 using Domain.Lines;
 using Domain.OrderBatchs.BatchWeightResults;
@@ -27,7 +28,7 @@ namespace Domain.OrderBatchs
         public Line Line { get; private set; }
         public Station? CurrentStation { get; private set; }
         public BatchStep CurrentStep { get; private set; } = BatchStep.None;
-        public List<BatchWeighingResult> BatchWeighingResults { get; private set; }
+        public List<BatchWeighingResult> BatchWeighingResults { get; private set; } = new List<BatchWeighingResult>();
 
 #pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
         public OrderBatch()
@@ -42,6 +43,20 @@ namespace Domain.OrderBatchs
             ProductionOrderId = productionOrderId;
             ProductionOrderDetailId = productionOrderDetailId;
             BatchNo = batchNo;
+        }
+
+        public OrderBatchStatusHistory ChangeStatus(OrderBatchStatus newStatus)
+        {
+            var previousStatus = Status;
+
+            Status = newStatus;
+
+            return new OrderBatchStatusHistory(
+                OrderBatchId,
+                DateTime.UtcNow,
+                newStatus,
+                previousStatus
+            );
         }
         public void AddWeighingResult(BatchWeighingResult result)
         {
@@ -84,5 +99,7 @@ namespace Domain.OrderBatchs
         {
             Status = OrderBatchStatus.Cancelled;
         }
+
+
     }
 }

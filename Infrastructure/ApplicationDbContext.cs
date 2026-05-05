@@ -1,5 +1,9 @@
-﻿using BatchSystem.Domain.SeedWork;
+﻿using BatchSystem.Domain.Logins.StaffCodes;
+using BatchSystem.Domain.OrderBatchs.OrderBatchStatusHistories;
+using BatchSystem.Domain.ProductionOrders.ProductionOrderStatusHistories;
+using BatchSystem.Domain.SeedWork;
 using BatchSystem.Infrastructure;
+using BatchSystem.Infrastructure.Configurations;
 using Domain.Alarms;
 using Domain.Lines;
 using Domain.Logins;
@@ -35,11 +39,12 @@ namespace Infrastructure
         public DbSet<Station> Stations { get; set; }
         public DbSet<Material> Materials { get; set; }
         public DbSet<OrderBatch> OrderBatchs { get; set; }
+        public DbSet<OrderBatchStatusHistory> OrderBatchStatusHistories { get; set; }
         public DbSet<BatchWeighingResult> BatchWeighingResults { get; set; }
         public DbSet<ProductionOrder> ProductionOrders { get; set; }
+        public DbSet<ProductionOrderStatusHistory> ProductionOrderStatusHistories { get; set; }
         public DbSet<Product> Products { get; set; }
         public DbSet<Recipe> Recipes { get; set; }
-        public DbSet<LineCurrentStatus> LineCurrentStatuses { get; set; }
         public DbSet<LineStatusHistory> LineStatusHistories { get; set; }
         public DbSet<ProductionOrderDetail> ProductionOrderDetails { get; set; }
         public DbSet<RecipeMaterial> RecipeMaterials { get; set; }
@@ -47,6 +52,7 @@ namespace Infrastructure
         public DbSet<AlarmDefinition> AlarmDefinitions { get; set; }
         public DbSet<AlarmEvent> AlarmEvents { get; set; }
         public DbSet<Login> Logins { get; set; }
+        public DbSet<StaffCode> StaffCodes { get; set; }
 
         public async Task<bool> SaveEntitiesAsync(CancellationToken cancellationToken = default)
         {
@@ -61,13 +67,14 @@ namespace Infrastructure
             modelBuilder.ApplyConfiguration(new LineEntityTypeConfiguration());
             modelBuilder.ApplyConfiguration(new StationEntityTypeConfiguration());
             modelBuilder.ApplyConfiguration(new StationCurrentStatusEntityTypeConfiguration());
-            modelBuilder.ApplyConfiguration(new LineCurrentStatusEntityTypeConfiguration());
             modelBuilder.ApplyConfiguration(new LineStatusHistoryEntityTypeConfiguration());
 
             // Cấu hình cho đơn hàng và mẻ (Orders & Batches)
             modelBuilder.ApplyConfiguration(new ProductionOrderEntityTypeConfiguration());
+            modelBuilder.ApplyConfiguration(new ProductionOrderStatusHistoryEntityTypeConfiguration());
             modelBuilder.ApplyConfiguration(new ProductionOrderDetailEntityTypeConfiguration());
             modelBuilder.ApplyConfiguration(new OrderBatchEntityTypeConfiguration());
+            modelBuilder.ApplyConfiguration(new OrderBatchStatusHistoryEntityTypeConfiguration());
             modelBuilder.ApplyConfiguration(new BatchWeighingResultEntityTypeConfiguration());
 
             // Cấu hình cho danh mục (Master Data)
@@ -82,6 +89,7 @@ namespace Infrastructure
 
             // Cấu hình cho bảo mật (Security)
             modelBuilder.ApplyConfiguration(new LoginEntityTypeConfiguration());
+            modelBuilder.ApplyConfiguration(new StaffCodeEntityTypeConfiguration());
 
         }
     }

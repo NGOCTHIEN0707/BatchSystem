@@ -18,7 +18,7 @@ namespace Domain.ProductionOrders
         public Guid ProductionOrderId { get; private set; }
         public string ProductId { get; private set; }
         public string RecipeId { get; private set; }
-        public int BatchQuantity { get; private set; }
+        public int NumberOfPieces { get; private set; }
         public int SequenceNo { get; private set; }// Thứ tự chạy
         public ProductionOrder ProductionOrder { get; private set; }
         public Product Product { get; private set; }
@@ -34,25 +34,25 @@ namespace Domain.ProductionOrders
 
 
 #pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
-        public ProductionOrderDetail(Guid productionOrderId, string productId, string recipeId, int batchQuantity, int sequenceNo)
+        public ProductionOrderDetail(Guid productionOrderId, string productId, string recipeId, int numberOfPieces, int sequenceNo)
 #pragma warning restore CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
         {
             ProductionOrderId=productionOrderId;
             ProductId=productId;
             RecipeId=recipeId;
-            BatchQuantity=batchQuantity;
+            NumberOfPieces=numberOfPieces;
             SequenceNo=sequenceNo;
         }
 
-        public void CreateOrderBatches()
+        public void CreateOrderBatches(int batchCount)
         {
-            if (BatchQuantity <= 0)
+            if (batchCount  <= 0)
                 throw new Exception("BatchQuantity must be greater than zero.");
 
 
             var batches = new List<OrderBatch>();
 
-            for (int i = 1; i <= BatchQuantity; i++)
+            for (int i = 1; i <= batchCount; i++)
             {
                 batches.Add(new OrderBatch(
                     ProductionOrderId,
@@ -95,12 +95,12 @@ namespace Domain.ProductionOrders
 
             RecipeId = recipeId;
         }
-        public void UpdateBatchQuantity(int batchQuantity)
+        public void UpdateNumberOfPieces(int numberOfPieces)
         {
-            if (batchQuantity <= 0)
-                throw new Exception("Batch quantity must be greater than zero.");
+            if (numberOfPieces <= 0)
+                throw new Exception("Number of pieces must be greater than zero.");
 
-            BatchQuantity = batchQuantity;
+            NumberOfPieces = numberOfPieces;
         }
         public void UpdateSequenceNo(int sequenceNo)
         {

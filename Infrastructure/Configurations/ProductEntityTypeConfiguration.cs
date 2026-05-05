@@ -15,6 +15,11 @@ namespace Infrastructure.Configurations
         {
             builder.HasKey(x => x.ProductId);
             builder.Property(x => x.ProductId).HasDefaultValueSql("NEWID()");
+
+            builder.Property(x => x.ProductCode)
+           .ValueGeneratedOnAdd() // Tự động sinh khi thêm mới
+           .UseIdentityColumn();
+            builder.HasIndex(x => x.ProductCode).IsUnique();
             builder.HasOne(x => x.Recipe)
             .WithMany()
             .HasForeignKey(x => x.RecipeId)

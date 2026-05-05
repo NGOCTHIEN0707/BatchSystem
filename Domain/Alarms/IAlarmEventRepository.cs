@@ -12,6 +12,7 @@ namespace BatchSystem.Domain.Alarms
     {
         Task AddAsync(AlarmEvent alarmEvent);
         void Delete(AlarmEvent alarmEvent);
+        Task<AlarmEvent?> GetActiveEventAsync(string alarmId,Guid? orderBatchId);
         Task<AlarmEvent?> GetById(Guid alarmEventId);
         // Ở đây vẫn cần GetById để phục vụ cho các lệnh khác chứ không dùng Get ngay đây để truy vấn dữ liệu
         void UpdateAsync(AlarmEvent alarmEvent);

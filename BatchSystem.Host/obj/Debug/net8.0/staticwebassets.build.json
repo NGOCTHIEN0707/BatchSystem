@@ -1,0 +1,23 @@
+{
+  "Version": 1,
+  "Hash": "8zc5+DVr21ZM8/ID+75p6D0ebudMXcTIuUAEdpdbzcY=",
+  "Source": "BatchSystem.Host",
+  "BasePath": "_content/BatchSystem.Host",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [
+    {
+      "Identity": "C:\\Users\\herob\\Downloads\\BatchSystem\\BatchSystem\\BatchSystem.csproj",
+      "Version": 2,
+      "Source": "BatchSystem",
+      "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",
+      "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework",
+      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
+      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework"
+    }
+  ],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
